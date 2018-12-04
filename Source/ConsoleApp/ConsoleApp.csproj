@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Fundamentals\Fundamental.cs" />
+    <Compile Include="Fundamentals\Fundamental1.cs" />
     <Compile Include="DevMorningFixDomain\Bootstrapper.cs" />
     <Compile Include="FundamentalTwo.cs" />
     <Compile Include="FundamentalEight.cs" />
