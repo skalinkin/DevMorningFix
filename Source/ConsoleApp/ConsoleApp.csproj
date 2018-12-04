@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FundamentalTwo.cs" />
     <Compile Include="FundamentalEight.cs" />
     <Compile Include="Container\IContainer.cs" />
     <Compile Include="Container\LifeCycle.cs" />
