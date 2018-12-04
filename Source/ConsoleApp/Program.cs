@@ -1,4 +1,5 @@
 ﻿using System;
+using Avtec.DevMorningFix.ConsoleApp.Container;
 
 namespace Avtec.DevMorningFix.ConsoleApp
 {
@@ -6,6 +7,10 @@ namespace Avtec.DevMorningFix.ConsoleApp
     {
         private static void Main(string[] args)
         {
+
+            var container = new SimpleIocContainer();
+            Bootstrapper.Configure(container);
+            
             var fundamentalEight = new FundamentalEight();
             var fundamentaltwo = new FundamentalTwo();
             Console.WriteLine("Hello World!");
