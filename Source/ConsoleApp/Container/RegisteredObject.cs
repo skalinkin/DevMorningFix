@@ -1,6 +1,6 @@
 using System;
 
-namespace SimpleIoc
+namespace Avtec.DevMorningFix.ConsoleApp.Container
 {
     public class RegisteredObject
     {

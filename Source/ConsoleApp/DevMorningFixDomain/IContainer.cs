@@ -1,6 +1,7 @@
 using System;
+using Avtec.DevMorningFix.ConsoleApp.Container;
 
-namespace SimpleIoc
+namespace Avtec.DevMorningFix.ConsoleApp.DevMorningFixDomain
 {
     public interface IContainer
     {

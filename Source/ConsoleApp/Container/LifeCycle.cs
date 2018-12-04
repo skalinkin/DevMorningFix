@@ -1,4 +1,4 @@
-namespace SimpleIoc
+namespace Avtec.DevMorningFix.ConsoleApp.Container
 {
     public enum LifeCycle
     {

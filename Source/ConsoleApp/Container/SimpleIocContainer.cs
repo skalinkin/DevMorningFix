@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Avtec.DevMorningFix.ConsoleApp.DevMorningFixDomain;
 
-namespace SimpleIoc
+namespace Avtec.DevMorningFix.ConsoleApp.Container
 {
     public class SimpleIocContainer : IContainer
     {
