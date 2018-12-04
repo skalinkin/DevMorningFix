@@ -1,7 +1,4 @@
-﻿using System;
-using System.Linq;
-
-namespace Avtec.DevMorningFix.ConsoleApp
+﻿namespace Avtec.DevMorningFix.ConsoleApp.DevMorningFixDomain
 {
     public static class Bootstrapper
     {
