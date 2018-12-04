@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp
+﻿namespace Avtec.DevMorningFix.ConsoleApp
 {
     internal class Program
     {
