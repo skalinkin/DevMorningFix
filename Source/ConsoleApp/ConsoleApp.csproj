@@ -47,11 +47,17 @@
     <Compile Include="Fundamentals\Fundamental1.cs" />
     <Compile Include="FundamentalTwo.cs" />
     <Compile Include="FundamentalEight.cs" />
+    <Compile Include="DevMorningFixDomain\IContainer.cs" />
+    <Compile Include="Container\LifeCycle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Container\RegisteredObject.cs" />
+    <Compile Include="Container\SimpleIocContainer.cs" />
+    <Compile Include="Container\TypeNotRegisteredException.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
