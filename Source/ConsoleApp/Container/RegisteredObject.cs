@@ -1,4 +1,5 @@
 using System;
+using Avtec.DevMorningFix.Infrastructure;
 
 namespace Avtec.DevMorningFix.ConsoleApp.Container
 {

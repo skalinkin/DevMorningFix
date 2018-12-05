@@ -1,6 +1,6 @@
 using System;
 
-namespace Avtec.DevMorningFix
+namespace Avtec.DevMorningFix.Infrastructure
 {
     public interface IContainer
     {

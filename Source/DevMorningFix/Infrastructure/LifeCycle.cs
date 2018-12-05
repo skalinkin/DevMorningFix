@@ -1,4 +1,4 @@
-namespace Avtec.DevMorningFix
+namespace Avtec.DevMorningFix.Infrastructure
 {
     public enum LifeCycle
     {

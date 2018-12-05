@@ -1,6 +1,7 @@
 using System;
 using Avtec.DevMorningFix.ConsoleApp.Container;
 using Avtec.DevMorningFix.ConsoleApp.Fundamentals;
+using Avtec.DevMorningFix.Infrastructure;
 
 namespace Avtec.DevMorningFix.ConsoleApp
 {
