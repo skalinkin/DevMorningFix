@@ -16,11 +16,12 @@ namespace Avtec.DevMorningFix.ConsoleApp
             
             var fundamental1 = new Fundamental1();
             var fundamentaltwo = new FundamentalTwo();
+            var fundamentalthree = new FundamentalThree();
             var fundamentalEight = new FundamentalEight();
 
             fundamental1.Print();
             Console.WriteLine($"2. {fundamentaltwo.Name}. {fundamentaltwo.Description}");
-            Console.WriteLine("3. Loose coupling.Loose coupling means designing so that you hold connections among different parts of a program to a minimum.Use the principles of good abstractions in class interfaces, encapsulation, and information hiding to design classes with as few interconnections as possible.Minimal connectedness minimizes work during integration, testing, and maintenance.");
+            Console.WriteLine($"3. {fundamentalthree.Name}. {fundamentalthree.Description}");
             Console.WriteLine("4. Extensibility.Extensibility means that you can enhance a system without causing violence to the underlying structure.You can change a piece of a system without affecting other pieces.The most likely changes cause the system the least trauma.");
             Console.WriteLine("5. Reusability.Reusability means designing the system so that you can reuse pieces of it in other systems.");
             Console.WriteLine("6. High fan-in.  High fan-in refers to having a high number of classes that use a given class. High fan-in implies that a system has been designed to make good use of utility classes at the lower levels in the system.");
