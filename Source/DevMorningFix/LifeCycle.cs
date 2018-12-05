@@ -1,4 +1,4 @@
-namespace Avtec.DevMorningFix.ConsoleApp.DevMorningFixDomain
+namespace Avtec.DevMorningFix
 {
     public enum LifeCycle
     {
