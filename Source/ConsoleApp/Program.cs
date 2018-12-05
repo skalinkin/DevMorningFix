@@ -1,6 +1,5 @@
 ﻿using System;
 using Avtec.DevMorningFix.ConsoleApp.Container;
-using Avtec.DevMorningFix.ConsoleApp.DevMorningFixDomain;
 using Avtec.DevMorningFix.ConsoleApp.Fundamentals;
 
 namespace Avtec.DevMorningFix.ConsoleApp
@@ -11,9 +10,9 @@ namespace Avtec.DevMorningFix.ConsoleApp
         {
 
             var container = new SimpleIocContainer();
-            Bootstrapper.Configure(container);
-            
-            
+            //Bootstrapper.Configure(container);
+
+
             var fundamental1 = new Fundamental1();
             var fundamentaltwo = new FundamentalTwo();
             var fundamentalthree = new FundamentalThree();
