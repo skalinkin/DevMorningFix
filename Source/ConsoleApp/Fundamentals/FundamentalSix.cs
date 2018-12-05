@@ -1,4 +1,4 @@
-﻿namespace Avtec.DevMorningFix.Fundamentals
+﻿namespace Avtec.DevMorningFix.ConsoleApp.Fundamentals
 {
     public class FundamentalSix
     {
