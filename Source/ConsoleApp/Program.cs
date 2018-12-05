@@ -10,7 +10,7 @@ namespace Avtec.DevMorningFix.ConsoleApp
         {
 
             var container = new SimpleIocContainer();
-            //Bootstrapper.Configure(container);
+            Bootstrapper.Configure(container);
 
 
             var fundamental1 = new Fundamental1();
