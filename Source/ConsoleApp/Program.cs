@@ -23,10 +23,8 @@ namespace Avtec.DevMorningFix.ConsoleApp
             fundamental1.Print();
             Console.WriteLine($"2. {fundamentalTwo.Name}. {fundamentalTwo.Description}");
             Console.WriteLine($"3. {fundamentalThree.Name}. {fundamentalThree.Description}");
-            Console.WriteLine(
-                "4. Extensibility.Extensibility means that you can enhance a system without causing violence to the underlying structure.You can change a piece of a system without affecting other pieces.The most likely changes cause the system the least trauma.");
-            Console.WriteLine(
-                "5. Reusability.Reusability means designing the system so that you can reuse pieces of it in other systems.");
+            Console.WriteLine( "4. Extensibility.Extensibility means that you can enhance a system without causing violence to the underlying structure.You can change a piece of a system without affecting other pieces.The most likely changes cause the system the least trauma.");
+            Console.WriteLine( "5. Reusability.Reusability means designing the system so that you can reuse pieces of it in other systems.");
             Console.WriteLine(new FundamentalSix().ToString());
             Console.WriteLine(new FundamentalSeven().Description);
             Console.WriteLine(fundamentalEight.Description);
