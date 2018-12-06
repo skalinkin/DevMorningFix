@@ -1,4 +1,4 @@
-﻿namespace Avtec.DevMorningFix.ConsoleApp
+﻿namespace Avtec.DevMorningFix.ConsoleApp.Fundamentals
 {
     internal class FundamentalEight
     {
