@@ -1,7 +1,7 @@
 ﻿
-namespace Avtec.DevMorningFix.ConsoleApp.Fundamentals
+namespace Avtec.DevMorningFix.AvtecEngineeringFundamentals
 {
-    internal class FundamentalThree
+    public class FundamentalThree
     {
         public string Name = "Loose coupling";
 

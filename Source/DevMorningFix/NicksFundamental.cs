@@ -1,6 +1,6 @@
-namespace Avtec.DevMorningFix.ConsoleApp.Fundamentals
+﻿namespace Avtec.DevMorningFix
 {
-    public class Fundamental
+    internal class NicksFundamental
     {
         public string Description { get; set; }
         public string Name { get; set; }

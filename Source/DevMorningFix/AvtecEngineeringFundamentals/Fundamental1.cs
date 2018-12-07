@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Avtec.DevMorningFix.ConsoleApp.Fundamentals
+namespace Avtec.DevMorningFix.AvtecEngineeringFundamentals
 {
 
     public class Fundamental1
@@ -11,9 +11,9 @@ namespace Avtec.DevMorningFix.ConsoleApp.Fundamentals
             Console.WriteLine($"{currFundamental.Name} {currFundamental.Description}");
         }
 
-        private Fundamental Create()
+        private NicksFundamental Create()
         {
-            Fundamental funDa = new Fundamental
+            NicksFundamental funDa = new NicksFundamental()
             {
                 Name = GetDescription(),
                 Description = GetName()

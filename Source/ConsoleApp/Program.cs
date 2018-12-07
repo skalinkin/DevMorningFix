@@ -1,6 +1,6 @@
 using System;
+using Avtec.DevMorningFix.AvtecEngineeringFundamentals;
 using Avtec.DevMorningFix.ConsoleApp.Container;
-using Avtec.DevMorningFix.ConsoleApp.Fundamentals;
 using Avtec.DevMorningFix.Infrastructure;
 
 namespace Avtec.DevMorningFix.ConsoleApp
@@ -13,7 +13,7 @@ namespace Avtec.DevMorningFix.ConsoleApp
             Bootstrapper.Configure(container);
 
             var fundamental1 = new Fundamental1();
-            var fundamentalTwo = new FundamentalTwo();
+            Fundamental fundamentalTwo = new FundamentalTwo();
             var fundamentalThree = new FundamentalThree();
             var fundamentalEight = new FundamentalEight();
             var fundamentalEleven = new FundamentalEleven();

@@ -41,9 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Fundamental.cs" />
+    <Compile Include="AvtecEngineeringFundamentals\Fundamental1.cs" />
+    <Compile Include="AvtecEngineeringFundamentals\FundamentalEight.cs" />
+    <Compile Include="AvtecEngineeringFundamentals\FundamentalEleven.cs" />
+    <Compile Include="AvtecEngineeringFundamentals\FundamentalNine.cs" />
+    <Compile Include="AvtecEngineeringFundamentals\FundamentalSeven.cs" />
+    <Compile Include="AvtecEngineeringFundamentals\FundamentalSix.cs" />
+    <Compile Include="AvtecEngineeringFundamentals\FundamentalTen.cs" />
+    <Compile Include="AvtecEngineeringFundamentals\FundamentalThree.cs" />
+    <Compile Include="AvtecEngineeringFundamentals\FundamentalTwo.cs" />
     <Compile Include="Infrastructure\Bootstrapper.cs" />
     <Compile Include="Infrastructure\IContainer.cs" />
     <Compile Include="Infrastructure\LifeCycle.cs" />
+    <Compile Include="NicksFundamental.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
