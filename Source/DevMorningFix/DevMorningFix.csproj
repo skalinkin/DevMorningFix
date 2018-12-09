@@ -41,6 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AvtecEngineeringFundamentals\FundamentalFive.cs" />
+    <Compile Include="AvtecEngineeringFundamentals\IDevFixFundamental.cs" />
+    <Compile Include="DataManager\IDataManager.cs" />
+    <Compile Include="DataManager\XmlManager.cs" />
     <Compile Include="Fundamental.cs" />
     <Compile Include="AvtecEngineeringFundamentals\Fundamental1.cs" />
     <Compile Include="AvtecEngineeringFundamentals\FundamentalEight.cs" />
@@ -56,6 +60,11 @@
     <Compile Include="Infrastructure\LifeCycle.cs" />
     <Compile Include="NicksFundamental.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataStore\SimpleData.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,6 +1,7 @@
 using System;
 using Avtec.DevMorningFix.AvtecEngineeringFundamentals;
 using Avtec.DevMorningFix.ConsoleApp.Container;
+using Avtec.DevMorningFix.DataManager;
 using Avtec.DevMorningFix.Infrastructure;
 
 namespace Avtec.DevMorningFix.ConsoleApp
@@ -11,6 +12,7 @@ namespace Avtec.DevMorningFix.ConsoleApp
         {
             var container = new SimpleIocContainer();
             Bootstrapper.Configure(container);
+            XmlManager xmlManager = new XmlManager();
 
             var fundamental1 = new Fundamental1();
             Fundamental fundamentalTwo = new FundamentalTwo();
@@ -19,12 +21,14 @@ namespace Avtec.DevMorningFix.ConsoleApp
             var fundamentalEleven = new FundamentalEleven();
             var fundamentalTen = new FundamentalTen();
             var fundamentalNine = new FundamentalNine();
+            var fundamentalFive = new FundamentalFive(xmlManager);
 
             fundamental1.Print();
             Console.WriteLine($"2. {fundamentalTwo.Name}. {fundamentalTwo.Description}");
             Console.WriteLine($"3. {fundamentalThree.Name}. {fundamentalThree.Description}");
             Console.WriteLine( "4. Extensibility.Extensibility means that you can enhance a system without causing violence to the underlying structure.You can change a piece of a system without affecting other pieces.The most likely changes cause the system the least trauma.");
-            Console.WriteLine( "5. Reusability.Reusability means designing the system so that you can reuse pieces of it in other systems.");
+
+            Console.WriteLine(fundamentalFive.ToString());
             Console.WriteLine(new FundamentalSix().ToString());
             Console.WriteLine(new FundamentalSeven().Description);
             Console.WriteLine(fundamentalEight.Description);
