@@ -106,7 +106,7 @@ namespace DevMorningFixUnitTest
             //Arange
             string ID = "5";
             XmlManager xmlManager = new XmlManager();
-            var fundamental = new FundamentalFive(xmlManager);
+            var fundamental = new DevFixFundamental(ID, xmlManager);
             string fromM = xmlManager.GetFundamentalName(ID);
             // Act
             string fromF = fundamental.Name;
@@ -119,7 +119,7 @@ namespace DevMorningFixUnitTest
             //Arange
             string ID = "5";
             XmlManager xmlManager = new XmlManager();
-            var fundamental = new FundamentalFive(xmlManager);
+            var fundamental = new DevFixFundamental(ID, xmlManager);
             string fromM = xmlManager.GetFundamentalDescription(ID);
             // Act
             string fromF = fundamental.Description;

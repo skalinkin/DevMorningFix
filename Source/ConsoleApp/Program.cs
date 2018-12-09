@@ -21,7 +21,12 @@ namespace Avtec.DevMorningFix.ConsoleApp
             var fundamentalEleven = new FundamentalEleven();
             var fundamentalTen = new FundamentalTen();
             var fundamentalNine = new FundamentalNine();
-            var fundamentalFive = new FundamentalFive(xmlManager);
+            // maybe they could all be built similarly
+            // all deriving from IDevFixFundamental
+            // maybe wouldn't need 11 classes
+            // stick them in a list - roll through and print (for this ecercise)
+            // maybe I should just get the values (name, description) and simply pass them in ??
+            var fundamentalFive = new DevFixFundamental("5", xmlManager);
 
             fundamental1.Print();
             Console.WriteLine($"2. {fundamentalTwo.Name}. {fundamentalTwo.Description}");

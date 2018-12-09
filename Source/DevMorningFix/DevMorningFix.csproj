@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AvtecEngineeringFundamentals\FundamentalFive.cs" />
+    <Compile Include="AvtecEngineeringFundamentals\DevFixFundamental.cs" />
     <Compile Include="AvtecEngineeringFundamentals\IDevFixFundamental.cs" />
     <Compile Include="DataManager\IDataManager.cs" />
     <Compile Include="DataManager\XmlManager.cs" />

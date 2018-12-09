@@ -7,24 +7,23 @@ using System.Threading.Tasks;
 
 namespace Avtec.DevMorningFix.AvtecEngineeringFundamentals
 {
-    public class FundamentalFive : IDevFixFundamental
+    public class DevFixFundamental : IDevFixFundamental
     {
-        private XmlManager xmlManager = new XmlManager();   // hopefully a container can cure this dependency
         public string Description { get; set; }
         public string Name { get; set; }
         public string ID { get; set; }
-        public FundamentalFive()
+        public DevFixFundamental()
         {
-            ID = "5";
+            ID = "ID not set";
             Name = "name not set";
             Description = "description not set";
         }
 
-        public FundamentalFive(XmlManager xmlManager)
+        public DevFixFundamental(string id, XmlManager xmlManager)
         {
-            ID = "5";
-            Name = xmlManager.GetFundamentalName(ID);   // ordering constraint - is that good
-            Description = xmlManager.GetFundamentalDescription(ID);
+            ID = id;
+            Name = xmlManager.GetFundamentalName(id);
+            Description = xmlManager.GetFundamentalDescription(id);
         }
 
         public override string ToString()
