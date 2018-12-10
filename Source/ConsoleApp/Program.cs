@@ -12,7 +12,7 @@ namespace Avtec.DevMorningFix.ConsoleApp
         {
             var container = new SimpleIocContainer();
             Bootstrapper.Configure(container);
-            XmlManager xmlManager = new XmlManager();
+            IDataManager dataManager = new XmlManager();
 
             var fundamental1 = new Fundamental1();
             Fundamental fundamentalTwo = new FundamentalTwo();
@@ -26,8 +26,10 @@ namespace Avtec.DevMorningFix.ConsoleApp
             // maybe wouldn't need 11 classes
             // stick them in a list - roll through and print (for this ecercise)
             // maybe I should just get the values (name, description) and simply pass them in ??
-            var fundamentalFive = new DevFixFundamental("5", xmlManager);
-
+            var fundamentalFive = new DevFixFundamental("5", dataManager);
+            // or just get the whole she-bang
+            // IEnumerable<IDevFixFundamental> objList = dataManager.GetFundamentalsList();
+            //
             fundamental1.Print();
             Console.WriteLine($"2. {fundamentalTwo.Name}. {fundamentalTwo.Description}");
             Console.WriteLine($"3. {fundamentalThree.Name}. {fundamentalThree.Description}");

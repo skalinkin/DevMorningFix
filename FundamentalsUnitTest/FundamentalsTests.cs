@@ -18,9 +18,9 @@ namespace DevMorningFixUnitTest
         {
             //Arange
             string ID = "1";
-            XmlManager xmlManager = new XmlManager();
+            IDataManager dataManager = new XmlManager();
             var fundamental = new Fundamental1();
-            string fromM = xmlManager.GetFundamentalName(ID);
+            string fromM = dataManager.GetFundamentalName(ID);
             // Act
             string fromF = "this class cannot be tested";
             //Assert
@@ -31,9 +31,9 @@ namespace DevMorningFixUnitTest
         {
             //Arange
             string ID = "1";
-            XmlManager xmlManager = new XmlManager();
+            IDataManager dataManager = new XmlManager();
             var fundamental = new Fundamental1();
-            string fromM = xmlManager.GetFundamentalDescription(ID);
+            string fromM = dataManager.GetFundamentalDescription(ID);
             // Act
             string fromF = "this class cannot be tested";
             //Assert
@@ -45,9 +45,9 @@ namespace DevMorningFixUnitTest
         {
             //Arange
             string ID = "2";
-            XmlManager xmlManager = new XmlManager();
-            var fundamental = new FundamentalTwo();
-            string fromM = xmlManager.GetFundamentalName(ID);
+            IDataManager dataManager = new XmlManager();
+            var fundamental = new FundamentalTwo(); // this is not how its actually created
+            string fromM = dataManager.GetFundamentalName(ID);
             // Act
             string fromF = fundamental.Name;
             //Assert
@@ -58,9 +58,9 @@ namespace DevMorningFixUnitTest
         {
             //Arange
             string ID = "2";
-            XmlManager xmlManager = new XmlManager();
+            IDataManager dataManager = new XmlManager();
             var fundamental = new FundamentalTwo();
-            string fromMLong = xmlManager.GetFundamentalDescription(ID);
+            string fromMLong = dataManager.GetFundamentalDescription(ID);
             string fromM = fromMLong.Substring(0, 10);
             // Act
             string fromF = fundamental.Description;
@@ -73,9 +73,9 @@ namespace DevMorningFixUnitTest
         {
             //Arange
             string ID = "3";
-            XmlManager xmlManager = new XmlManager();
+            IDataManager dataManager =  new XmlManager();
             var fundamental = new FundamentalThree();
-            string fromM = xmlManager.GetFundamentalName(ID);
+            string fromM = dataManager.GetFundamentalName(ID);
             // Act
             string fromF = fundamental.Name;
             //Assert
@@ -86,9 +86,9 @@ namespace DevMorningFixUnitTest
         {
             //Arange
             string ID = "3";
-            XmlManager xmlManager = new XmlManager();
+            IDataManager dataManager =  new XmlManager();
             var fundamental = new FundamentalThree();
-            string fromMLong = xmlManager.GetFundamentalDescription(ID);
+            string fromMLong = dataManager.GetFundamentalDescription(ID);
             string fromM = fromMLong.Substring(0, 10);
             // Act
             string fromF = fundamental.Description;
@@ -105,9 +105,9 @@ namespace DevMorningFixUnitTest
         {
             //Arange
             string ID = "5";
-            XmlManager xmlManager = new XmlManager();
-            var fundamental = new DevFixFundamental(ID, xmlManager);
-            string fromM = xmlManager.GetFundamentalName(ID);
+            IDataManager dataManager =  new XmlManager();
+            var fundamental = new DevFixFundamental(ID, dataManager);
+            string fromM = dataManager.GetFundamentalName(ID);
             // Act
             string fromF = fundamental.Name;
             //Assert
@@ -118,9 +118,9 @@ namespace DevMorningFixUnitTest
         {
             //Arange
             string ID = "5";
-            XmlManager xmlManager = new XmlManager();
-            var fundamental = new DevFixFundamental(ID, xmlManager);
-            string fromM = xmlManager.GetFundamentalDescription(ID);
+            IDataManager dataManager =  new XmlManager();
+            var fundamental = new DevFixFundamental(ID, dataManager);
+            string fromM = dataManager.GetFundamentalDescription(ID);
             // Act
             string fromF = fundamental.Description;
             //Assert
@@ -132,9 +132,9 @@ namespace DevMorningFixUnitTest
         {
             //Arange
             string ID = "6";
-            XmlManager xmlManager = new XmlManager();
+            IDataManager dataManager =  new XmlManager();
             var fundamental = new FundamentalSix();
-            string fromM = xmlManager.GetFundamentalName(ID);
+            string fromM = dataManager.GetFundamentalName(ID);
             // Act
             string fromF = fundamental.Name;
             //Assert
@@ -145,9 +145,9 @@ namespace DevMorningFixUnitTest
         {
             //Arange
             string ID = "6";
-            XmlManager xmlManager = new XmlManager();
+            IDataManager dataManager =  new XmlManager();
             var fundamental = new FundamentalSix();
-            string fromMLong = xmlManager.GetFundamentalDescription(ID);
+            string fromMLong = dataManager.GetFundamentalDescription(ID);
             string fromM = fromMLong.Substring(0, 10);
             // Act
             string fromF = fundamental.Description;
@@ -160,9 +160,9 @@ namespace DevMorningFixUnitTest
         {
             //Arange
             string ID = "7";
-            XmlManager xmlManager = new XmlManager();
+            IDataManager dataManager =  new XmlManager();
             var fundamental = new FundamentalSeven();
-            string fromM = xmlManager.GetFundamentalName(ID);
+            string fromM = dataManager.GetFundamentalName(ID);
             // Act
             string fromF = "the class contains no name property";   // fundamental.Name;
             //Assert
@@ -173,9 +173,9 @@ namespace DevMorningFixUnitTest
         {
             //Arange
             string ID = "7";
-            XmlManager xmlManager = new XmlManager();
+            IDataManager dataManager =  new XmlManager();
             var fundamental = new FundamentalSeven();
-            string fromMLong = xmlManager.GetFundamentalDescription(ID);
+            string fromMLong = dataManager.GetFundamentalDescription(ID);
             string fromM = fromMLong.Substring(0, 10);
             // Act
             string fromF = fundamental.Description;
@@ -188,9 +188,9 @@ namespace DevMorningFixUnitTest
         {
             //Arange
             string ID = "8";
-            XmlManager xmlManager = new XmlManager();
+            IDataManager dataManager =  new XmlManager();
             var fundamental = new FundamentalEight();
-            string fromM = xmlManager.GetFundamentalName(ID);
+            string fromM = dataManager.GetFundamentalName(ID);
             // Act
             string fromF = fundamental.Name;
             //Assert
@@ -201,9 +201,9 @@ namespace DevMorningFixUnitTest
         {
             //Arange
             string ID = "8";
-            XmlManager xmlManager = new XmlManager();
+            IDataManager dataManager =  new XmlManager();
             var fundamental = new FundamentalEight();
-            string fromM = xmlManager.GetFundamentalDescription(ID);
+            string fromM = dataManager.GetFundamentalDescription(ID);
             // Act
             string fromF = fundamental.Description;
             //Assert
@@ -215,9 +215,9 @@ namespace DevMorningFixUnitTest
         {
             //Arange
             string ID = "9";
-            XmlManager xmlManager = new XmlManager();
+            IDataManager dataManager =  new XmlManager();
             var fundamental = new FundamentalNine();
-            string fromM = xmlManager.GetFundamentalName(ID);
+            string fromM = dataManager.GetFundamentalName(ID);
             // Act
             string fromF = "the class contains no name property";   // fundamental.Name;
             //Assert
@@ -228,9 +228,9 @@ namespace DevMorningFixUnitTest
         {
             //Arange
             string ID = "9";
-            XmlManager xmlManager = new XmlManager();
+            IDataManager dataManager =  new XmlManager();
             var fundamental = new FundamentalNine();
-            string fromMLong = xmlManager.GetFundamentalDescription(ID);
+            string fromMLong = dataManager.GetFundamentalDescription(ID);
             string fromM = fromMLong.Substring(0, 10);
             // Act
             string fromF = fundamental.Description;
@@ -243,9 +243,9 @@ namespace DevMorningFixUnitTest
         {
             //Arange
             string ID = "10";
-            XmlManager xmlManager = new XmlManager();
+            IDataManager dataManager =  new XmlManager();
             var fundamental = new FundamentalTen();
-            string fromM = xmlManager.GetFundamentalName(ID);
+            string fromM = dataManager.GetFundamentalName(ID);
             // Act
             string fromF = "the class contains no name property";   // fundamental.Name;
             //Assert
@@ -256,9 +256,9 @@ namespace DevMorningFixUnitTest
         {
             //Arange
             string ID = "10";
-            XmlManager xmlManager = new XmlManager();
+            IDataManager dataManager =  new XmlManager();
             var fundamental = new FundamentalTen();
-            string fromMLong = xmlManager.GetFundamentalDescription(ID);
+            string fromMLong = dataManager.GetFundamentalDescription(ID);
             string fromM = fromMLong.Substring(0, 10);
             // Act
             string fromF = fundamental.Description;
@@ -271,9 +271,9 @@ namespace DevMorningFixUnitTest
         {
             //Arange
             string ID = "11";
-            XmlManager xmlManager = new XmlManager();
+            IDataManager dataManager =  new XmlManager();
             var fundamental = new FundamentalEleven();
-            string fromM = xmlManager.GetFundamentalName(ID);
+            string fromM = dataManager.GetFundamentalName(ID);
             // Act
             string fromF = "the class contains no name property";   // fundamental.Name;
             //Assert
@@ -284,9 +284,9 @@ namespace DevMorningFixUnitTest
         {
             //Arange
             string ID = "11";
-            XmlManager xmlManager = new XmlManager();
+            IDataManager dataManager =  new XmlManager();
             var fundamental = new FundamentalEleven();
-            string fromMLong = xmlManager.GetFundamentalDescription(ID);
+            string fromMLong = dataManager.GetFundamentalDescription(ID);
             string fromM = fromMLong.Substring(0, 10);
             // Act
             string fromF = fundamental.Description;

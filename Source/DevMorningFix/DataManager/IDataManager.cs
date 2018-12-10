@@ -11,5 +11,6 @@ namespace Avtec.DevMorningFix.DataManager
     {
         string GetFundamentalName(string ID);
         string GetFundamentalDescription(string ID);
+        IEnumerable<IDevFixFundamental> GetFundamentalsList();
     }
 }

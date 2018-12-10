@@ -10,7 +10,7 @@ using System.Xml.Linq;
 
 namespace Avtec.DevMorningFix.DataManager
 {
-    public class XmlManager
+    public class XmlManager : IDataManager
     {
         public string GetFundamentalName(string ID)
         {
@@ -47,6 +47,23 @@ namespace Avtec.DevMorningFix.DataManager
                 }
             }
             return description;
+        }
+        public IEnumerable<IDevFixFundamental> GetFundamentalsList()
+        {
+            List<IDevFixFundamental> fundamentals = new List<IDevFixFundamental>();
+            var dir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            string fn = dir + "\\SimpleDataStore\\SimpleData.xml";
+            var doc = XDocument.Load(fn);
+            var data = doc.Element("DevMorningFixFundamentals").Elements("fundamental");
+            foreach (XElement item in data)
+            {
+                DevFixFundamental dff = new DevFixFundamental();
+                dff.ID = item.Attribute("ID").Value;
+                dff.Name = item.Attribute("Name").Value;
+                dff.Description = item.Attribute("Description").Value;
+                fundamentals.Add(dff);
+            }
+            return fundamentals;
         }
     }
 }

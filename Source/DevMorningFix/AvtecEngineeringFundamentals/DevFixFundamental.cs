@@ -19,11 +19,11 @@ namespace Avtec.DevMorningFix.AvtecEngineeringFundamentals
             Description = "description not set";
         }
 
-        public DevFixFundamental(string id, XmlManager xmlManager)
+        public DevFixFundamental(string id, IDataManager dataManager)
         {
             ID = id;
-            Name = xmlManager.GetFundamentalName(id);
-            Description = xmlManager.GetFundamentalDescription(id);
+            Name = dataManager.GetFundamentalName(id);
+            Description = dataManager.GetFundamentalDescription(id);
         }
 
         public override string ToString()
