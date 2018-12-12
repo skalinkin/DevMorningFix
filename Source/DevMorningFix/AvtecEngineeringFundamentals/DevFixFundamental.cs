@@ -1,31 +1,35 @@
-﻿using Avtec.DevMorningFix.DataManager;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Avtec.DevMorningFix.ServiceTier.DataManager;
 
 namespace Avtec.DevMorningFix.AvtecEngineeringFundamentals
 {
     public class DevFixFundamental : IDevFixFundamental
     {
+        private IDataManager _dataManager;
+
         public string Description { get; set; }
         public string Name { get; set; }
         public string ID { get; set; }
+
         public DevFixFundamental()
         {
-            ID = "ID not set";
-            Name = "name not set";
-            Description = "description not set";
         }
 
-        public DevFixFundamental(string id, IDataManager dataManager)
+        public DevFixFundamental(IDataManager dataManager)
+        {
+            _dataManager = dataManager;
+        }
+
+        public void Initialize(string id)
         {
             ID = id;
-            Name = dataManager.GetFundamentalName(id);
-            Description = dataManager.GetFundamentalDescription(id);
+            Name = _dataManager.GetFundamentalName(id);
+            Description = _dataManager.GetFundamentalDescription(id);
         }
-
         public override string ToString()
         {
             return ID + ". " + Name + ". " + Description;

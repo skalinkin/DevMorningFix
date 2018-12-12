@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -43,8 +44,10 @@
   <ItemGroup>
     <Compile Include="AvtecEngineeringFundamentals\DevFixFundamental.cs" />
     <Compile Include="AvtecEngineeringFundamentals\IDevFixFundamental.cs" />
-    <Compile Include="DataManager\IDataManager.cs" />
-    <Compile Include="DataManager\XmlManager.cs" />
+    <Compile Include="BusinessTier\SimpleFundamentalsManager.cs" />
+    <Compile Include="BusinessTier\SimpleManager.cs" />
+    <Compile Include="ServiceTier\DataManager\IDataManager.cs" />
+    <Compile Include="ServiceTier\DataManager\XmlManager.cs" />
     <Compile Include="Fundamental.cs" />
     <Compile Include="AvtecEngineeringFundamentals\Fundamental1.cs" />
     <Compile Include="AvtecEngineeringFundamentals\FundamentalEight.cs" />
@@ -61,11 +64,18 @@
     <Compile Include="IStartup.cs" />
     <Compile Include="NicksFundamental.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceTier\Exceptions\ExceptionRequiredObjectNotFound.cs" />
+    <Compile Include="ServiceTier\Exceptions\ExceptionServiceNotFound.cs" />
+    <Compile Include="ServiceTier\ISimpleFundamentalService.cs" />
+    <Compile Include="ServiceTier\ISimpleService.cs" />
+    <Compile Include="ServiceTier\ServiceByNameFactory.cs" />
+    <Compile Include="ServiceTier\SimpleFundamentalServiceImpl.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DataStore\SimpleData.xml">
+    <Content Include="ServiceTier\DataStore\SimpleData.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
