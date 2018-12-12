@@ -56,7 +56,6 @@ namespace Avtec.DevMorningFix.ServiceTier
                 // TODO: add in a unit of work service for some ORM interface - e.g. entity framework, nhibernate
                 throw new ExceptionServiceNotFound(string.Format("Service named '{0}' is not supported.", serviceName));
             }
-
         }
         private String GetImplName(String serviceName)
         {

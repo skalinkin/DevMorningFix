@@ -1,4 +1,5 @@
 ﻿using Avtec.DevMorningFix.BusinessTier;
+using Avtec.DevMorningFix.FormatOutput;
 using Avtec.DevMorningFix.ServiceTier;
 using Avtec.DevMorningFix.ServiceTier.DataManager;
 
@@ -12,7 +13,7 @@ namespace Avtec.DevMorningFix.Infrastructure
             // 
             container.Register<IDataManager, SimpleFundamentalServiceImpl>();
             container.Register<SimpleManager, SimpleFundamentalsManager>();
-            container.Register<IStartup,ConsoleStartup>();
+            container.Register<IStartup, ConsoleStartup>();
         }
     }
 }

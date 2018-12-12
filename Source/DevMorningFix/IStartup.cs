@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Avtec.DevMorningFix.AvtecEngineeringFundamentals;
 using Avtec.DevMorningFix.BusinessTier;
+using Avtec.DevMorningFix.FormatOutput;
 
 namespace Avtec.DevMorningFix
 {
@@ -13,6 +14,8 @@ namespace Avtec.DevMorningFix
     class ConsoleStartup : IStartup
     {
         private readonly SimpleManager _businessManager;
+        // I tried injecting this but it died horribly
+        private readonly IFormattedOutputFactory _formattedFactory = new FormattedOutputFactory();
 
         public ConsoleStartup(SimpleManager businessManager)
         {
@@ -26,10 +29,11 @@ namespace Avtec.DevMorningFix
             // adding program args or some 'form' interface would do other stuff
             // other business manager items have unit tests
             //
+            FundamentalFormattedOutput fundamentalFormattedOutput = _formattedFactory.GetFormattedOutput();
             IEnumerable<IDevFixFundamental> fl = _businessManager.GetFundamentals();
             foreach (var f in fl)
             {
-                Console.WriteLine(f.ToString() + "\n");
+                fundamentalFormattedOutput.OutputFormatted(f);
             }
             Console.ReadLine();
         }
