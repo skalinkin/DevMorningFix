@@ -7,11 +7,17 @@ namespace Avtec.DevMorningFix.ConsoleApp
     {
         private static void Main(string[] args)
         {
-            var container = new SimpleIocContainer();
-            Bootstrapper.Configure(container);
+            var container = GetContainer();
 
             var startup = container.Resolve<IStartup>();
             startup.Start(args);
+        }
+
+        private static IContainer GetContainer()
+        {
+            var container = new SimpleIocContainer();
+            Bootstrapper.Configure(container);
+            return container;
         }
     }
 }
