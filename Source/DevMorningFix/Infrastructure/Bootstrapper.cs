@@ -4,7 +4,7 @@
     {
         public static void Configure(IContainer container)
         {
-            
+            container.Register<IStartup,ConsoleStartup>();
         }
     }
 }

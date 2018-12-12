@@ -34,8 +34,7 @@ namespace Avtec.DevMorningFix.ConsoleApp.Container
             var registeredObject = registeredObjects.Where(o => o.TypeToResolve == typeToResolve).ToArray();
             if (!registeredObject.Any())
             {
-                throw new TypeNotRegisteredException(string.Format(
-                    "The type {0} has not been registered", typeToResolve.Name));
+                throw new TypeNotRegisteredException($"The type {typeToResolve.Name} has not been registered");
             }
 
             if (registeredObject.Length == 1)
