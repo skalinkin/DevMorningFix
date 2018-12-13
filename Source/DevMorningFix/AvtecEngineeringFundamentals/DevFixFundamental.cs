@@ -30,9 +30,5 @@ namespace Avtec.DevMorningFix.AvtecEngineeringFundamentals
             Name = _dataManager.GetFundamentalName(id);
             Description = _dataManager.GetFundamentalDescription(id);
         }
-        public override string ToString()
-        {
-            return ID + ". " + Name + ". " + Description;
-        }
     }
 }
