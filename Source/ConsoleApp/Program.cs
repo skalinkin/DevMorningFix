@@ -8,7 +8,6 @@ namespace Avtec.DevMorningFix.ConsoleApp
         private static void Main(string[] args)
         {
             var container = GetContainer();
-
             var startup = container.Resolve<IStartup>();
             startup.Start(args);
         }

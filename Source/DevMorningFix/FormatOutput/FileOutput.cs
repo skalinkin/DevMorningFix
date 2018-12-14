@@ -1,15 +1,11 @@
-﻿using Avtec.DevMorningFix.AvtecEngineeringFundamentals;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
+using Avtec.DevMorningFix.AvtecEngineeringFundamentals;
 
 namespace Avtec.DevMorningFix.FormatOutput
 {
-    class FileOutput : FundamentalFormattedOutput
+    internal class FileOutput : IOutput
     {
-        public override void OutputFormatted(IDevFixFundamental f)
+        public virtual void OutputFormatted(IDevFixFundamental f)
         {
             Console.WriteLine($" I need work !! {f.ID}: {f.Name} {f.Description} ");
         }

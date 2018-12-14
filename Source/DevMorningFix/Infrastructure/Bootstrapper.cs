@@ -9,11 +9,13 @@ namespace Avtec.DevMorningFix.Infrastructure
     {
         public static void Configure(IContainer container)
         {
-            // do we care about ordering ??
-            // 
             container.Register<IDataManager, SimpleFundamentalServiceImpl>();
             container.Register<SimpleManager, SimpleFundamentalsManager>();
             container.Register<IStartup, ConsoleStartup>();
+            container.Register<IFormattedOutputFactory, FormattedOutputFactory>();
+            container.Register<IFundamentalFormat, SimpleFormat>();
+            container.Register<IFundamentalModel, FundamentalModel>();
+            container.Register<IOutput, ConsoleOutput>();
         }
     }
 }

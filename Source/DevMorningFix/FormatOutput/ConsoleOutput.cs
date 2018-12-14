@@ -1,18 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Avtec.DevMorningFix.AvtecEngineeringFundamentals;
 
 namespace Avtec.DevMorningFix.FormatOutput
 {
-    class ConsoleOutput : FundamentalFormattedOutput
+    internal class ConsoleOutput : IOutput
     {
-        public override void OutputFormatted(IDevFixFundamental f)
+        private readonly IFundamentalFormat _format;
+        private readonly IFundamentalModel _model;
+
+        public ConsoleOutput(IFundamentalFormat format, IFundamentalModel model)
         {
-            Console.WriteLine($"{f.ID}:{f.Name}. {f.Description} ");
+            _format = format;
+            _model = model;
         }
 
+        public virtual void OutputFormatted(IDevFixFundamental f)
+        {
+            var format = _format.GetFormat();
+            var data = _model.GetData(f);
+            var finalString = string.Format(format, data);
+            Console.WriteLine(finalString);
+        }
     }
 }

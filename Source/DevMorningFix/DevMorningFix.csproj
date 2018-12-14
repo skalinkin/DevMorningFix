@@ -46,11 +46,16 @@
     <Compile Include="AvtecEngineeringFundamentals\IDevFixFundamental.cs" />
     <Compile Include="BusinessTier\SimpleFundamentalsManager.cs" />
     <Compile Include="BusinessTier\SimpleManager.cs" />
+    <Compile Include="ConsoleStartup.cs" />
     <Compile Include="FormatOutput\ConsoleOutput.cs" />
     <Compile Include="FormatOutput\FileOutput.cs" />
     <Compile Include="FormatOutput\FormattedOutputFactory.cs" />
+    <Compile Include="FormatOutput\FundamentalModel.cs" />
     <Compile Include="FormatOutput\IFormattedOutputFactory.cs" />
-    <Compile Include="FormatOutput\FundamentalFormattedOutput.cs" />
+    <Compile Include="FormatOutput\IOutput.cs" />
+    <Compile Include="FormatOutput\IFundamentalFormat.cs" />
+    <Compile Include="FormatOutput\IFundamentalModel.cs" />
+    <Compile Include="FormatOutput\SimpleFormat.cs" />
     <Compile Include="ServiceTier\DataManager\IDataManager.cs" />
     <Compile Include="ServiceTier\DataManager\XmlManager.cs" />
     <Compile Include="Fundamental.cs" />

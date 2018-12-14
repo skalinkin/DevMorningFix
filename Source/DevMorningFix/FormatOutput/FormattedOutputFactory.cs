@@ -1,29 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.Specialized;
 using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Avtec.DevMorningFix.ServiceTier;
-using Avtec.DevMorningFix.ServiceTier.DataManager;
 using DevMorningFix.services.Exceptions;
 
 namespace Avtec.DevMorningFix.FormatOutput
 {
     public class FormattedOutputFactory : IFormattedOutputFactory
     {
-        FundamentalFormattedOutput IFormattedOutputFactory.GetFormattedOutput()
+        private readonly IOutput _output;
+
+        public FormattedOutputFactory(IOutput output)
         {
-            string configName = "FundamentalFormattedOutput";
-            Object obj = null;
+            _output = output;
+        }
+        public IOutput GetFormattedOutput()
+        {
+            var configName = "FundamentalFormattedOutput";
+            object obj = null;
             try
             {
                 // can this be injected ??
 
-                string outputName = GetOutputProviderName(configName);
+                var outputName = GetOutputProviderName(configName);
                 //string sTypeName = outputName;
-                Type objType = Type.GetType(outputName);
+                var objType = Type.GetType(outputName);
                 obj = Activator.CreateInstance(objType);
             }
             catch (Exception e)
@@ -31,11 +30,13 @@ namespace Avtec.DevMorningFix.FormatOutput
                 //Console.WriteLine("Exception occured: {0}", e);
                 throw new ExceptionServiceNotFound(string.Format($"No output format {configName} found."));
             }
-            return (FundamentalFormattedOutput)obj;
+
+            return (IOutput) obj;
         }
-        private String GetOutputProviderName(String outputName)
+
+        private string GetOutputProviderName(string outputName)
         {
-            NameValueCollection settings = ConfigurationManager.AppSettings;
+            var settings = ConfigurationManager.AppSettings;
             return settings.Get(outputName);
         }
     }
