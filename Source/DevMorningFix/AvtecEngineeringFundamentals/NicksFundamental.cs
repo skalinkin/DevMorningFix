@@ -1,4 +1,4 @@
-﻿namespace Avtec.DevMorningFix
+﻿namespace Avtec.DevMorningFix.AvtecEngineeringFundamentals
 {
     internal class NicksFundamental
     {

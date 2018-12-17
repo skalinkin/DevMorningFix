@@ -72,7 +72,7 @@
     <Compile Include="Infrastructure\IContainer.cs" />
     <Compile Include="Infrastructure\LifeCycle.cs" />
     <Compile Include="IStartup.cs" />
-    <Compile Include="NicksFundamental.cs" />
+    <Compile Include="AvtecEngineeringFundamentals\NicksFundamental.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceTier\Exceptions\ExceptionRequiredObjectNotFound.cs" />
     <Compile Include="ServiceTier\Exceptions\ExceptionServiceNotFound.cs" />
