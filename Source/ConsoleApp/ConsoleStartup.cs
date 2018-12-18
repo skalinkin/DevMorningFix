@@ -2,7 +2,7 @@ using System;
 using Avtec.DevMorningFix.BusinessTier;
 using Avtec.DevMorningFix.FormatOutput;
 
-namespace Avtec.DevMorningFix
+namespace Avtec.DevMorningFix.ConsoleApp
 {
     internal class ConsoleStartup : IStartup
     {

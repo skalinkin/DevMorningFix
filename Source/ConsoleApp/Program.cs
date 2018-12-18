@@ -1,5 +1,5 @@
-using Avtec.DevMorningFix.ConsoleApp.Container;
 using Avtec.DevMorningFix.Infrastructure;
+using Container;
 
 namespace Avtec.DevMorningFix.ConsoleApp
 {
@@ -16,7 +16,13 @@ namespace Avtec.DevMorningFix.ConsoleApp
         {
             var container = new SimpleIocContainer();
             Bootstrapper.Configure(container);
+            Register(container);
             return container;
+        }
+
+        private static void Register(IContainer container)
+        {
+            container.Register<IStartup, ConsoleStartup>();
         }
     }
 }

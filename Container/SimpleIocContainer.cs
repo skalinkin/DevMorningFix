@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using Avtec.DevMorningFix.Infrastructure;
 
-namespace Avtec.DevMorningFix.ConsoleApp.Container
+namespace Container
 {
     public class SimpleIocContainer : IContainer
     {
@@ -31,15 +32,15 @@ namespace Avtec.DevMorningFix.ConsoleApp.Container
 
         private object ResolveObject(Type typeToResolve)
         {
-            var registeredObject = registeredObjects.Where(o => o.TypeToResolve == typeToResolve).ToArray();
-            if (!registeredObject.Any())
+            var registeredObject = Enumerable.Where(registeredObjects, o => o.TypeToResolve == typeToResolve).ToArray();
+            if (!Enumerable.Any(registeredObject))
             {
                 throw new TypeNotRegisteredException($"The type {typeToResolve.Name} has not been registered");
             }
 
             if (registeredObject.Length == 1)
             {
-            return GetInstance(registeredObject.First());
+            return GetInstance(Enumerable.First(registeredObject));
             }
 
             var list = new List<object>();
@@ -57,7 +58,7 @@ namespace Avtec.DevMorningFix.ConsoleApp.Container
                 registeredObject.LifeCycle == LifeCycle.Transient)
             {
                 var parameters = ResolveConstructorParameters(registeredObject);
-                registeredObject.CreateInstance(parameters.ToArray());
+                registeredObject.CreateInstance(Enumerable.ToArray<object>(parameters));
             }
 
             return registeredObject.Instance;
@@ -65,7 +66,7 @@ namespace Avtec.DevMorningFix.ConsoleApp.Container
 
         private IEnumerable<object> ResolveConstructorParameters(RegisteredObject registeredObject)
         {
-            var constructorInfo = registeredObject.ConcreteType.GetConstructors().First();
+            var constructorInfo = Enumerable.First<ConstructorInfo>(registeredObject.ConcreteType.GetConstructors());
             foreach (var parameter in constructorInfo.GetParameters())
             {
                 yield return ResolveObject(parameter.ParameterType);
