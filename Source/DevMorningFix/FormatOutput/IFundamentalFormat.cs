@@ -1,6 +1,6 @@
 ﻿namespace Avtec.DevMorningFix.FormatOutput
 {
-    internal interface IFundamentalFormat
+    public interface IFundamentalFormat
     {
         string GetFormat();
     }

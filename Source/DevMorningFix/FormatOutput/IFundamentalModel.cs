@@ -2,7 +2,7 @@
 
 namespace Avtec.DevMorningFix.FormatOutput
 {
-    internal interface IFundamentalModel
+    public interface IFundamentalModel
     {
         object[] GetData(IDevFixFundamental target);
     }
