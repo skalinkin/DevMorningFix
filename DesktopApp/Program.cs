@@ -6,13 +6,13 @@ using DesktopApp;
 
 namespace Avtec.DevMorningFix.DesktopApp
 {
-    static class Program
+    internal static class Program
     {
         /// <summary>
-        /// The main entry point for the application.
+        ///     The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        private static void Main()
         {
             Application.SetCompatibleTextRenderingDefault(false);
             var container = GetContainer();
@@ -31,7 +31,7 @@ namespace Avtec.DevMorningFix.DesktopApp
         private static void Register(SimpleIocContainer container)
         {
             container.Register<IStartup, DesktopStartup>();
-            container.Register<Form1,Form1>();
+            container.Register<Form1, Form1>();
         }
     }
 }

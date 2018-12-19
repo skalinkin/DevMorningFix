@@ -1,5 +1,4 @@
-﻿using System;
-using Avtec.DevMorningFix.BusinessTier;
+﻿using Avtec.DevMorningFix.BusinessTier;
 using Avtec.DevMorningFix.FormatOutput;
 using Avtec.DevMorningFix.ServiceTier;
 using Avtec.DevMorningFix.ServiceTier.DataManager;

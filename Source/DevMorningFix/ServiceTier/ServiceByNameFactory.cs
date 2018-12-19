@@ -1,34 +1,32 @@
 ﻿using System;
-using System.Collections.Specialized;
 using System.Configuration;
 using Avtec.DevMorningFix.ServiceTier.DataManager;
-using DevMorningFix.services;
 using DevMorningFix.services.Exceptions;
 
 namespace Avtec.DevMorningFix.ServiceTier
 {
     public class ServiceByNameFactory
     {
-        private static ServiceByNameFactory factory = new ServiceByNameFactory();
+        private static readonly ServiceByNameFactory factory = new ServiceByNameFactory();
 
         public static ServiceByNameFactory GetInstance()
         {
             return factory;
         }
 
-        public ISimpleService GetService(String serviceName)
+        public ISimpleService GetService(string serviceName)
         {
             // for debug
             // ReadAppSettings();
             // 
             IDataManager dataManager = null;
-            Object obj = null;
+            object obj = null;
 
             try
             {
                 // can this be injected ??
-                string sImplName = GetImplName(serviceName);
-                string sTypeName = sImplName;
+                var sImplName = GetImplName(serviceName);
+                var sTypeName = sImplName;
                 if (serviceName.CompareTo("ISimpleFundamentalService") == 0)
                 {
                     dataManager = new XmlManager();
@@ -36,9 +34,11 @@ namespace Avtec.DevMorningFix.ServiceTier
                 else
                 {
                     // TODO: add in a unit of work service for some ORM interface - e.g. entity framework, nhibernate
-                    throw new ExceptionServiceNotFound(string.Format("Service named '{0}' is not supported.", serviceName));
+                    throw new ExceptionServiceNotFound(string.Format("Service named '{0}' is not supported.",
+                        serviceName));
                 }
-                Type objType = Type.GetType(sImplName);
+
+                var objType = Type.GetType(sImplName);
                 obj = Activator.CreateInstance(objType, dataManager);
             }
             catch (Exception e)
@@ -49,26 +49,26 @@ namespace Avtec.DevMorningFix.ServiceTier
 
             if (serviceName.CompareTo("ISimpleFundamentalService") == 0)
             {
-                return (ISimpleFundamentalService)obj;
+                return (ISimpleFundamentalService) obj;
             }
-            else
-            {
-                // TODO: add in a unit of work service for some ORM interface - e.g. entity framework, nhibernate
-                throw new ExceptionServiceNotFound(string.Format("Service named '{0}' is not supported.", serviceName));
-            }
+
+            // TODO: add in a unit of work service for some ORM interface - e.g. entity framework, nhibernate
+            throw new ExceptionServiceNotFound(string.Format("Service named '{0}' is not supported.", serviceName));
         }
-        private String GetImplName(String serviceName)
+
+        private string GetImplName(string serviceName)
         {
-            NameValueCollection settings = ConfigurationManager.AppSettings;
+            var settings = ConfigurationManager.AppSettings;
             return settings.Get(serviceName);
         }
+
         private static void ReadAppSettings()
         {
             try
             {
                 // Get the AppSettings section.
-                NameValueCollection appSettings =
-                   ConfigurationManager.AppSettings;
+                var appSettings =
+                    ConfigurationManager.AppSettings;
 
                 // Get the AppSettings section elements.
                 Console.WriteLine();
@@ -78,20 +78,20 @@ namespace Avtec.DevMorningFix.ServiceTier
                 if (appSettings.Count == 0)
                 {
                     Console.WriteLine("[ReadAppSettings: {0}]",
-                    "AppSettings is empty Use GetSection command first.");
+                        "AppSettings is empty Use GetSection command first.");
                 }
-                for (int i = 0; i < appSettings.Count; i++)
+
+                for (var i = 0; i < appSettings.Count; i++)
                 {
                     Console.WriteLine("#{0} Key: {1} Value: {2}",
-                      i, appSettings.GetKey(i), appSettings[i]);
+                        i, appSettings.GetKey(i), appSettings[i]);
                 }
             }
             catch (ConfigurationErrorsException e)
             {
                 Console.WriteLine("[ReadAppSettings: {0}]",
-                    e.ToString());
+                    e);
             }
         }
-
     }
 }

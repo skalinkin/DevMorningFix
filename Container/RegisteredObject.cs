@@ -12,17 +12,17 @@ namespace Container
             LifeCycle = lifeCycle;
         }
 
-        public Type TypeToResolve { get; private set; }
+        public Type TypeToResolve { get; }
 
-        public Type ConcreteType { get; private set; }
+        public Type ConcreteType { get; }
 
         public object Instance { get; private set; }
 
-        public LifeCycle LifeCycle { get; private set; }
+        public LifeCycle LifeCycle { get; }
 
         public void CreateInstance(params object[] args)
         {
-            this.Instance = Activator.CreateInstance(this.ConcreteType, args);
+            Instance = Activator.CreateInstance(ConcreteType, args);
         }
     }
 }

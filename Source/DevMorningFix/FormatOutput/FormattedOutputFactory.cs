@@ -12,6 +12,7 @@ namespace Avtec.DevMorningFix.FormatOutput
         {
             _output = output;
         }
+
         public IOutput GetFormattedOutput()
         {
             var configName = "FundamentalFormattedOutput";

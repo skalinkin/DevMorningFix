@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using Avtec.DevMorningFix.Infrastructure;
 
 namespace Container
@@ -32,15 +31,15 @@ namespace Container
 
         private object ResolveObject(Type typeToResolve)
         {
-            var registeredObject = Enumerable.Where(registeredObjects, o => o.TypeToResolve == typeToResolve).ToArray();
-            if (!Enumerable.Any(registeredObject))
+            var registeredObject = registeredObjects.Where(o => o.TypeToResolve == typeToResolve).ToArray();
+            if (!registeredObject.Any())
             {
                 throw new TypeNotRegisteredException($"The type {typeToResolve.Name} has not been registered");
             }
 
             if (registeredObject.Length == 1)
             {
-            return GetInstance(Enumerable.First(registeredObject));
+                return GetInstance(registeredObject.First());
             }
 
             var list = new List<object>();
@@ -58,7 +57,7 @@ namespace Container
                 registeredObject.LifeCycle == LifeCycle.Transient)
             {
                 var parameters = ResolveConstructorParameters(registeredObject);
-                registeredObject.CreateInstance(Enumerable.ToArray<object>(parameters));
+                registeredObject.CreateInstance(parameters.ToArray());
             }
 
             return registeredObject.Instance;
@@ -66,7 +65,7 @@ namespace Container
 
         private IEnumerable<object> ResolveConstructorParameters(RegisteredObject registeredObject)
         {
-            var constructorInfo = Enumerable.First<ConstructorInfo>(registeredObject.ConcreteType.GetConstructors());
+            var constructorInfo = registeredObject.ConcreteType.GetConstructors().First();
             foreach (var parameter in constructorInfo.GetParameters())
             {
                 yield return ResolveObject(parameter.ParameterType);

@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using Avtec.DevMorningFix.AvtecEngineeringFundamentals;
-using DevMorningFix.services;
 
 namespace Avtec.DevMorningFix.ServiceTier
 {
@@ -14,6 +13,5 @@ namespace Avtec.DevMorningFix.ServiceTier
         IEnumerable<IDevFixFundamental> GetFundamentalsList();
         bool DeleteFundamental(string name);
         bool CreateFundamental(int id, string name, string description);
-
     }
 }

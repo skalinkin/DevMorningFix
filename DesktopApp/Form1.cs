@@ -26,7 +26,7 @@ namespace DesktopApp
             foreach (var fundamental in fundamentals)
             {
                 var data = _model.GetData(fundamental);
-                label1.Text += string.Format(format+"\n", data);
+                label1.Text += string.Format(format + "\n", data);
             }
         }
     }

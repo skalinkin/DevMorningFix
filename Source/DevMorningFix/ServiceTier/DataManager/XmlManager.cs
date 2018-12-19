@@ -10,96 +10,106 @@ namespace Avtec.DevMorningFix.ServiceTier.DataManager
     {
         public string GetFundamentalName(string ID)
         {
-            string name = "ain't got no name";
+            var name = "ain't got no name";
             var dir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            string fn = dir + "\\ServiceTier\\DataStore\\SimpleData.xml";
+            var fn = dir + "\\ServiceTier\\DataStore\\SimpleData.xml";
             var doc = XDocument.Load(fn);
             var data = doc.Element("DevMorningFixFundamentals").Elements("fundamental");
-            foreach (XElement item in data)
+            foreach (var item in data)
             {
-                string xmlId = item.Attribute("ID").Value;
+                var xmlId = item.Attribute("ID").Value;
                 if (xmlId == ID)
                 {
                     name = item.Attribute("Name").Value;
                     break;
                 }
             }
+
             return name;
         }
+
         public string GetFundamentalDescription(string ID)
         {
-            string description = "ain't got no description";
+            var description = "ain't got no description";
             var dir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            string fn = dir + "\\ServiceTier\\DataStore\\SimpleData.xml";
+            var fn = dir + "\\ServiceTier\\DataStore\\SimpleData.xml";
             var doc = XDocument.Load(fn);
             var data = doc.Element("DevMorningFixFundamentals").Elements("fundamental");
-            foreach (XElement item in data)
+            foreach (var item in data)
             {
-                string xmlId = item.Attribute("ID").Value;
+                var xmlId = item.Attribute("ID").Value;
                 if (xmlId == ID)
                 {
                     description = item.Attribute("Description").Value;
                     break;
                 }
             }
+
             return description;
         }
+
         public IEnumerable<IDevFixFundamental> GetFundamentalsList()
         {
-            List<IDevFixFundamental> fundamentals = new List<IDevFixFundamental>();
+            var fundamentals = new List<IDevFixFundamental>();
             var dir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            string fn = dir + "\\ServiceTier\\DataStore\\SimpleData.xml";
+            var fn = dir + "\\ServiceTier\\DataStore\\SimpleData.xml";
             var doc = XDocument.Load(fn);
             var data = doc.Element("DevMorningFixFundamentals").Elements("fundamental");
-            foreach (XElement item in data)
+            foreach (var item in data)
             {
-                DevFixFundamental dff = new DevFixFundamental(this);
-                string id = item.Attribute("ID").Value;
+                var dff = new DevFixFundamental(this);
+                var id = item.Attribute("ID").Value;
                 dff.Initialize(item.Attribute("ID").Value);
                 dff.Name = item.Attribute("Name").Value;
                 dff.Description = item.Attribute("Description").Value;
                 fundamentals.Add(dff);
             }
+
             return fundamentals;
         }
+
         public IEnumerable<string> GetFundamentalNames()
         {
-            List<string> names = new List<string>();
+            var names = new List<string>();
             var dir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            string fn = dir + "\\ServiceTier\\DataStore\\SimpleData.xml";
+            var fn = dir + "\\ServiceTier\\DataStore\\SimpleData.xml";
             var doc = XDocument.Load(fn);
             var data = doc.Element("DevMorningFixFundamentals").Elements("fundamental");
-            foreach (XElement item in data)
+            foreach (var item in data)
             {
                 names.Add(item.Attribute("Name").Value);
             }
+
             return names;
         }
+
         public IEnumerable<string> GetFundamentalIDs()
         {
-            List<string> IDs = new List<string>();
+            var IDs = new List<string>();
             var dir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            string fn = dir + "\\ServiceTier\\DataStore\\SimpleData.xml";
+            var fn = dir + "\\ServiceTier\\DataStore\\SimpleData.xml";
             var doc = XDocument.Load(fn);
             var data = doc.Element("DevMorningFixFundamentals").Elements("fundamental");
-            foreach (XElement item in data)
+            foreach (var item in data)
             {
                 IDs.Add(item.Attribute("ID").Value);
             }
+
             return IDs;
         }
 
         public IEnumerable<string> GetFundamentalDescriptions()
         {
-            List<string> Descriptions = new List<string>();
+            var Descriptions = new List<string>();
             var dir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            string fn = dir + "\\ServiceTier\\DataStore\\SimpleData.xml";
+            var fn = dir + "\\ServiceTier\\DataStore\\SimpleData.xml";
             var doc = XDocument.Load(fn);
             var data = doc.Element("DevMorningFixFundamentals").Elements("fundamental");
-            foreach (XElement item in data)
+            foreach (var item in data)
             {
                 Descriptions.Add(item.Attribute("Description").Value);
             }
+
             return Descriptions;
         }
 
@@ -116,6 +126,7 @@ namespace Avtec.DevMorningFix.ServiceTier.DataManager
             IDevFixFundamental f = new DevFixFundamental();
             return f;
         }
+
         public bool DeleteFundamental(string Name)
         {
             // get from data
@@ -133,6 +144,5 @@ namespace Avtec.DevMorningFix.ServiceTier.DataManager
             // get from data
             return true;
         }
-
     }
 }

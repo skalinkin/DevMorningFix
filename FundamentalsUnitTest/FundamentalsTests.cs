@@ -7,95 +7,176 @@ namespace FundamentalsUnitTest
     [TestFixture]
     public class FundamentalsTests
     {
+        [Test]
+        public void Fundamental1_GetDescription_ReturnsCorrectDescriptionValue()
+        {
+            //Arange
+            var id = "1";
+            IDataManager dataManager = new XmlManager();
+            var fundamental = new DevFixFundamental(dataManager);
+            fundamental.Initialize(id);
+            var fromM = dataManager.GetFundamentalDescription(id);
+            // Act
+            var fromF = fundamental.Description;
+            //Assert
+            StringAssert.AreEqualIgnoringCase(fromM, fromF);
+        }
+
         // One
         [Test]
         public void Fundamental1_GetName_ReturnsCorrectNameValue()
         {
             //Arange
-            string id = "1";
+            var id = "1";
             IDataManager dataManager = new XmlManager();
             var fundamental = new DevFixFundamental(dataManager);
             fundamental.Initialize(id);
-            string fromM = dataManager.GetFundamentalName(id);
+            var fromM = dataManager.GetFundamentalName(id);
             // Act
-            string fromF = fundamental.Name;
+            var fromF = fundamental.Name;
             //Assert
             StringAssert.AreEqualIgnoringCase(fromM, fromF);
         }
+
         [Test]
-        public void Fundamental1_GetDescription_ReturnsCorrectDescriptionValue()
+        public void Fundamental10_GetDescription_ReturnsCorrectDescriptionValue()
         {
             //Arange
-            string id = "1";
+            var id = "10";
             IDataManager dataManager = new XmlManager();
             var fundamental = new DevFixFundamental(dataManager);
             fundamental.Initialize(id);
-            string fromM = dataManager.GetFundamentalDescription(id);
+            var fromM = dataManager.GetFundamentalDescription(id);
             // Act
-            string fromF = fundamental.Description;
+            var fromF = fundamental.Description;
             //Assert
             StringAssert.AreEqualIgnoringCase(fromM, fromF);
         }
+
+        // ten
+        [Test]
+        public void Fundamental10_GetName_ReturnsCorrectNameValue()
+        {
+            //Arange
+            var id = "10";
+            IDataManager dataManager = new XmlManager();
+            var fundamental = new DevFixFundamental(dataManager);
+            fundamental.Initialize(id);
+            var fromM = dataManager.GetFundamentalName(id);
+            // Act
+            var fromF = fundamental.Name;
+            //Assert
+            StringAssert.AreEqualIgnoringCase(fromM, fromF);
+        }
+
+        [Test]
+        public void Fundamental11_GetDescription_ReturnsCorrectDescriptionValue()
+        {
+            //Arange
+            var id = "11";
+            IDataManager dataManager = new XmlManager();
+            var fundamental = new DevFixFundamental(dataManager);
+            fundamental.Initialize(id);
+            var fromM = dataManager.GetFundamentalDescription(id);
+            // Act
+            var fromF = fundamental.Description;
+            //Assert
+            StringAssert.AreEqualIgnoringCase(fromM, fromF);
+        }
+
+        // eleven
+        [Test]
+        public void Fundamental11_GetName_ReturnsCorrectNameValue()
+        {
+            //Arange
+            var id = "11";
+            IDataManager dataManager = new XmlManager();
+            var fundamental = new DevFixFundamental(dataManager);
+            fundamental.Initialize(id);
+            var fromM = dataManager.GetFundamentalName(id);
+            // Act
+            var fromF = fundamental.Name;
+            //Assert
+            StringAssert.AreEqualIgnoringCase(fromM, fromF);
+        }
+
+        [Test]
+        public void Fundamental2_GetDescription_ReturnsCorrectDescriptionValue()
+        {
+            //Arange
+            var id = "2";
+            IDataManager dataManager = new XmlManager();
+            var fundamental = new DevFixFundamental(dataManager);
+            fundamental.Initialize(id);
+            var fromM = dataManager.GetFundamentalDescription(id);
+            // Act
+            var fromF = fundamental.Description;
+            //Assert
+            StringAssert.AreEqualIgnoringCase(fromM, fromF);
+        }
+
         // two
         [Test]
         public void Fundamental2_GetName_ReturnsCorrectNameValue()
         {
             //Arange
-            string id = "2";
+            var id = "2";
             IDataManager dataManager = new XmlManager();
             var fundamental = new DevFixFundamental(dataManager);
             fundamental.Initialize(id);
-            string fromM = dataManager.GetFundamentalName(id);
+            var fromM = dataManager.GetFundamentalName(id);
             // Act
-            string fromF = fundamental.Name;
+            var fromF = fundamental.Name;
             //Assert
             StringAssert.AreEqualIgnoringCase(fromM, fromF);
         }
+
         [Test]
-        public void Fundamental2_GetDescription_ReturnsCorrectDescriptionValue()
+        public void Fundamental3_GetDescription_ReturnsCorrectDescriptionValue()
         {
             //Arange
-            string id = "2";
+            var id = "3";
             IDataManager dataManager = new XmlManager();
             var fundamental = new DevFixFundamental(dataManager);
             fundamental.Initialize(id);
-            string fromM = dataManager.GetFundamentalDescription(id);
+            var fromM = dataManager.GetFundamentalDescription(id);
             // Act
-            string fromF = fundamental.Description;
+            var fromF = fundamental.Description;
             //Assert
             StringAssert.AreEqualIgnoringCase(fromM, fromF);
         }
+
         // three
         [Test]
         public void Fundamental3_GetName_ReturnsCorrectNameValue()
         {
             //Arange
-            string id = "3";
+            var id = "3";
             IDataManager dataManager = new XmlManager();
             var fundamental = new DevFixFundamental(dataManager);
             fundamental.Initialize(id);
-            string fromM = dataManager.GetFundamentalName(id);
+            var fromM = dataManager.GetFundamentalName(id);
             // Act
-            string fromF = fundamental.Name;
+            var fromF = fundamental.Name;
             //Assert
             StringAssert.AreEqualIgnoringCase(fromM, fromF);
         }
+
         [Test]
-        public void Fundamental3_GetDescription_ReturnsCorrectDescriptionValue()
+        public void Fundamental5_GetDescription_ReturnsCorrectDescriptionValue()
         {
             //Arange
-            string id = "3";
+            var id = "5";
             IDataManager dataManager = new XmlManager();
             var fundamental = new DevFixFundamental(dataManager);
             fundamental.Initialize(id);
-            string fromM = dataManager.GetFundamentalDescription(id);
+            var fromM = dataManager.GetFundamentalDescription(id);
             // Act
-            string fromF = fundamental.Description;
+            var fromF = fundamental.Description;
             //Assert
             StringAssert.AreEqualIgnoringCase(fromM, fromF);
         }
         // four
-
 
 
         // Five
@@ -103,201 +184,137 @@ namespace FundamentalsUnitTest
         public void Fundamental5_GetName_ReturnsCorrectNameValue()
         {
             //Arange
-            string id = "5";
-            IDataManager dataManager =  new XmlManager();
+            var id = "5";
+            IDataManager dataManager = new XmlManager();
             var fundamental = new DevFixFundamental(dataManager);
             fundamental.Initialize(id);
-            string fromM = dataManager.GetFundamentalName(id);
+            var fromM = dataManager.GetFundamentalName(id);
             // Act
-            string fromF = fundamental.Name;
+            var fromF = fundamental.Name;
             //Assert
             StringAssert.AreEqualIgnoringCase(fromM, fromF);
         }
+
         [Test]
-        public void Fundamental5_GetDescription_ReturnsCorrectDescriptionValue()
+        public void Fundamental6_GetDescription_ReturnsCorrectDescriptionValue()
         {
             //Arange
-            string id = "5";
-            IDataManager dataManager =  new XmlManager();
+            var id = "6";
+            IDataManager dataManager = new XmlManager();
             var fundamental = new DevFixFundamental(dataManager);
             fundamental.Initialize(id);
-            string fromM = dataManager.GetFundamentalDescription(id);
+            var fromM = dataManager.GetFundamentalDescription(id);
             // Act
-            string fromF = fundamental.Description;
+            var fromF = fundamental.Description;
             //Assert
             StringAssert.AreEqualIgnoringCase(fromM, fromF);
         }
+
         // six
         [Test]
         public void Fundamental6_GetName_ReturnsCorrectNameValue()
         {
             //Arange
-            string id = "6";
+            var id = "6";
             IDataManager dataManager = new XmlManager();
             var fundamental = new DevFixFundamental(dataManager);
             fundamental.Initialize(id);
-            string fromM = dataManager.GetFundamentalName(id);
+            var fromM = dataManager.GetFundamentalName(id);
             // Act
-            string fromF = fundamental.Name;
+            var fromF = fundamental.Name;
             //Assert
             StringAssert.AreEqualIgnoringCase(fromM, fromF);
         }
+
         [Test]
-        public void Fundamental6_GetDescription_ReturnsCorrectDescriptionValue()
+        public void Fundamental7_GetDescription_ReturnsCorrectDescriptionValue()
         {
             //Arange
-            string id = "6";
+            var id = "7";
             IDataManager dataManager = new XmlManager();
             var fundamental = new DevFixFundamental(dataManager);
             fundamental.Initialize(id);
-            string fromM = dataManager.GetFundamentalDescription(id);
+            var fromM = dataManager.GetFundamentalDescription(id);
             // Act
-            string fromF = fundamental.Description;
+            var fromF = fundamental.Description;
             //Assert
             StringAssert.AreEqualIgnoringCase(fromM, fromF);
         }
+
         // seven
         [Test]
         public void Fundamental7_GetName_ReturnsCorrectNameValue()
         {
             //Arange
-            string id = "7";
+            var id = "7";
             IDataManager dataManager = new XmlManager();
             var fundamental = new DevFixFundamental(dataManager);
             fundamental.Initialize(id);
-            string fromM = dataManager.GetFundamentalName(id);
+            var fromM = dataManager.GetFundamentalName(id);
             // Act
-            string fromF = fundamental.Name;
+            var fromF = fundamental.Name;
             //Assert
             StringAssert.AreEqualIgnoringCase(fromM, fromF);
         }
+
         [Test]
-        public void Fundamental7_GetDescription_ReturnsCorrectDescriptionValue()
+        public void Fundamental8_GetDescription_ReturnsCorrectDescriptionValue()
         {
             //Arange
-            string id = "7";
+            var id = "8";
             IDataManager dataManager = new XmlManager();
             var fundamental = new DevFixFundamental(dataManager);
             fundamental.Initialize(id);
-            string fromM = dataManager.GetFundamentalDescription(id);
+            var fromM = dataManager.GetFundamentalDescription(id);
             // Act
-            string fromF = fundamental.Description;
+            var fromF = fundamental.Description;
             //Assert
             StringAssert.AreEqualIgnoringCase(fromM, fromF);
         }
+
         // eight
         [Test]
         public void Fundamental8_GetName_ReturnsCorrectNameValue()
         {
             //Arange
-            string id = "8";
+            var id = "8";
             IDataManager dataManager = new XmlManager();
             var fundamental = new DevFixFundamental(dataManager);
             fundamental.Initialize(id);
-            string fromM = dataManager.GetFundamentalName(id);
+            var fromM = dataManager.GetFundamentalName(id);
             // Act
-            string fromF = fundamental.Name;
+            var fromF = fundamental.Name;
             //Assert
             StringAssert.AreEqualIgnoringCase(fromM, fromF);
         }
+
         [Test]
-        public void Fundamental8_GetDescription_ReturnsCorrectDescriptionValue()
+        public void Fundamental9_GetDescription_ReturnsCorrectDescriptionValue()
         {
             //Arange
-            string id = "8";
+            var id = "9";
             IDataManager dataManager = new XmlManager();
             var fundamental = new DevFixFundamental(dataManager);
             fundamental.Initialize(id);
-            string fromM = dataManager.GetFundamentalDescription(id);
+            var fromM = dataManager.GetFundamentalDescription(id);
             // Act
-            string fromF = fundamental.Description;
+            var fromF = fundamental.Description;
             //Assert
             StringAssert.AreEqualIgnoringCase(fromM, fromF);
         }
+
         // nine
         [Test]
         public void Fundamental9_GetName_ReturnsCorrectNameValue()
         {
             //Arange
-            string id = "9";
+            var id = "9";
             IDataManager dataManager = new XmlManager();
             var fundamental = new DevFixFundamental(dataManager);
             fundamental.Initialize(id);
-            string fromM = dataManager.GetFundamentalName(id);
+            var fromM = dataManager.GetFundamentalName(id);
             // Act
-            string fromF = fundamental.Name;
-            //Assert
-            StringAssert.AreEqualIgnoringCase(fromM, fromF);
-        }
-        [Test]
-        public void Fundamental9_GetDescription_ReturnsCorrectDescriptionValue()
-        {
-            //Arange
-            string id = "9";
-            IDataManager dataManager = new XmlManager();
-            var fundamental = new DevFixFundamental(dataManager);
-            fundamental.Initialize(id);
-            string fromM = dataManager.GetFundamentalDescription(id);
-            // Act
-            string fromF = fundamental.Description;
-            //Assert
-            StringAssert.AreEqualIgnoringCase(fromM, fromF);
-        }
-        // ten
-        [Test]
-        public void Fundamental10_GetName_ReturnsCorrectNameValue()
-        {
-            //Arange
-            string id = "10";
-            IDataManager dataManager = new XmlManager();
-            var fundamental = new DevFixFundamental(dataManager);
-            fundamental.Initialize(id);
-            string fromM = dataManager.GetFundamentalName(id);
-            // Act
-            string fromF = fundamental.Name;
-            //Assert
-            StringAssert.AreEqualIgnoringCase(fromM, fromF);
-        }
-        [Test]
-        public void Fundamental10_GetDescription_ReturnsCorrectDescriptionValue()
-        {
-            //Arange
-            string id = "10";
-            IDataManager dataManager = new XmlManager();
-            var fundamental = new DevFixFundamental(dataManager);
-            fundamental.Initialize(id);
-            string fromM = dataManager.GetFundamentalDescription(id);
-            // Act
-            string fromF = fundamental.Description;
-            //Assert
-            StringAssert.AreEqualIgnoringCase(fromM, fromF);
-        }
-        // eleven
-        [Test]
-        public void Fundamental11_GetName_ReturnsCorrectNameValue()
-        {
-            //Arange
-            string id = "11";
-            IDataManager dataManager = new XmlManager();
-            var fundamental = new DevFixFundamental(dataManager);
-            fundamental.Initialize(id);
-            string fromM = dataManager.GetFundamentalName(id);
-            // Act
-            string fromF = fundamental.Name;
-            //Assert
-            StringAssert.AreEqualIgnoringCase(fromM, fromF);
-        }
-        [Test]
-        public void Fundamental11_GetDescription_ReturnsCorrectDescriptionValue()
-        {
-            //Arange
-            string id = "11";
-            IDataManager dataManager = new XmlManager();
-            var fundamental = new DevFixFundamental(dataManager);
-            fundamental.Initialize(id);
-            string fromM = dataManager.GetFundamentalDescription(id);
-            // Act
-            string fromF = fundamental.Description;
+            var fromF = fundamental.Name;
             //Assert
             StringAssert.AreEqualIgnoringCase(fromM, fromF);
         }

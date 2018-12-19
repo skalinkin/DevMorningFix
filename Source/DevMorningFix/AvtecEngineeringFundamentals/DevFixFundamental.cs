@@ -1,19 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Avtec.DevMorningFix.ServiceTier.DataManager;
+﻿using Avtec.DevMorningFix.ServiceTier.DataManager;
 
 namespace Avtec.DevMorningFix.AvtecEngineeringFundamentals
 {
     public class DevFixFundamental : IDevFixFundamental
     {
-        private IDataManager _dataManager;
-
-        public string Description { get; set; }
-        public string Name { get; set; }
-        public string ID { get; set; }
+        private readonly IDataManager _dataManager;
 
         public DevFixFundamental()
         {
@@ -23,6 +14,10 @@ namespace Avtec.DevMorningFix.AvtecEngineeringFundamentals
         {
             _dataManager = dataManager;
         }
+
+        public string Description { get; set; }
+        public string Name { get; set; }
+        public string ID { get; set; }
 
         public void Initialize(string id)
         {

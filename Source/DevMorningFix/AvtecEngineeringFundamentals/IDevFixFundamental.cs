@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Avtec.DevMorningFix.AvtecEngineeringFundamentals
+﻿namespace Avtec.DevMorningFix.AvtecEngineeringFundamentals
 {
     public interface IDevFixFundamental
     {

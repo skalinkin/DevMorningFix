@@ -1,10 +1,6 @@
 ﻿using System.Collections.Generic;
-using System.IO;
-using System.Reflection;
-using System.Xml.Linq;
 using Avtec.DevMorningFix.AvtecEngineeringFundamentals;
 using Avtec.DevMorningFix.ServiceTier.DataManager;
-using DevMorningFix.services;
 
 namespace Avtec.DevMorningFix.ServiceTier
 {
@@ -21,6 +17,7 @@ namespace Avtec.DevMorningFix.ServiceTier
         {
             return _dataManager.GetFundamentalNames();
         }
+
         public IEnumerable<string> GetFundamentalIDs()
         {
             return _dataManager.GetFundamentalIDs();
@@ -50,15 +47,6 @@ namespace Avtec.DevMorningFix.ServiceTier
             return _dataManager.GetFundamentalsList();
         }
 
-        public string GetFundamentalName(string id)
-        {
-            return _dataManager.GetFundamentalName(id);
-        }
-
-        public string GetFundamentalDescription(string id)
-        {
-            return _dataManager.GetFundamentalDescription(id);
-        }
         public bool DeleteFundamental(string name)
         {
             // get from data
@@ -70,6 +58,15 @@ namespace Avtec.DevMorningFix.ServiceTier
             // get from data
             return true;
         }
+
+        public string GetFundamentalName(string id)
+        {
+            return _dataManager.GetFundamentalName(id);
+        }
+
+        public string GetFundamentalDescription(string id)
+        {
+            return _dataManager.GetFundamentalDescription(id);
+        }
     }
 }
-
