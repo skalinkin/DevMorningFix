@@ -7,7 +7,16 @@ namespace Avtec.DevMorningFix.ServiceTier
 {
     public class ServiceByNameFactory
     {
-        private static readonly ServiceByNameFactory factory = new ServiceByNameFactory();
+        // todo Why can't I get rid of the singleton-ness of this class and inject a service
+        // 
+        // todo why can't I make a simple constructor that takes a simple service
+        // todo I guess I am reuired to have a constructor that takes no parameters ??
+        // todo but still 'it' thinks ServiceByNameFactory(ISimpleService svc) is a constructor with two parameters
+        // 
+        // todo it seems like I can get rid of this reading tha app config, since container init did it
+        // todo but there is some conspiracy against that
+        // 
+        private static readonly ServiceByNameFactory factory = new ServiceByNameFactory() ;
 
         public static ServiceByNameFactory GetInstance()
         {
@@ -27,7 +36,7 @@ namespace Avtec.DevMorningFix.ServiceTier
                 // can this be injected ??
                 var sImplName = GetImplName(serviceName);
                 var sTypeName = sImplName;
-                if (serviceName.CompareTo("ISimpleFundamentalService") == 0)
+                if (serviceName.CompareTo("Avtec.DevMorningFix.ServiceTier.ISimpleFundamentalService") == 0)
                 {
                     dataManager = new XmlManager();
                 }
@@ -47,7 +56,7 @@ namespace Avtec.DevMorningFix.ServiceTier
                 throw new ExceptionServiceNotFound(string.Format("No service named '{0}' found.", serviceName));
             }
 
-            if (serviceName.CompareTo("ISimpleFundamentalService") == 0)
+            if (serviceName.CompareTo("Avtec.DevMorningFix.ServiceTier.ISimpleFundamentalService") == 0)
             {
                 return (ISimpleFundamentalService) obj;
             }

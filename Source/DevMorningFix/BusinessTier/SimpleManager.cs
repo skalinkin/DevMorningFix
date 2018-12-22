@@ -16,7 +16,7 @@ namespace Avtec.DevMorningFix.BusinessTier
 
         public ISimpleService GetService(string serviceName)
         {
-            return _factory.GetService(serviceName);
+             return _factory.GetService(serviceName);
         }
     }
 }

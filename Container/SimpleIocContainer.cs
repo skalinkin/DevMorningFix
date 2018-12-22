@@ -19,6 +19,11 @@ namespace Container
             registeredObjects.Add(new RegisteredObject(typeof(TTypeToResolve), typeof(TConcrete), lifeCycle));
         }
 
+        public void Register(Type resolve, Type concrete, LifeCycle lifeCycle)
+        {
+            registeredObjects.Add(new RegisteredObject(resolve, concrete, lifeCycle));
+        }
+
         public TTypeToResolve Resolve<TTypeToResolve>()
         {
             return (TTypeToResolve) ResolveObject(typeof(TTypeToResolve));
