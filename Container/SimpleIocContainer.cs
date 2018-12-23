@@ -19,6 +19,13 @@ namespace Container
             registeredObjects.Add(new RegisteredObject(typeof(TTypeToResolve), typeof(TConcrete), lifeCycle));
         }
 
+        // 
+        // A possible Kobayashi Maru situation
+        // 
+        public void Register(Type resolve, Type concrete)
+        {
+            registeredObjects.Add(new RegisteredObject(resolve, concrete, LifeCycle.Singleton));
+        }
         public void Register(Type resolve, Type concrete, LifeCycle lifeCycle)
         {
             registeredObjects.Add(new RegisteredObject(resolve, concrete, lifeCycle));
