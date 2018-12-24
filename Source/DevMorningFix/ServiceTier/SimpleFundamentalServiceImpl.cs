@@ -8,9 +8,9 @@ namespace Avtec.DevMorningFix.ServiceTier
     {
         private static IDataManager _dataManager;
 
-        public SimpleFundamentalServiceImpl(IDataManager dataManager)
+        public void Initialize()
         {
-            _dataManager = dataManager;
+            _dataManager = new XmlManager();
         }
 
         public IEnumerable<string> GetFundamentalNames()
@@ -30,14 +30,12 @@ namespace Avtec.DevMorningFix.ServiceTier
 
         public IDevFixFundamental GetDevFixFundamental(string name)
         {
-            // get from data
             IDevFixFundamental f = new DevFixFundamental();
             return f;
         }
 
         public IDevFixFundamental GetDevFixFundamental(int id)
         {
-            // get from data
             IDevFixFundamental f = new DevFixFundamental();
             return f;
         }
@@ -49,13 +47,11 @@ namespace Avtec.DevMorningFix.ServiceTier
 
         public bool DeleteFundamental(string name)
         {
-            // get from data
             return true;
         }
 
         public bool CreateFundamental(int id, string name, string description)
         {
-            // get from data
             return true;
         }
 
