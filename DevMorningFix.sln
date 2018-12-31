@@ -13,6 +13,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesktopApp", "DesktopApp\De
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Container", "Container\Container.csproj", "{9894E954-43F8-4129-AE01-BA5ED1F22F41}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation Layer", "Presentation Layer", "{982DD007-E704-493A-9879-89857BBA9287}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure Layer", "Infrastructure Layer", "{5ADF15EF-483D-4B79-859A-3A98EC392E26}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{0B0CCDC1-F84F-4579-93FC-AD2EF9A50C0D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +48,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E40CC0A1-C697-4E9D-8FBD-71CE495BE969} = {982DD007-E704-493A-9879-89857BBA9287}
+		{351C94E4-4DB1-4522-B0D4-3AEFE2C6F08F} = {0B0CCDC1-F84F-4579-93FC-AD2EF9A50C0D}
+		{B7BD82B5-1952-4EAF-AD29-97CF512153E8} = {982DD007-E704-493A-9879-89857BBA9287}
+		{9894E954-43F8-4129-AE01-BA5ED1F22F41} = {5ADF15EF-483D-4B79-859A-3A98EC392E26}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {156EE302-9B52-4DC1-B22B-E548C08DCB38}
