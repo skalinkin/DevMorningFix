@@ -1,7 +1,7 @@
 using System.Windows.Forms;
-using DesktopApp;
+using Avtec.DevMorningFix;
 
-namespace Avtec.DevMorningFix
+namespace DesktopApp
 {
     internal class DesktopStartup : IStartup
     {

@@ -44,8 +44,6 @@
   <ItemGroup>
     <Compile Include="AvtecEngineeringFundamentals\DevFixFundamental.cs" />
     <Compile Include="AvtecEngineeringFundamentals\IDevFixFundamental.cs" />
-    <Compile Include="BusinessTier\SimpleFundamentalsManager.cs" />
-    <Compile Include="BusinessTier\SimpleManager.cs" />
     <Compile Include="FormatOutput\ConsoleOutput.cs" />
     <Compile Include="FormatOutput\FileOutput.cs" />
     <Compile Include="FormatOutput\FormattedOutputFactory.cs" />
@@ -55,8 +53,8 @@
     <Compile Include="FormatOutput\IFundamentalFormat.cs" />
     <Compile Include="FormatOutput\IFundamentalModel.cs" />
     <Compile Include="FormatOutput\SimpleFormat.cs" />
-    <Compile Include="ServiceTier\DataManager\IDataManager.cs" />
-    <Compile Include="ServiceTier\DataManager\XmlManager.cs" />
+    <Compile Include="TempSpot\DataManager\IDataManager.cs" />
+    <Compile Include="TempSpot\DataManager\XmlManager.cs" />
     <Compile Include="Fundamental.cs" />
     <Compile Include="AvtecEngineeringFundamentals\Fundamental1.cs" />
     <Compile Include="AvtecEngineeringFundamentals\FundamentalEight.cs" />
@@ -73,15 +71,9 @@
     <Compile Include="IStartup.cs" />
     <Compile Include="AvtecEngineeringFundamentals\NicksFundamental.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ServiceTier\Exceptions\ExceptionRequiredObjectNotFound.cs" />
-    <Compile Include="ServiceTier\Exceptions\ExceptionServiceNotFound.cs" />
-    <Compile Include="ServiceTier\ISimpleFundamentalService.cs" />
-    <Compile Include="ServiceTier\ISimpleService.cs" />
-    <Compile Include="ServiceTier\ServiceByNameFactory.cs" />
-    <Compile Include="ServiceTier\SimpleFundamentalServiceImpl.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ServiceTier\DataStore\SimpleData.xml">
+    <Content Include="TempSpot\DataStore\SimpleData.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

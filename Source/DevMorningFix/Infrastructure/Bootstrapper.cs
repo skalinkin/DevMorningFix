@@ -1,10 +1,5 @@
 ﻿using System;
 using System.Configuration;
-using System.Reflection;
-using Avtec.DevMorningFix.BusinessTier;
-using Avtec.DevMorningFix.FormatOutput;
-using Avtec.DevMorningFix.ServiceTier;
-using Avtec.DevMorningFix.ServiceTier.DataManager;
 
 namespace Avtec.DevMorningFix.Infrastructure
 {

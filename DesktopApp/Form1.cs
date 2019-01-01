@@ -1,19 +1,25 @@
 ﻿using System;
 using System.Windows.Forms;
-using Avtec.DevMorningFix.BusinessTier;
 using Avtec.DevMorningFix.FormatOutput;
+using Avtec.DevMorningFix.TempSpot.DataManager;
 
 namespace DesktopApp
 {
     public partial class Form1 : Form
     {
-        private readonly SimpleManager _businessManager;
+        private readonly IDataManager _dataManager;
         private readonly IFundamentalFormat _format;
         private readonly IFundamentalModel _model;
 
-        public Form1(SimpleManager businessManager, IFundamentalFormat format, IFundamentalModel model)
+        /*
+        Note: 
+            This in no way suggests an implementation, solution or any other final construct.
+            This is simply code put in to allow further refactoring towards improvement.
+            I.e., it allows stuff to work for now.
+        */
+        public Form1(IDataManager dataManager, IFundamentalFormat format, IFundamentalModel model)
         {
-            _businessManager = businessManager;
+            _dataManager = dataManager;
             _format = format;
             _model = model;
             InitializeComponent();
@@ -21,7 +27,7 @@ namespace DesktopApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            var fundamentals = _businessManager.GetFundamentals();
+            var fundamentals = _dataManager.GetFundamentalsList();
             var format = _format.GetFormat();
             foreach (var fundamental in fundamentals)
             {

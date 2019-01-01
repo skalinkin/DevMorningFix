@@ -3,8 +3,9 @@ using System.IO;
 using System.Reflection;
 using System.Xml.Linq;
 using Avtec.DevMorningFix.AvtecEngineeringFundamentals;
+using Avtec.DevMorningFix.TempSpot.DataManager;
 
-namespace Avtec.DevMorningFix.ServiceTier.DataManager
+namespace Avtec.DevMorningFix.TempSpot.DataManager
 {
     public class XmlManager : IDataManager
     {
@@ -12,7 +13,7 @@ namespace Avtec.DevMorningFix.ServiceTier.DataManager
         {
             var name = "ain't got no name";
             var dir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            var fn = dir + "\\ServiceTier\\DataStore\\SimpleData.xml";
+            var fn = dir + "\\TempSpot\\DataStore\\SimpleData.xml";
             var doc = XDocument.Load(fn);
             var data = doc.Element("DevMorningFixFundamentals").Elements("fundamental");
             foreach (var item in data)
@@ -32,7 +33,7 @@ namespace Avtec.DevMorningFix.ServiceTier.DataManager
         {
             var description = "ain't got no description";
             var dir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            var fn = dir + "\\ServiceTier\\DataStore\\SimpleData.xml";
+            var fn = dir + "\\TempSpot\\DataStore\\SimpleData.xml";
             var doc = XDocument.Load(fn);
             var data = doc.Element("DevMorningFixFundamentals").Elements("fundamental");
             foreach (var item in data)
@@ -52,7 +53,7 @@ namespace Avtec.DevMorningFix.ServiceTier.DataManager
         {
             var fundamentals = new List<IDevFixFundamental>();
             var dir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            var fn = dir + "\\ServiceTier\\DataStore\\SimpleData.xml";
+            var fn = dir + "\\TempSpot\\DataStore\\SimpleData.xml";
             var doc = XDocument.Load(fn);
             var data = doc.Element("DevMorningFixFundamentals").Elements("fundamental");
             foreach (var item in data)
@@ -72,7 +73,7 @@ namespace Avtec.DevMorningFix.ServiceTier.DataManager
         {
             var names = new List<string>();
             var dir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            var fn = dir + "\\ServiceTier\\DataStore\\SimpleData.xml";
+            var fn = dir + "\\TempSpot\\DataStore\\SimpleData.xml";
             var doc = XDocument.Load(fn);
             var data = doc.Element("DevMorningFixFundamentals").Elements("fundamental");
             foreach (var item in data)
@@ -87,7 +88,7 @@ namespace Avtec.DevMorningFix.ServiceTier.DataManager
         {
             var IDs = new List<string>();
             var dir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            var fn = dir + "\\ServiceTier\\DataStore\\SimpleData.xml";
+            var fn = dir + "\\TempSpot\\DataStore\\SimpleData.xml";
             var doc = XDocument.Load(fn);
             var data = doc.Element("DevMorningFixFundamentals").Elements("fundamental");
             foreach (var item in data)
@@ -102,7 +103,7 @@ namespace Avtec.DevMorningFix.ServiceTier.DataManager
         {
             var Descriptions = new List<string>();
             var dir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            var fn = dir + "\\ServiceTier\\DataStore\\SimpleData.xml";
+            var fn = dir + "\\TempSpot\\DataStore\\SimpleData.xml";
             var doc = XDocument.Load(fn);
             var data = doc.Element("DevMorningFixFundamentals").Elements("fundamental");
             foreach (var item in data)

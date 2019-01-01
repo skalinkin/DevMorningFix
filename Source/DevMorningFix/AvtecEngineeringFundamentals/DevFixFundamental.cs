@@ -1,4 +1,4 @@
-﻿using Avtec.DevMorningFix.ServiceTier.DataManager;
+﻿using Avtec.DevMorningFix.TempSpot.DataManager;
 
 namespace Avtec.DevMorningFix.AvtecEngineeringFundamentals
 {

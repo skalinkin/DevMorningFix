@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Configuration;
-using DevMorningFix.services.Exceptions;
 
 namespace Avtec.DevMorningFix.FormatOutput
 {
@@ -29,8 +28,7 @@ namespace Avtec.DevMorningFix.FormatOutput
             catch (Exception e)
             {
                 //Console.WriteLine("Exception occured: {0}", e);
-                throw new ExceptionServiceNotFound(string.Format($"No output format {configName} found."));
-            }
+ }
 
             return (IOutput) obj;
         }
