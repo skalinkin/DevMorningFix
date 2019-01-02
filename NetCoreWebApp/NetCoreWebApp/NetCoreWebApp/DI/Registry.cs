@@ -11,8 +11,7 @@ namespace Avtec.NetCoreWebApp.DI
         {
             For<IDevFixFundamental>().Use<DevFixFundamental>();
             For<IFundamentalAccess>().Use<FundamentalAccess>();
-            For<IDataManager>().Use<XmlManager>();
-            
+            For<IDataManager>().Use<XmlManager>();            
         }
     }
 }
