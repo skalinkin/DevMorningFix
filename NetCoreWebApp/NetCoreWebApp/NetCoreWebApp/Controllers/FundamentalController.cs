@@ -16,8 +16,8 @@ namespace Avtec.NetCoreWebApp.Controllers
 
         public IActionResult Index()
         {
-            List<DevFixFundamental> _viewModel = _funAccess.GetFundamentals();
-            return View(_viewModel);
+            List<DevFixFundamental> viewModel = _funAccess.GetFundamentals();
+            return View(viewModel);
         }
     }
 }

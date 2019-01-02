@@ -1,9 +1,12 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using System;
+using Avtec.NetCoreWebApp.DI;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using StructureMap;
 
 namespace Avtec.NetCoreWebApp
 {
@@ -17,7 +20,7 @@ namespace Avtec.NetCoreWebApp
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
+        public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services.Configure<CookiePolicyOptions>(options =>
             {
@@ -25,13 +28,30 @@ namespace Avtec.NetCoreWebApp
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-
-
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            var container = new Container();
+            container.Configure(config =>
+            {
+                config.IncludeRegistry<FunRegistry>();
+                config.Populate(services);
+            });
+            return container.GetInstance<IServiceProvider>();
+        }
+
+        public IServiceProvider ConfigureIoC(IServiceCollection services)
+        {
+            var container = new Container();
+            container.Configure(config =>
+            {
+                config.IncludeRegistry<FunRegistry>();
+                config.Populate(services);
+            });
+            return container.GetInstance<IServiceProvider>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+            public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -51,7 +71,7 @@ namespace Avtec.NetCoreWebApp
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Fundamental}/{action=Index}/{id?}");
             });
         }
     }

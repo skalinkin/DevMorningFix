@@ -18,19 +18,21 @@ namespace Avtec.NetCoreWebApp.Fundamentals
         public List<DevFixFundamental> GetFundamentals()
         {
             //Todo: JPEase array
-            var funList = new List<DevFixFundamental>();
-            funList.Add(GetFundamental("1"));
-            funList.Add(GetFundamental("2"));
-            funList.Add(GetFundamental("3"));
-            funList.Add(GetFundamental("4"));
-            funList.Add(GetFundamental("5"));
-            funList.Add(GetFundamental("6"));
-            funList.Add(GetFundamental("7"));
-            funList.Add(GetFundamental("8"));
-            funList.Add(GetFundamental("9"));
-            funList.Add(GetFundamental("10"));
-            funList.Add(GetFundamental("11"));
-            return null;
+            var funList = new List<DevFixFundamental>
+            {
+                GetFundamental("1"),
+                GetFundamental("2"),
+                GetFundamental("3"),
+                GetFundamental("4"),
+                GetFundamental("5"),
+                GetFundamental("6"),
+                GetFundamental("7"),
+                GetFundamental("8"),
+                GetFundamental("9"),
+                GetFundamental("10"),
+                GetFundamental("11")
+            };
+            return funList;
         }
 
         public DevFixFundamental GetFundamental(string id)
