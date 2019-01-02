@@ -1,6 +1,4 @@
-using System;
-
-namespace NetCoreWebApp.Models
+namespace Avtec.NetCoreWebApp.Models
 {
     public class ErrorViewModel
     {
