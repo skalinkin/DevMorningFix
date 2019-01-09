@@ -16,10 +16,16 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="DevMorningFix">
+      <UniqueIdentifier>{5e315578-5159-4bed-a976-9e70b5020250}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
       <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DevMorningFix.h">
+      <Filter>DevMorningFix</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -28,6 +34,9 @@
     </ClCompile>
     <ClCompile Include="ExploringContainers.cpp">
       <Filter>Presentation Layer\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DevMorningFix.cpp">
+      <Filter>DevMorningFix</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
