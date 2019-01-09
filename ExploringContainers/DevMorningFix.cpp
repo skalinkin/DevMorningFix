@@ -1,15 +1,15 @@
 #include "pch.h"
 #include "DevMorningFix.h"
-#include <iostream>
+using namespace std;
 
-
-DevMorningFix::DevMorningFix()
+DevMorningFix::DevMorningFix(std::ostream& output) 
+	: m_outstream (output)
 {
 }
 
 void DevMorningFix::Start()
 {
-    std::cout << "Hello World!\n"; 
+    cout << "Hello World!\n"; 
 }
 
 DevMorningFix::~DevMorningFix()
