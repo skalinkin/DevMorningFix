@@ -1,16 +1,15 @@
 #include "pch.h"
 #include "DevMorningFix.h"
 
-DevMorningFix::DevMorningFix(std::ostream& output) 
-	: m_outstream (output)
+DevMorningFix::DevMorningFix(std::ostream& output, IMessageOfTheDay* messageProvider)
+	: m_outstream(output)
+	, m_messageProvider(messageProvider)
 {
 }
 
-void DevMorningFix::Start()
+void DevMorningFix::Start() const
 {
-	std::cout << "Hello World! C++ is waaaay cool.\n"; 
+	const std::string sMsg = m_messageProvider->GetMessage();
+	m_outstream << sMsg;
 }
 
-DevMorningFix::~DevMorningFix()
-{
-}

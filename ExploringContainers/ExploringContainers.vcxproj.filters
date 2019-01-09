@@ -27,6 +27,12 @@
     <ClInclude Include="DevMorningFix.h">
       <Filter>DevMorningFix</Filter>
     </ClInclude>
+    <ClInclude Include="IMessageOfTheDay.h">
+      <Filter>DevMorningFix</Filter>
+    </ClInclude>
+    <ClInclude Include="ImportantMessage.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -37,6 +43,9 @@
     </ClCompile>
     <ClCompile Include="DevMorningFix.cpp">
       <Filter>DevMorningFix</Filter>
+    </ClCompile>
+    <ClCompile Include="ImportantMessage.cpp">
+      <Filter>Presentation Layer\Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

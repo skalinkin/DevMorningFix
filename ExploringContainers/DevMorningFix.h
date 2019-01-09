@@ -1,5 +1,5 @@
 #pragma once
-#include <iostream>
+#include "IMessageOfTheDay.h"
 
 class DevMorningFix
 {
@@ -16,10 +16,12 @@ public:
 	DevMorningFix(const DevMorningFix&) = default;
 	DevMorningFix&operator=(const DevMorningFix&) = default;	// copy
 
-	DevMorningFix(std::ostream& output);
-	virtual ~DevMorningFix();
-	static void Start();
+	DevMorningFix(std::ostream&, IMessageOfTheDay*);
+	virtual ~DevMorningFix() = default;
+	void Start() const;
+
 private:
 	std::ostream& m_outstream;
+	std::unique_ptr<IMessageOfTheDay> m_messageProvider;
 };
 
