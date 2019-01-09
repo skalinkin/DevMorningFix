@@ -29,17 +29,11 @@ namespace Avtec.NetCoreWebApp
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-
-            var container = new Container();
-            container.Configure(config =>
-            {
-                config.IncludeRegistry<FunRegistry>();
-                config.Populate(services);
-            });
-            return container.GetInstance<IServiceProvider>();
+            var container = ConfigureContainer(services);
+            return container;
         }
 
-        public IServiceProvider ConfigureIoC(IServiceCollection services)
+        private IServiceProvider ConfigureContainer(IServiceCollection services)
         {
             var container = new Container();
             container.Configure(config =>
