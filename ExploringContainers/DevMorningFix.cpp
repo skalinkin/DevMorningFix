@@ -1,11 +1,26 @@
 #include "pch.h"
 #include "DevMorningFix.h"
 
-DevMorningFix::DevMorningFix(std::ostream& output, IMessageOfTheDay* messageProvider)
+/*******************************************************************************/
+/*!
+* Constructor.
+*
+* @param [in,out]	output	The output stream.
+* @param 		 	upMp  	unique_ptr to message provider.
+*/
+/*******************************************************************************/
+
+DevMorningFix::DevMorningFix(std::ostream& output, std::unique_ptr<IMessageOfTheDay> upMp)
 	: m_outstream(output)
-	, m_messageProvider(messageProvider)
+	, m_messageProvider(std::move(upMp))
 {
 }
+
+/*******************************************************************************/
+/*!
+* Starts the app business logic.
+*/
+/*******************************************************************************/
 
 void DevMorningFix::Start() const
 {
