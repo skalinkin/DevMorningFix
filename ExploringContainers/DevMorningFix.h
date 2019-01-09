@@ -6,8 +6,8 @@ class DevMorningFix
 public:
 	DevMorningFix(std::ostream& output);
 	virtual ~DevMorningFix();
-	void Start();
+	static void Start();
 private:
-	ostream m_outstream;
+	std::ostream& m_outstream;
 };
 
