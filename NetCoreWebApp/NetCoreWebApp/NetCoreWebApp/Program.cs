@@ -7,11 +7,16 @@ namespace Avtec.NetCoreWebApp
     {
         public static void Main(string[] args)
         {
-            CreateWebHostBuilder(args).Build().Run();
+            var webHostBuilder = CreateWebHostBuilder(args);
+            var webHost = webHostBuilder.Build();
+            webHost.Run();
         }
 
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+        public static IWebHostBuilder CreateWebHostBuilder(string[] args)
+        {
+            var webHostBuilderJ = WebHost.CreateDefaultBuilder(args);
+            var webHostBuilder = webHostBuilderJ.UseStartup<Startup>();
+            return webHostBuilder;
+        }
     }
 }
