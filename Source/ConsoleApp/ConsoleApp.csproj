@@ -51,7 +51,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Container\Container.csproj">
+    <ProjectReference Include="..\Container\Container.csproj">
       <Project>{9894e954-43f8-4129-ae01-ba5ed1f22f41}</Project>
       <Name>Container</Name>
     </ProjectReference>

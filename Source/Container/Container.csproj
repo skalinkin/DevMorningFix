@@ -48,7 +48,7 @@
     <Compile Include="TypeNotRegisteredException.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Source\DevMorningFix\DevMorningFix.csproj">
+    <ProjectReference Include="..\DevMorningFix\DevMorningFix.csproj">
       <Project>{bf40ec3e-89ce-4a17-b5da-0e35ee38581e}</Project>
       <Name>DevMorningFix</Name>
     </ProjectReference>

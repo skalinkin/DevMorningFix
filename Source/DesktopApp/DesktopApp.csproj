@@ -69,7 +69,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="..\Source\ConsoleApp\App.config">
+    <None Include="..\ConsoleApp\App.config">
       <Link>App.config</Link>
     </None>
     <None Include="Properties\Settings.settings">
@@ -87,7 +87,7 @@
       <Project>{9894e954-43f8-4129-ae01-ba5ed1f22f41}</Project>
       <Name>Container</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Source\DevMorningFix\DevMorningFix.csproj">
+    <ProjectReference Include="..\DevMorningFix\DevMorningFix.csproj">
       <Project>{bf40ec3e-89ce-4a17-b5da-0e35ee38581e}</Project>
       <Name>DevMorningFix</Name>
     </ProjectReference>
