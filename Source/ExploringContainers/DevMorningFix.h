@@ -1,5 +1,6 @@
 #pragma once
 #include "IMessageOfTheDay.h"
+#include <fruit/fruit.h>
 
 class DevMorningFix
 {
