@@ -92,7 +92,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(BOOST_INCLUDE_48PLUS);$(SolutionDir)Resources;$(SolutionDir)Resources\Hypodermic;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)Fruit\include;$(BOOST_INCLUDE_48PLUS);$(SolutionDir)Resources;$(SolutionDir)Resources\Hypodermic;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -100,7 +100,7 @@
       <AdditionalLibraryDirectories>$(BOOST_LIB_48PLUS);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PreBuildEvent>
-      <Command>Unzip ../../Resources/Fruit.zip</Command>
+      <Command>PowerShell Expand-Archive -Path ../../Resources/Fruit.zip -DestinationPath .\</Command>
       <Message>Install Google Fruit DI Framework</Message>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -132,7 +132,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(BOOST_INCLUDE_48PLUS);$(SolutionDir)Resources;$(SolutionDir)Resources\Hypodermic;C:\Program Files (x86)\Fruit\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)Fruit\include;$(BOOST_INCLUDE_48PLUS);$(SolutionDir)Resources;$(SolutionDir)Resources\Hypodermic;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -142,7 +142,7 @@
       <AdditionalDependencies>$(BOOST_LIB_48PLUS);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
-      <Command>Unzip ../../Resources/Fruit.zip</Command>
+      <Command>PowerShell Expand-Archive -Path ../../Resources/Fruit.zip -DestinationPath .\</Command>
     </PreBuildEvent>
     <PreBuildEvent>
       <Message>Install Google Fruit DI Framework</Message>

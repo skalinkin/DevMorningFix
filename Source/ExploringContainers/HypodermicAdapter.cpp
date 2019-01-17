@@ -5,17 +5,15 @@
 using namespace Hypodermic;
 
 
-HypodermicAdapter::HypodermicAdapter()
-= default;
+HypodermicAdapter::HypodermicAdapter() = default;
 
 
-HypodermicAdapter::~HypodermicAdapter()
-= default;
+HypodermicAdapter::~HypodermicAdapter() = default;
 
 std::shared_ptr<IDevMorningFix> HypodermicAdapter::GetApp()
 {
-	//ContainerBuilder builder;
-	//builder.registerType<ImportantMessage>().as<IMessageOfTheDay>();
+	ContainerBuilder builder;
+	builder.registerType<ImportantMessage>().as<IMessageOfTheDay>();
 	//builder.registerType<cout>().as<std::ostream>();
 
 	//builder.registerType<DevMorningFix>().as<IDevMorningFix>();
