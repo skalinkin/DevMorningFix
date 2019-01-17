@@ -10,6 +10,7 @@ using StructureMap;
 
 namespace Avtec.NetCoreWebApp
 {
+    //Build the site
     public class Startup
     {
         public Startup(IConfiguration configuration)

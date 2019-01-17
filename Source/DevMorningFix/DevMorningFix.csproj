@@ -44,6 +44,8 @@
   <ItemGroup>
     <Compile Include="AvtecEngineeringFundamentals\DevFixFundamental.cs" />
     <Compile Include="AvtecEngineeringFundamentals\IDevFixFundamental.cs" />
+    <Compile Include="BusinessCases\IShowFundamentals.cs" />
+    <Compile Include="BusinessCases\ShowFundamentals.cs" />
     <Compile Include="FormatOutput\ConsoleOutput.cs" />
     <Compile Include="FormatOutput\FileOutput.cs" />
     <Compile Include="FormatOutput\FormattedOutputFactory.cs" />
