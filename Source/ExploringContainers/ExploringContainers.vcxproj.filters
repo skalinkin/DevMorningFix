@@ -19,6 +19,9 @@
     <Filter Include="DevMorningFix">
       <UniqueIdentifier>{5e315578-5159-4bed-a976-9e70b5020250}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Hypodermic">
+      <UniqueIdentifier>{2d089000-d5a7-4797-8bf1-aec53451422e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -33,6 +36,15 @@
     <ClInclude Include="ImportantMessage.h">
       <Filter>Presentation Layer\Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="IDependencyResolver.h">
+      <Filter>DevMorningFix</Filter>
+    </ClInclude>
+    <ClInclude Include="HypodermicAdapter.h">
+      <Filter>Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="IDevMorningFix.h">
+      <Filter>DevMorningFix</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -46,6 +58,9 @@
     </ClCompile>
     <ClCompile Include="ImportantMessage.cpp">
       <Filter>Presentation Layer\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HypodermicAdapter.cpp">
+      <Filter>Hypodermic</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
