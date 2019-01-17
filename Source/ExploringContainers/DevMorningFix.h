@@ -2,18 +2,21 @@
 #include "IMessageOfTheDay.h"
 #include <fruit/fruit.h>
 #include "IDevMorningFix.h"
+#include "IOutputProvider.h"
+
+class DefaultOutputProvider;
 
 class DevMorningFix: public IDevMorningFix
 {
 public:
 	DevMorningFix() = delete;
 	virtual ~DevMorningFix() = default;
-	DevMorningFix(std::ostream&, std::unique_ptr<IMessageOfTheDay> upMp);
+	DevMorningFix(std::shared_ptr<IOutputProvider> upOp , std::shared_ptr<IMessageOfTheDay> upMp);
 
 	void Start() const override;
 
 private:
-	std::ostream& m_outstream;
-	std::unique_ptr<IMessageOfTheDay> m_messageProvider;
+	std::shared_ptr<IOutputProvider> m_outputprovider;
+	std::shared_ptr<IMessageOfTheDay> m_messageProvider;
 };
 

@@ -45,6 +45,12 @@
     <ClInclude Include="IDevMorningFix.h">
       <Filter>DevMorningFix</Filter>
     </ClInclude>
+    <ClInclude Include="IOutputProvider.h">
+      <Filter>DevMorningFix</Filter>
+    </ClInclude>
+    <ClInclude Include="DefaultOutputProvider.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -56,11 +62,14 @@
     <ClCompile Include="DevMorningFix.cpp">
       <Filter>DevMorningFix</Filter>
     </ClCompile>
-    <ClCompile Include="ImportantMessage.cpp">
-      <Filter>Presentation Layer\Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="HypodermicAdapter.cpp">
       <Filter>Hypodermic</Filter>
+    </ClCompile>
+    <ClCompile Include="DefaultOutputProvider.cpp">
+      <Filter>DevMorningFix</Filter>
+    </ClCompile>
+    <ClCompile Include="ImportantMessage.cpp">
+      <Filter>DevMorningFix</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

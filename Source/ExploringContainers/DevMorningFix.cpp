@@ -10,9 +10,9 @@
 */
 /*******************************************************************************/
 
-DevMorningFix::DevMorningFix(std::ostream& output, std::unique_ptr<IMessageOfTheDay> upMp)
-	: m_outstream(output)
-	, m_messageProvider(std::move(upMp))
+DevMorningFix::DevMorningFix(std::shared_ptr<IOutputProvider> upOp, std::shared_ptr<IMessageOfTheDay> upMp)
+	: m_outputprovider(upOp)
+	, m_messageProvider(upMp)
 {
 }
 
@@ -25,6 +25,7 @@ DevMorningFix::DevMorningFix(std::ostream& output, std::unique_ptr<IMessageOfThe
 void DevMorningFix::Start() const
 {
 	const std::string sMsg = m_messageProvider->GetMessage();
-	m_outstream << sMsg;
+	std::ostream& output = m_outputprovider->Provide();
+	output << sMsg;
 }
 

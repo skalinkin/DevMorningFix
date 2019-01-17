@@ -170,15 +170,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="DefaultOutputProvider.h" />
     <ClInclude Include="DevMorningFix.h" />
     <ClInclude Include="HypodermicAdapter.h" />
     <ClInclude Include="IDependencyResolver.h" />
     <ClInclude Include="IDevMorningFix.h" />
     <ClInclude Include="IMessageOfTheDay.h" />
     <ClInclude Include="ImportantMessage.h" />
+    <ClInclude Include="IOutputProvider.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DefaultOutputProvider.cpp" />
     <ClCompile Include="DevMorningFix.cpp" />
     <ClCompile Include="ExploringContainers.cpp" />
     <ClCompile Include="HypodermicAdapter.cpp" />
