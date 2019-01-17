@@ -14,8 +14,6 @@ std::shared_ptr<IDevMorningFix> HypodermicAdapter::GetApp()
 {
 	ContainerBuilder builder;
 	builder.registerType<ImportantMessage>().as<IMessageOfTheDay>();
-	//builder.registerType<cout>().as<std::ostream>();
-
 	//builder.registerType<DevMorningFix>().as<IDevMorningFix>();
 	//auto container = builder.build();
 	//auto app = container->resolve<IDevMorningFix>();

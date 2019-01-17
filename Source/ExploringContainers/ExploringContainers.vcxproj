@@ -100,7 +100,7 @@
       <AdditionalLibraryDirectories>$(BOOST_LIB_48PLUS);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PreBuildEvent>
-      <Command>PowerShell Expand-Archive -Path ../../Resources/Fruit.zip -DestinationPath .\</Command>
+      <Command>7z x -y -aos ../../Resources/Fruit.zip</Command>
       <Message>Install Google Fruit DI Framework</Message>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -142,7 +142,7 @@
       <AdditionalDependencies>$(BOOST_LIB_48PLUS);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
-      <Command>PowerShell Expand-Archive -Path ../../Resources/Fruit.zip -DestinationPath .\</Command>
+      <Command>7z x -y -aos ../../Resources/Fruit.zip</Command>
     </PreBuildEvent>
     <PreBuildEvent>
       <Message>Install Google Fruit DI Framework</Message>
