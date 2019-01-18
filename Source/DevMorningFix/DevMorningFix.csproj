@@ -55,6 +55,7 @@
     <Compile Include="FormatOutput\IFundamentalFormat.cs" />
     <Compile Include="FormatOutput\IFundamentalModel.cs" />
     <Compile Include="FormatOutput\SimpleFormat.cs" />
+    <Compile Include="IDependencyResolver.cs" />
     <Compile Include="TempSpot\DataManager\IDataManager.cs" />
     <Compile Include="TempSpot\DataManager\XmlManager.cs" />
     <Compile Include="Fundamental.cs" />
@@ -79,6 +80,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Autofac\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
