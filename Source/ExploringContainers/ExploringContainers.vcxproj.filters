@@ -31,6 +31,9 @@
     <Filter Include="Containers\Factory">
       <UniqueIdentifier>{8fee4587-289e-4266-bbfa-b967b8f5016a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AppConfig">
+      <UniqueIdentifier>{cf38848e-e7fc-48ba-bcd2-76db6448bd49}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -92,5 +95,10 @@
     <ClCompile Include="DependencyResolverFactory.cpp">
       <Filter>Containers\Factory</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="props.xml">
+      <Filter>AppConfig</Filter>
+    </Xml>
   </ItemGroup>
 </Project>
