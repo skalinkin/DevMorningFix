@@ -6,12 +6,6 @@
 #include "DefaultOutputProvider.h"
 using namespace Hypodermic;
 
-
-HypodermicAdapter::HypodermicAdapter() = default;
-
-
-HypodermicAdapter::~HypodermicAdapter() = default;
-
 std::shared_ptr<IDevMorningFix> HypodermicAdapter::GetApp()
 {
 	ContainerBuilder builder;
@@ -21,5 +15,4 @@ std::shared_ptr<IDevMorningFix> HypodermicAdapter::GetApp()
 	auto container = builder.build();
 	auto app = container->resolve<IDevMorningFix>();
 	return app;
-	//return {};
 }

@@ -5,8 +5,8 @@
 class HypodermicAdapter:public IDependencyResolver
 {
 public:
-	HypodermicAdapter();
-	virtual ~HypodermicAdapter();
+	HypodermicAdapter() = default;
+	virtual ~HypodermicAdapter() = default;
 	std::shared_ptr<IDevMorningFix> GetApp() override;
 };
 

@@ -1,5 +1,7 @@
 #pragma once
+
 #include "IDependencyResolver.h"
+
 class BoostDIAdapter : public IDependencyResolver
 {
 public:

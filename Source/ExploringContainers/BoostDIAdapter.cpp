@@ -16,6 +16,5 @@ std::shared_ptr<IDevMorningFix> BoostDIAdapter::GetApp()
 	);
 
 	auto app = injector.create< std::shared_ptr<IDevMorningFix>>();
-
 	return app;
 }
