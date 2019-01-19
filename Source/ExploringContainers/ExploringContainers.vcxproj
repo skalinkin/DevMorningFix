@@ -92,7 +92,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ProjectDir)Fruit\include;$(BOOST_INCLUDE_48PLUS);$(SolutionDir)Resources;$(SolutionDir)Resources\Hypodermic;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Resources\BoostDI\include;$(ProjectDir)Fruit\include;$(BOOST_INCLUDE_48PLUS);$(SolutionDir)Resources;$(SolutionDir)Resources\Hypodermic;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -132,7 +132,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ProjectDir)Fruit\include;$(BOOST_INCLUDE_48PLUS);$(SolutionDir)Resources;$(SolutionDir)Resources\Hypodermic;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Resources\BoostDI\include;$(ProjectDir)Fruit\include;$(BOOST_INCLUDE_48PLUS);$(SolutionDir)Resources;$(SolutionDir)Resources\Hypodermic;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -170,7 +170,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BoostDIAdapter.h" />
     <ClInclude Include="DefaultOutputProvider.h" />
+    <ClInclude Include="DependencyResolverFactory.h" />
     <ClInclude Include="DevMorningFix.h" />
     <ClInclude Include="HypodermicAdapter.h" />
     <ClInclude Include="IDependencyResolver.h" />
@@ -181,7 +183,9 @@
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BoostDIAdapter.cpp" />
     <ClCompile Include="DefaultOutputProvider.cpp" />
+    <ClCompile Include="DependencyResolverFactory.cpp" />
     <ClCompile Include="DevMorningFix.cpp" />
     <ClCompile Include="ExploringContainers.cpp" />
     <ClCompile Include="HypodermicAdapter.cpp" />
