@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Avtec.DevMorningFix.AvtecEngineeringFundamentals;
+using Avtec.DevMorningFix;
 using Avtec.NetCoreWebApp.Fundamentals;
 using Microsoft.AspNetCore.Mvc;
 

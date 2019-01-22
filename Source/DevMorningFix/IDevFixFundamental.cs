@@ -1,4 +1,4 @@
-﻿namespace Avtec.DevMorningFix.AvtecEngineeringFundamentals
+﻿namespace Avtec.DevMorningFix
 {
     public interface IDevFixFundamental
     {
