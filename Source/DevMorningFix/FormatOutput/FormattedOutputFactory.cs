@@ -28,7 +28,7 @@ namespace Avtec.DevMorningFix.FormatOutput
             catch (Exception e)
             {
                 //Console.WriteLine("Exception occured: {0}", e);
- }
+            }
 
             return (IOutput) obj;
         }

@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using Avtec.DevMorningFix.AvtecEngineeringFundamentals;
 
 namespace Avtec.DevMorningFix.TempSpot.DataManager
 {

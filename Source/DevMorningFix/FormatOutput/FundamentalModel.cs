@@ -1,6 +1,4 @@
-﻿using Avtec.DevMorningFix.AvtecEngineeringFundamentals;
-
-namespace Avtec.DevMorningFix.FormatOutput
+﻿namespace Avtec.DevMorningFix.FormatOutput
 {
     internal class FundamentalModel : IFundamentalModel
     {

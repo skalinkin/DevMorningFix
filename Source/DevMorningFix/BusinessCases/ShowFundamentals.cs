@@ -3,7 +3,7 @@ using Avtec.DevMorningFix.TempSpot.DataManager;
 
 namespace Avtec.DevMorningFix.BusinessCases
 {
-    class ShowFundamentals : IShowFundamentals
+    internal class ShowFundamentals : IShowFundamentals
     {
         private readonly IDataManager _dataManager;
         private readonly IOutput _output;
@@ -13,6 +13,7 @@ namespace Avtec.DevMorningFix.BusinessCases
             _dataManager = dataManage;
             _output = output;
         }
+
         public void Show()
         {
             var fl = _dataManager.GetFundamentalsList();

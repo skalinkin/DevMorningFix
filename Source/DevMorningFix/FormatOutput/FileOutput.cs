@@ -1,5 +1,4 @@
 ﻿using System;
-using Avtec.DevMorningFix.AvtecEngineeringFundamentals;
 
 namespace Avtec.DevMorningFix.FormatOutput
 {

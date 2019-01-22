@@ -10,11 +10,11 @@ namespace Avtec.DevMorningFix.Infrastructure
             var appSettings = ConfigurationManager.AppSettings;
             for (var i = 0; i < appSettings.Count; i++)
             {
-                string sInterfaceName = appSettings.GetKey(i);
-                string sImplName = appSettings[i];
+                var sInterfaceName = appSettings.GetKey(i);
+                var sImplName = appSettings[i];
                 //
-                Type ifType = Type.GetType(sInterfaceName);
-                Type implType = Type.GetType(sImplName);
+                var ifType = Type.GetType(sInterfaceName);
+                var implType = Type.GetType(sImplName);
                 //
                 container.Register(ifType, implType);
             }

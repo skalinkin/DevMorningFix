@@ -2,8 +2,6 @@
 using System.IO;
 using System.Reflection;
 using System.Xml.Linq;
-using Avtec.DevMorningFix.AvtecEngineeringFundamentals;
-using Avtec.DevMorningFix.TempSpot.DataManager;
 
 namespace Avtec.DevMorningFix.TempSpot.DataManager
 {
