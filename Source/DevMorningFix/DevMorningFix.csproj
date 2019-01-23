@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DevFixFundamental.cs" />
+    <Compile Include="XmlStoreModule\FundamentalRepository.cs" />
     <Compile Include="IDevFixFundamental.cs" />
     <Compile Include="BusinessCases\IShowFundamentals.cs" />
     <Compile Include="BusinessCases\Impl\ShowFundamentals.cs" />
@@ -53,14 +54,15 @@
     <Compile Include="FormatOutput\IFundamentalModel.cs" />
     <Compile Include="FormatOutput\SimpleFormat.cs" />
     <Compile Include="IDependencyResolver.cs" />
-    <Compile Include="TempSpot\DataManager\IDataManager.cs" />
-    <Compile Include="TempSpot\DataManager\XmlManager.cs" />
+    <Compile Include="IFundamentalRepository.cs" />
+    <Compile Include="XmlStoreModule\DataManager\IDataManager.cs" />
+    <Compile Include="XmlStoreModule\DataManager\XmlManager.cs" />
     <Compile Include="Fundamental.cs" />
     <Compile Include="IStartup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="TempSpot\DataStore\SimpleData.xml">
+    <Content Include="XmlStoreModule\DataStore\SimpleData.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
