@@ -56,9 +56,12 @@ namespace Avtec.DevMorningFix.TempSpot.DataManager
             var data = doc.Element("DevMorningFixFundamentals").Elements("fundamental");
             foreach (var item in data)
             {
-                var dff = new DevFixFundamental(this);
+                var dff = new DevFixFundamental();
                 var id = item.Attribute("ID").Value;
-                dff.Initialize(item.Attribute("ID").Value);
+                string id1 = item.Attribute("ID").Value;
+                dff.ID = id1;
+                dff.Name = GetFundamentalName(id1);
+                dff.Description = GetFundamentalDescription(id1);
                 dff.Name = item.Attribute("Name").Value;
                 dff.Description = item.Attribute("Description").Value;
                 fundamentals.Add(dff);
