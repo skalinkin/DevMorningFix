@@ -1,5 +1,4 @@
-using Avtec.DevMorningFix.Infrastructure;
-using Container;
+using Avtec.DevMorningFix.Container;
 
 namespace Avtec.DevMorningFix.ConsoleApp
 {
@@ -7,22 +6,9 @@ namespace Avtec.DevMorningFix.ConsoleApp
     {
         private static void Main(string[] args)
         {
-            var container = GetContainer();
-            var startup = container.Resolve<IStartup>();
-            startup.Start(args);
-        }
-
-        private static IContainer GetContainer()
-        {
-            var container = new SimpleIocContainer();
-            Bootstrapper.Configure(container);
-            Register(container);
-            return container;
-        }
-
-        private static void Register(IContainer container)
-        {
-            container.Register<IStartup, ConsoleStartup>();
+            var instanceDependencyResolver = Bootstrapper.Instance.DependencyResolver;
+            var compositionRoot = instanceDependencyResolver.GetCompositionRoot();
+            compositionRoot.Start(args);
         }
     }
 }

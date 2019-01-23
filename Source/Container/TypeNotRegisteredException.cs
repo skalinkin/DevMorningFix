@@ -1,6 +1,6 @@
 using System;
 
-namespace Container
+namespace Avtec.DevMorningFix.Container
 {
     public class TypeNotRegisteredException : Exception
     {

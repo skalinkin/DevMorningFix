@@ -1,7 +1,6 @@
 using System;
-using Avtec.DevMorningFix.Infrastructure;
 
-namespace Container
+namespace Avtec.DevMorningFix.Container
 {
     public class RegisteredObject
     {

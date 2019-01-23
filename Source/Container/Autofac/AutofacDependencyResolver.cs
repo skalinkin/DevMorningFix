@@ -1,10 +1,13 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.Composition;
 using System.IO;
 using System.Reflection;
 using Autofac;
 
-namespace Avtec.DevMorningFix
+namespace Avtec.DevMorningFix.Container.Autofac
 {
+    [Export(typeof(IDependencyResolver))]
+    [ExportMetadata("Name", "Autofac")]
     class AutofacDependencyResolver : IDependencyResolver
     {
         public IStartup GetCompositionRoot()
