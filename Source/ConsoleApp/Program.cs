@@ -6,6 +6,7 @@ namespace Avtec.DevMorningFix.ConsoleApp
     {
         private static void Main(string[] args)
         {
+            Bootstrapper.Instance.Configure();
             var instanceDependencyResolver = Bootstrapper.Instance.DependencyResolver;
             var compositionRoot = instanceDependencyResolver.GetCompositionRoot();
             compositionRoot.Start(args);

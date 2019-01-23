@@ -8,6 +8,7 @@ namespace Avtec.DevMorningFix.DesktopApp
         [STAThread]
         private static void Main()
         {
+            Bootstrapper.Instance.Configure();
             var instanceDependencyResolver = Bootstrapper.Instance.DependencyResolver;
             var compositionRoot = instanceDependencyResolver.GetCompositionRoot();
             compositionRoot.Start();

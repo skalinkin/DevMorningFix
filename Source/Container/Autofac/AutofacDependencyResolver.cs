@@ -18,11 +18,18 @@ namespace Avtec.DevMorningFix.Container.Autofac
             string path = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
 
             foreach (string dll in Directory.GetFiles(path, "*.dll"))
+            {
                 allAssemblies.Add(Assembly.LoadFile(dll));
+            }
+
+            foreach (string exe in Directory.GetFiles(path, "*.exe"))
+            {
+                allAssemblies.Add(Assembly.LoadFile(exe));
+            }
 
             foreach (var assembly in allAssemblies)
             {
-                builder.RegisterAssemblyTypes(assembly);
+                builder.RegisterAssemblyTypes(assembly).AsImplementedInterfaces();
             }
 
             var container = builder.Build();
