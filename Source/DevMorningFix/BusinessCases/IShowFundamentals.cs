@@ -2,6 +2,6 @@
 {
     public interface IShowFundamentals
     {
-        void Show();
+        void Execute();
     }
 }

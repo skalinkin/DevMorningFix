@@ -14,7 +14,7 @@ namespace Avtec.DevMorningFix.BusinessCases
             _output = output;
         }
 
-        public void Show()
+        public void Execute()
         {
             var fl = _dataManager.GetFundamentalsList();
             foreach (var f in fl)

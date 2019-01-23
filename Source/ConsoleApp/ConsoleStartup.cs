@@ -14,7 +14,7 @@ namespace Avtec.DevMorningFix.ConsoleApp
 
         public void Start(params object[] parameters)
         {
-            _showFundamentalsBusinessCase.Show();
+            _showFundamentalsBusinessCase.Execute();
             Console.ReadLine();
         }
     }
