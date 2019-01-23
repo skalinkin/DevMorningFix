@@ -1,7 +1,7 @@
 ﻿using Avtec.DevMorningFix.FormatOutput;
 using Avtec.DevMorningFix.TempSpot.DataManager;
 
-namespace Avtec.DevMorningFix.BusinessCases
+namespace Avtec.DevMorningFix.BusinessCases.Impl
 {
     internal class ShowFundamentals : IShowFundamentals
     {
