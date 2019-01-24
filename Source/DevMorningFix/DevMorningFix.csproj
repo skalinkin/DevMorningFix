@@ -57,7 +57,6 @@
     <Compile Include="IFundamentalRepository.cs" />
     <Compile Include="XmlStoreModule\DataManager\IDataManager.cs" />
     <Compile Include="XmlStoreModule\DataManager\XmlManager.cs" />
-    <Compile Include="Fundamental.cs" />
     <Compile Include="IStartup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
