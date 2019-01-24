@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using Avtec.DevMorningFix.TempSpot.DataManager;
+using Avtec.DevMorningFix.XmlStoreModule.DataManager;
 
 namespace Avtec.DevMorningFix.XmlStoreModule
 {
@@ -13,6 +12,7 @@ namespace Avtec.DevMorningFix.XmlStoreModule
         {
             _manager = manager;
         }
+
         public IEnumerable<DevFixFundamental> GetAllFundamentals()
         {
             return _manager.GetFundamentalsList().Cast<DevFixFundamental>();

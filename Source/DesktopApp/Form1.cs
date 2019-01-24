@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using Avtec.DevMorningFix.FormatOutput;
-using Avtec.DevMorningFix.TempSpot.DataManager;
+using Avtec.DevMorningFix.XmlStoreModule.DataManager;
 
 namespace DesktopApp
 {

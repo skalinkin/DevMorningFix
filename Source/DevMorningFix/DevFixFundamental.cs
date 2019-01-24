@@ -1,6 +1,4 @@
-﻿using Avtec.DevMorningFix.TempSpot.DataManager;
-
-namespace Avtec.DevMorningFix
+﻿namespace Avtec.DevMorningFix
 {
     public class DevFixFundamental : IDevFixFundamental
     {

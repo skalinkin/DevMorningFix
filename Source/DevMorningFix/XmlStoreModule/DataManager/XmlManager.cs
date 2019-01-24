@@ -3,7 +3,7 @@ using System.IO;
 using System.Reflection;
 using System.Xml.Linq;
 
-namespace Avtec.DevMorningFix.TempSpot.DataManager
+namespace Avtec.DevMorningFix.XmlStoreModule.DataManager
 {
     public class XmlManager : IDataManager
     {
@@ -58,7 +58,7 @@ namespace Avtec.DevMorningFix.TempSpot.DataManager
             {
                 var dff = new DevFixFundamental();
                 var id = item.Attribute("ID").Value;
-                string id1 = item.Attribute("ID").Value;
+                var id1 = item.Attribute("ID").Value;
                 dff.ID = id1;
                 dff.Name = GetFundamentalName(id1);
                 dff.Description = GetFundamentalDescription(id1);

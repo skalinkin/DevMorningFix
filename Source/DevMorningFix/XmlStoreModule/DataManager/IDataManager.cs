@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Avtec.DevMorningFix.TempSpot.DataManager
+namespace Avtec.DevMorningFix.XmlStoreModule.DataManager
 {
     public interface IDataManager
     {
