@@ -16,10 +16,7 @@ namespace Avtec.DevMorningFix.BusinessCases.Impl
         public void Execute()
         {
             var fundamentals = _repository.GetAllFundamentals();
-            foreach (var fundamental in fundamentals)
-            {
-                _output.OutputFormatted(fundamental);
-            }
+            _output.OutputData(fundamentals);
         }
     }
 }

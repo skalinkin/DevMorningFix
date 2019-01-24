@@ -11,7 +11,7 @@ namespace Avtec.DevMorningFix.XmlStoreModule.DataManager
         {
             var name = "ain't got no name";
             var dir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            var fn = dir + "\\TempSpot\\DataStore\\SimpleData.xml";
+            var fn = dir + "\\XmlStoreModule\\DataStore\\SimpleData.xml";
             var doc = XDocument.Load(fn);
             var data = doc.Element("DevMorningFixFundamentals").Elements("fundamental");
             foreach (var item in data)
@@ -31,7 +31,7 @@ namespace Avtec.DevMorningFix.XmlStoreModule.DataManager
         {
             var description = "ain't got no description";
             var dir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            var fn = dir + "\\TempSpot\\DataStore\\SimpleData.xml";
+            var fn = dir + "\\XmlStoreModule\\DataStore\\SimpleData.xml";
             var doc = XDocument.Load(fn);
             var data = doc.Element("DevMorningFixFundamentals").Elements("fundamental");
             foreach (var item in data)
@@ -51,7 +51,7 @@ namespace Avtec.DevMorningFix.XmlStoreModule.DataManager
         {
             var fundamentals = new List<IDevFixFundamental>();
             var dir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            var fn = dir + "\\TempSpot\\DataStore\\SimpleData.xml";
+            var fn = dir + "\\XmlStoreModule\\DataStore\\SimpleData.xml";
             var doc = XDocument.Load(fn);
             var data = doc.Element("DevMorningFixFundamentals").Elements("fundamental");
             foreach (var item in data)

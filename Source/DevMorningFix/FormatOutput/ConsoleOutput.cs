@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Avtec.DevMorningFix.FormatOutput
 {
@@ -19,6 +20,17 @@ namespace Avtec.DevMorningFix.FormatOutput
             var data = _model.GetData(f);
             var finalString = string.Format(format, data);
             Console.WriteLine(finalString);
+        }
+
+        public void OutputData(IEnumerable<IDevFixFundamental> fundamentals)
+        {
+            var format = _format.GetFormat();
+            foreach (var fundamental in fundamentals)
+            {
+                var data = _model.GetData(fundamental);
+                var finalString = string.Format(format, data);
+                Console.WriteLine(finalString);
+            }
         }
     }
 }
