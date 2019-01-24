@@ -34,6 +34,9 @@
     <Filter Include="AppConfig">
       <UniqueIdentifier>{cf38848e-e7fc-48ba-bcd2-76db6448bd49}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Containers\Fruit">
+      <UniqueIdentifier>{4b07669a-687c-452b-a39b-5e867e374674}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -69,6 +72,9 @@
     <ClInclude Include="DependencyResolverFactory.h">
       <Filter>Containers\Factory</Filter>
     </ClInclude>
+    <ClInclude Include="FruitAdapter.h">
+      <Filter>Containers\Fruit</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -94,6 +100,9 @@
     </ClCompile>
     <ClCompile Include="DependencyResolverFactory.cpp">
       <Filter>Containers\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="FruitAdapter.cpp">
+      <Filter>Containers\Fruit</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -3,6 +3,7 @@
 #include "IDependencyResolver.h"
 #include "HypodermicAdapter.h"
 #include "BoostDIAdapter.h"
+#include "FruitAdapter.h"
 #include <boost/property_tree/xml_parser.hpp>
 #include <boost/property_tree/ptree_fwd.hpp>
 
@@ -26,6 +27,10 @@ std::unique_ptr<IDependencyResolver> DependencyResolverFactory::CreateDependency
 	else if ((nCmp = sContainerName.compare(CONTAINERNAME_BOOSTDI)) == 0)
 	{
 		upDr.reset(new BoostDIAdapter());
+	}
+	else if ((nCmp = sContainerName.compare(CONAINERNAME_FRUIT)) == 0)
+	{
+		upDr.reset(new FruitAdapter());
 	}
 	else
 	{
