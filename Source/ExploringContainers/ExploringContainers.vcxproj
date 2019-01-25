@@ -181,7 +181,6 @@
     <ClInclude Include="DefaultOutputProvider.h" />
     <ClInclude Include="DependencyResolverFactory.h" />
     <ClInclude Include="DevMorningFix.h" />
-    <ClInclude Include="FruitAdapter.h" />
     <ClInclude Include="HypodermicAdapter.h" />
     <ClInclude Include="IDependencyResolver.h" />
     <ClInclude Include="IDevMorningFix.h" />
@@ -196,7 +195,6 @@
     <ClCompile Include="DependencyResolverFactory.cpp" />
     <ClCompile Include="DevMorningFix.cpp" />
     <ClCompile Include="ExploringContainers.cpp" />
-    <ClCompile Include="FruitAdapter.cpp" />
     <ClCompile Include="HypodermicAdapter.cpp" />
     <ClCompile Include="ImportantMessage.cpp" />
     <ClCompile Include="pch.cpp">
