@@ -28,10 +28,6 @@ std::unique_ptr<IDependencyResolver> DependencyResolverFactory::CreateDependency
 	{
 		upDr.reset(new BoostDIAdapter());
 	}
-	else if ((nCmp = sContainerName.compare(CONAINERNAME_FRUIT)) == 0)
-	{
-		upDr.reset(new FruitAdapter());
-	}
 	else
 	{
 		std::stringstream errMsg;

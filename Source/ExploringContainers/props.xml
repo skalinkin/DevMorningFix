@@ -5,8 +5,7 @@
 		valid container values
 		hypodermic
 		boostdi
-	-->
+	  -->
     <container name="boostdi" />
-    <container name="fruit" />
   </appSettings>
 </configuration>

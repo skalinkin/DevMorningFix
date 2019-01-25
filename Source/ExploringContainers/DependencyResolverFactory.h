@@ -5,7 +5,6 @@
 
 constexpr auto CONTAINERNAME_HYPODERMIC = "hypodermic";
 constexpr auto CONTAINERNAME_BOOSTDI = "boostdi";
-constexpr auto CONAINERNAME_FRUIT = "fruit";
 
 class DependencyResolverFactory
 {
