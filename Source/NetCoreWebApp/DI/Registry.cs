@@ -1,5 +1,5 @@
 ﻿using Avtec.DevMorningFix;
-using Avtec.DevMorningFix.TempSpot.DataManager;
+using Avtec.DevMorningFix.XmlStoreModule.DataManager;
 using Avtec.NetCoreWebApp.Fundamentals;
 using StructureMap;
 
