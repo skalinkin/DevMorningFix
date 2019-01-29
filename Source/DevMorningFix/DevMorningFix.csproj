@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DevFixFundamental.cs" />
+    <Compile Include="FormatOutput\WebOutput.cs" />
     <Compile Include="XmlStoreModule\FundamentalRepository.cs" />
     <Compile Include="IDevFixFundamental.cs" />
     <Compile Include="BusinessCases\IShowFundamentals.cs" />
