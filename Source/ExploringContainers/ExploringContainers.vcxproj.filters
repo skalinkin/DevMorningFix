@@ -30,9 +30,6 @@
     <Filter Include="AppConfig">
       <UniqueIdentifier>{cf38848e-e7fc-48ba-bcd2-76db6448bd49}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Containers\Fruit">
-      <UniqueIdentifier>{4b07669a-687c-452b-a39b-5e867e374674}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ContainerFlavors">
       <UniqueIdentifier>{6842c5e7-21e9-4025-a9b8-20720bca24ec}</UniqueIdentifier>
     </Filter>
@@ -47,18 +44,6 @@
     </Filter>
     <Filter Include="ContainerFlavors\Hypodermic">
       <UniqueIdentifier>{c4205cf6-5215-44d4-8a0a-2866c1785a93}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ContainerFlavors\Fruit">
-      <UniqueIdentifier>{36645046-b99d-42fe-abe3-354a4038bd17}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ContainerFlavors\Fruit\include">
-      <UniqueIdentifier>{99e5dc17-8e37-4a91-b42b-e5428f1b002f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ContainerFlavors\Fruit\src">
-      <UniqueIdentifier>{6ff7dc8c-3be9-4367-85fd-d548177af18c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ContainerFlavors\Fruit\include\fruit">
-      <UniqueIdentifier>{6e1ee89c-9477-4b71-9c1e-ac9695674777}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -94,9 +79,6 @@
     </ClInclude>
     <ClInclude Include="DependencyResolverFactory.h">
       <Filter>Containers\Factory</Filter>
-    </ClInclude>
-    <ClInclude Include="FruitAdapter.h">
-      <Filter>Containers\Fruit</Filter>
     </ClInclude>
     <ClInclude Include="ContainerFlavors\BoostDI\include\boost\di.hpp">
       <Filter>ContainerFlavors\BoostDI\include\boost</Filter>
@@ -663,9 +645,6 @@
     </ClCompile>
     <ClCompile Include="DependencyResolverFactory.cpp">
       <Filter>Containers\Factory</Filter>
-    </ClCompile>
-    <ClCompile Include="FruitAdapter.cpp">
-      <Filter>Containers\Fruit</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
