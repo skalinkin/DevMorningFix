@@ -38,16 +38,17 @@ namespace Avtec.NetCoreWebApp
         private IServiceProvider ConfigureContainer(IServiceCollection services)
         {
             Bootstrapper.Instance.Configure();
+            Bootstrapper.Instance.AfterContainerReady = sp =>
+            {
+                var container = (Container) sp;
+                container.Configure(config =>
+                {
+                    config.IncludeRegistry<FunRegistry>();
+                    config.Populate(services);
+                });
+            };
+            
             var poo = Bootstrapper.Instance.DependencyResolver;
-
-            
-            
-            //var container = new Container();
-            //container.Configure(config =>
-            //{
-            //    config.IncludeRegistry<FunRegistry>();
-            //    config.Populate(services);
-            //});
             return poo;
         }
 
