@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "Source\ConsoleApp\ConsoleApp.csproj", "{E40CC0A1-C697-4E9D-8FBD-71CE495BE969}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4ED280BB-3721-4E72-BDB8-2DCCC36A51FA} = {4ED280BB-3721-4E72-BDB8-2DCCC36A51FA}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevMorningFix", "Source\DevMorningFix\DevMorningFix.csproj", "{BF40EC3E-89CE-4A17-B5DA-0E35EE38581E}"
 EndProject
