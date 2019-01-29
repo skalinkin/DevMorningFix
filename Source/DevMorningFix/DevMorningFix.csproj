@@ -44,15 +44,13 @@
     <Compile Include="IDevFixFundamental.cs" />
     <Compile Include="BusinessCases\IShowFundamentals.cs" />
     <Compile Include="BusinessCases\Impl\ShowFundamentals.cs" />
-    <Compile Include="FormatOutput\ConsoleOutput.cs" />
-    <Compile Include="FormatOutput\FormattedOutputFactory.cs" />
     <Compile Include="FormatOutput\FundamentalModel.cs" />
     <Compile Include="FormatOutput\IFormattedOutputFactory.cs" />
     <Compile Include="IOutput.cs" />
     <Compile Include="FormatOutput\IFundamentalFormat.cs" />
     <Compile Include="FormatOutput\IFundamentalModel.cs" />
     <Compile Include="FormatOutput\SimpleFormat.cs" />
-    <Compile Include="IDependencyResolver.cs" />
+    <Compile Include="ServiceProviderExtensions.cs" />
     <Compile Include="IFundamentalRepository.cs" />
     <Compile Include="XmlStoreModule\DataManager\IDataManager.cs" />
     <Compile Include="XmlStoreModule\DataManager\XmlManager.cs" />
