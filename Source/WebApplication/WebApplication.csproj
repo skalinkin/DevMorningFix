@@ -215,6 +215,7 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
+    <Compile Include="WebOutput.cs" />
     <Compile Include="WebStartup.cs" />
   </ItemGroup>
   <ItemGroup>

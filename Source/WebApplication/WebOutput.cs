@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Avtec.DevMorningFix;
+using Avtec.DevMorningFix.FormatOutput;
 
-namespace Avtec.DevMorningFix.FormatOutput
+namespace WebApplication
 {
     internal class WebOutput 
     {

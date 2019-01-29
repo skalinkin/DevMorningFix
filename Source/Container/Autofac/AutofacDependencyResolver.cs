@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.IO;
 using System.Reflection;
@@ -6,9 +7,9 @@ using Autofac;
 
 namespace Avtec.DevMorningFix.Container.Autofac
 {
-    [Export(typeof(IDependencyResolver))]
+    [Export(typeof(IServiceProvider))]
     [ExportMetadata("Name", "Autofac")]
-    internal class AutofacDependencyResolver : IDependencyResolver
+    internal class AutofacDependencyResolver : IServiceProvider
     {
         private bool _configured;
         private global::Autofac.IContainer _container;
@@ -47,6 +48,11 @@ namespace Avtec.DevMorningFix.Container.Autofac
             }
 
             _container = builder.Build();
+        }
+
+        public object GetService(Type serviceType)
+        {
+            throw new NotImplementedException();
         }
     }
 }
