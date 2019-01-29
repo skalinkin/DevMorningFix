@@ -1,17 +1,16 @@
 ﻿using System;
 using System.ComponentModel.Composition;
-using Autofac;
+using Microsoft.Extensions.DependencyInjection;
+using StructureMap;
 
-
-namespace Avtec.DevMorningFix.Container.Autofac
+namespace Avtec.DevMorningFix.Container.StructureMap
 {
     [Export(typeof(IServiceProvider))]
-    [ExportMetadata("Name", "Autofac")]
-    internal class AutofacDependencyResolver : IServiceProvider
+    [ExportMetadata("Name", "StructureMap")]
+    class StructureMapDependencyResolver : IServiceProvider
     {
         private bool _configured;
-        private global::Autofac.IContainer _container;
-
+        private global::StructureMap.IContainer _container;
         public object GetService(Type serviceType)
         {
             if (!_configured)
@@ -19,14 +18,16 @@ namespace Avtec.DevMorningFix.Container.Autofac
                 Configure();
             }
 
-            return _container.Resolve(serviceType);
+            return _container.GetInstance(serviceType);
         }
 
         private void Configure()
         {
+            //IServiceCollection services
             _configured = true;
             var strategy = new ContainerBuildStrategy();
             var container = strategy.CreateContainer();
+            //_container.Populate(services);
             _container = container;
         }
     }

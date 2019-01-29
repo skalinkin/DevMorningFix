@@ -28,8 +28,9 @@ namespace Avtec.DevMorningFix.Container.Autofac
             {
                 builder.RegisterAssemblyTypes(assembly).AsImplementedInterfaces();
             }
-
+            
             var container = builder.Build();
+            
             return container;
         }
     }
