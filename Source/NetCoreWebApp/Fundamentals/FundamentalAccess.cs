@@ -1,6 +1,6 @@
 ﻿using Avtec.DevMorningFix;
-using Avtec.DevMorningFix.TempSpot.DataManager;
 using System.Collections.Generic;
+using Avtec.DevMorningFix.XmlStoreModule.DataManager;
 
 namespace Avtec.NetCoreWebApp.Fundamentals
 {

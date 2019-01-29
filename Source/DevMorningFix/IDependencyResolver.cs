@@ -2,6 +2,6 @@
 {
     public interface IDependencyResolver
     {
-        IStartup GetCompositionRoot();
+        T Create<T>() where T : class;
     }
 }

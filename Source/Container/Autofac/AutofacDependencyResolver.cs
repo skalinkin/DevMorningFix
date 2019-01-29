@@ -8,21 +8,35 @@ namespace Avtec.DevMorningFix.Container.Autofac
 {
     [Export(typeof(IDependencyResolver))]
     [ExportMetadata("Name", "Autofac")]
-    class AutofacDependencyResolver : IDependencyResolver
+    internal class AutofacDependencyResolver : IDependencyResolver
     {
-        public IStartup GetCompositionRoot()
+        private bool _configured;
+        private global::Autofac.IContainer _container;
+
+        public T Create<T>() where T : class
         {
+            if (!_configured)
+            {
+                Configure();
+            }
+
+            return _container.Resolve<T>();
+        }
+
+        private void Configure()
+        {
+            _configured = true;
             var builder = new ContainerBuilder();
 
-            List<Assembly> allAssemblies = new List<Assembly>();
-            string path = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+            var allAssemblies = new List<Assembly>();
+            var path = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
 
-            foreach (string dll in Directory.GetFiles(path, "*.dll"))
+            foreach (var dll in Directory.GetFiles(path, "*.dll"))
             {
                 allAssemblies.Add(Assembly.LoadFile(dll));
             }
 
-            foreach (string exe in Directory.GetFiles(path, "*.exe"))
+            foreach (var exe in Directory.GetFiles(path, "*.exe"))
             {
                 allAssemblies.Add(Assembly.LoadFile(exe));
             }
@@ -32,9 +46,7 @@ namespace Avtec.DevMorningFix.Container.Autofac
                 builder.RegisterAssemblyTypes(assembly).AsImplementedInterfaces();
             }
 
-            var container = builder.Build();
-            var startup = container.Resolve<IStartup>();
-            return startup;
+            _container = builder.Build();
         }
     }
 }
