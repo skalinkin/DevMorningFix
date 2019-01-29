@@ -1,6 +1,5 @@
 #pragma once
 #include "IMessageOfTheDay.h"
-#include <fruit/fruit.h>
 #include "IDevMorningFix.h"
 #include "IOutputProvider.h"
 
