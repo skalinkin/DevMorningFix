@@ -12,7 +12,7 @@ namespace Avtec.DevMorningFix.WebApp
     {
         private readonly IOutput _output;
         private IEnumerable<IDevFixFundamental> fundamentals;
-        private readonly IFundamentalRepository _repository;
+        //private readonly IFundamentalRepository _repository;
 
         //private readonly IFundamentalRepository _repository;
         protected void Page_Load(object sender, EventArgs e)
@@ -20,11 +20,8 @@ namespace Avtec.DevMorningFix.WebApp
             Bootstrapper.Instance.Configure();
             var instanceDependencyResolver = Bootstrapper.Instance.DependencyResolver;
             //var compositionRoot = instanceDependencyResolver.GetCompositionRoot();
-            //string[] args;
-            var fundamentals = _repository.GetAllFundamentals();
-            _output.OutputData(fundamentals);
-            //compositionRoot.Start(args);
-            //TextBox_Fundamentals.Text = args;
+            string final = string.Empty;
+            TextBox_Fundamentals.Text = final;
 
         }
 
