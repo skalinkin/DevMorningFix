@@ -1,31 +1,34 @@
-﻿using System.ComponentModel.Composition;
+﻿using System;
+using System.ComponentModel.Composition;
+using Microsoft.Extensions.DependencyInjection;
+using StructureMap;
 
 namespace Avtec.DevMorningFix.Container.StructureMap
 {
-    [Export(typeof(IDependencyResolver))]
+    [Export(typeof(IServiceProvider))]
     [ExportMetadata("Name", "StructureMap")]
-    class StructureMapDependencyResolver : IDependencyResolver
+    class StructureMapDependencyResolver : IServiceProvider
     {
-        public IStartup GetCompositionRoot1()
+        private bool _configured;
+        private global::StructureMap.IContainer _container;
+        public object GetService(Type serviceType)
         {
-            var container = new global::StructureMap.Container(
-                _ => _.Scan
-                    (x =>
-                {
-                    x.TheCallingAssembly();
-                    x.AssembliesFromApplicationBaseDirectory();
-                    x.WithDefaultConventions();
-                    x.LookForRegistries();
-                })
-                );
+            if (!_configured)
+            {
+                Configure();
+            }
 
-
-            var startup = container.GetInstance<IStartup>();
-            return startup;
+            return _container.GetInstance(serviceType);
         }
-        public IStartup GetCompositionRoot()
+
+        private void Configure()
         {
-            throw new System.NotImplementedException();
+            //IServiceCollection services
+            _configured = true;
+            var strategy = new ContainerBuildStrategy();
+            var container = strategy.CreateContainer();
+            //_container.Populate(services);
+            _container = container;
         }
     }
 }
