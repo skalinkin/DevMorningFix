@@ -186,6 +186,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Autofac\AutofacDependencyResolver.cs" />
+    <Compile Include="Autofac\ContainerBuildStrategy.cs" />
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="IContainer.cs" />
     <Compile Include="LifeCycle.cs" />
