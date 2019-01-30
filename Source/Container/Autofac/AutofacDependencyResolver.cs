@@ -19,7 +19,6 @@ namespace Avtec.DevMorningFix.Container.Autofac
             {
                 Configure();
             }
-            var poo = new AutofacServiceProvider(_container);
 
             return _container.Resolve(serviceType);
         }
