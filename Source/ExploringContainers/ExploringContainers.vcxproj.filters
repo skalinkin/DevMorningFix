@@ -656,6 +656,9 @@
     <Text Include="ContainerFlavors\Hypodermic\CMakeLists.txt">
       <Filter>ContainerFlavors\Hypodermic</Filter>
     </Text>
+    <Text Include="conanfile.txt">
+      <Filter>AppConfig</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <None Include="ContainerFlavors\Hypodermic\Hypodermic.vcxproj">

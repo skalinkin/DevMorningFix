@@ -6,4 +6,4 @@ boost:shared=True # False
 # Take a look for all available options in conanfile.py at https://github.com/conan-community/conan-boost
 
 [generators]
-cmake
+visual_studio_multi

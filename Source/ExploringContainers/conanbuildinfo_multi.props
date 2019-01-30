@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ImportGroup Label="PropertySheets">
+		<Import Condition="'$(Configuration)' == 'Release' And '$(Platform)' == 'x64' And '$(PlatformToolset)' == 'v141'" Project="conanbuildinfo_release_x64_v141.props"/>
+	</ImportGroup>
+	<PropertyGroup Label="UserMacros"/>
+	<PropertyGroup/>
+	<ItemDefinitionGroup/>
+	<ItemGroup/>
+</Project>
