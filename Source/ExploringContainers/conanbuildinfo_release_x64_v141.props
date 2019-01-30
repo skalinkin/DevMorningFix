@@ -3,34 +3,34 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Label="Conan-RootDirs">
-    <Conan-boost-Root>C:/.conan/lvvcyd_2/1</Conan-boost-Root>
+    <Conan-boost-Root>C:/.conan/ibwfpv94/1</Conan-boost-Root>
     <Conan-bzip2-Root>$(USERPROFILE)/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7</Conan-bzip2-Root>
     <Conan-zlib-Root>$(USERPROFILE)/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7</Conan-zlib-Root>
   </PropertyGroup>
   <PropertyGroup Label="ConanVariables">
-    <ConanBinaryDirectories>C:/.conan/lvvcyd_2/1/bin;$(USERPROFILE)/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/bin;</ConanBinaryDirectories>
+    <ConanBinaryDirectories>C:/.conan/ibwfpv94/1/bin;$(USERPROFILE)/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/bin;</ConanBinaryDirectories>
     <ConanResourceDirectories></ConanResourceDirectories>
   </PropertyGroup>
   <PropertyGroup>
-    <LocalDebuggerEnvironment>PATH=%PATH%;C:/.conan/lvvcyd_2/1/bin;$(USERPROFILE)/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/bin;</LocalDebuggerEnvironment>
+    <LocalDebuggerEnvironment>PATH=%PATH%;C:/.conan/ibwfpv94/1/bin;$(USERPROFILE)/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/bin;</LocalDebuggerEnvironment>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-      <AdditionalIncludeDirectories>C:/.conan/lvvcyd_2/1/include;$(USERPROFILE)/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/include;$(USERPROFILE)/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:/.conan/ibwfpv94/1/include;$(USERPROFILE)/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/include;$(USERPROFILE)/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BOOST_ALL_DYN_LINK;BOOST_ALL_NO_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>C:/.conan/lvvcyd_2/1/lib;$(USERPROFILE)/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/lib;$(USERPROFILE)/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:/.conan/ibwfpv94/1/lib;$(USERPROFILE)/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/lib;$(USERPROFILE)/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>boost_wave.lib;boost_container.lib;boost_contract.lib;boost_exception.lib;boost_graph.lib;boost_iostreams.lib;boost_locale.lib;boost_log.lib;boost_program_options.lib;boost_random.lib;boost_regex.lib;boost_serialization.lib;boost_wserialization.lib;boost_coroutine.lib;boost_fiber.lib;boost_context.lib;boost_timer.lib;libboost_timer-vc141-mt-x64-1_69.lib;boost_thread.lib;boost_chrono.lib;libboost_chrono-vc141-mt-x64-1_69.lib;boost_date_time.lib;boost_atomic.lib;boost_filesystem.lib;boost_system.lib;libboost_system-vc141-mt-x64-1_69.lib;boost_type_erasure.lib;boost_log_setup.lib;boost_math_c99.lib;boost_math_c99f.lib;boost_math_c99l.lib;boost_math_tr1.lib;boost_math_tr1f.lib;boost_math_tr1l.lib;boost_stacktrace_noop.lib;boost_stacktrace_windbg.lib;boost_stacktrace_windbg_cached.lib;boost_unit_test_framework.lib;bcrypt.lib;bz2.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <Midl>
-      <AdditionalIncludeDirectories>C:/.conan/lvvcyd_2/1/include;$(USERPROFILE)/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/include;$(USERPROFILE)/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:/.conan/ibwfpv94/1/include;$(USERPROFILE)/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/include;$(USERPROFILE)/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </Midl>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>C:/.conan/lvvcyd_2/1/include;$(USERPROFILE)/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/include;$(USERPROFILE)/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:/.conan/ibwfpv94/1/include;$(USERPROFILE)/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/include;$(USERPROFILE)/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BOOST_ALL_DYN_LINK;BOOST_ALL_NO_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
     </ResourceCompile>
