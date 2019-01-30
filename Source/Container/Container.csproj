@@ -188,6 +188,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Autofac\AutofacBuilder.cs" />
     <Compile Include="Autofac\AutofacDependencyResolver.cs" />
     <Compile Include="Autofac\ContainerBuildStrategy.cs" />
     <Compile Include="Bootstrapper.cs" />
