@@ -1,8 +1,11 @@
-﻿using Avtec.NetCoreWebApp.DI;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
+using Avtec.DevMorningFix.Container;
+using Avtec.NetCoreWebApp.DI;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.DependencyInjection;
-using StructureMap;
 
 namespace Avtec.NetCoreWebApp
 {
@@ -22,4 +25,5 @@ namespace Avtec.NetCoreWebApp
             return webHostBuilder;
         }
     }
+
 }

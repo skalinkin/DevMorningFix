@@ -1,18 +1,18 @@
 ﻿using System;
 using System.ComponentModel.Composition;
+using Autofac.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
-using StructureMap;
 
-namespace Avtec.DevMorningFix.Container.StructureMap
+namespace Avtec.DevMorningFix.Container.Autofac
 {
     [Export(typeof(IDynamicServiceProvider))]
-    [ExportMetadata("Name", "StructureMap")]
-    public class StructureMapBuilder : IDynamicServiceProvider
+    [ExportMetadata("Name", "Autofac")]
+    internal class AutofacBuilder : IDynamicServiceProvider
     {
         public IServiceProvider OurServiceProvider => GetServiceProvider();
         public IServiceCollection ServicesCollection { get; set; }
 
-        public IServiceProvider GetServiceProvider()
+        private IServiceProvider GetServiceProvider()
         {
             var strategy = new ContainerBuildStrategy
             {
@@ -20,8 +20,7 @@ namespace Avtec.DevMorningFix.Container.StructureMap
             };
 
             var container = strategy.CreateContainer();
-
-            return new StructureMapServiceProvider(container);
+            return new AutofacServiceProvider(container);
         }
     }
 }

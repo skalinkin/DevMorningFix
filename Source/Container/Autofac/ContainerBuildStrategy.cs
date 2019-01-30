@@ -2,11 +2,15 @@
 using System.IO;
 using System.Reflection;
 using Autofac;
+using Autofac.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Avtec.DevMorningFix.Container.Autofac
 {
     internal class ContainerBuildStrategy
     {
+        public IServiceCollection SvcCollection { get; set; }
+
         public global::Autofac.IContainer CreateContainer()
         {
             var builder = new ContainerBuilder();
@@ -28,9 +32,14 @@ namespace Avtec.DevMorningFix.Container.Autofac
             {
                 builder.RegisterAssemblyTypes(assembly).AsImplementedInterfaces();
             }
-            
+
+            if (SvcCollection != null)
+            {
+                builder.Populate(SvcCollection);
+            }
+
             var container = builder.Build();
-            
+
             return container;
         }
     }

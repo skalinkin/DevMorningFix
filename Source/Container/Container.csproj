@@ -35,6 +35,9 @@
     <Reference Include="Autofac, Version=4.8.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Autofac.4.8.1\lib\net45\Autofac.dll</HintPath>
     </Reference>
+    <Reference Include="Autofac.Extensions.DependencyInjection, Version=4.3.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Autofac.Extensions.DependencyInjection.4.3.1\lib\netstandard2.0\Autofac.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=1.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.1.1.1\lib\netstandard1.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
     </Reference>
@@ -185,6 +188,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Autofac\AutofacBuilder.cs" />
     <Compile Include="Autofac\AutofacDependencyResolver.cs" />
     <Compile Include="Autofac\ContainerBuildStrategy.cs" />
     <Compile Include="Bootstrapper.cs" />
@@ -194,6 +198,7 @@
     <Compile Include="RegisteredObject.cs" />
     <Compile Include="SimpleIocContainer.cs" />
     <Compile Include="StructureMap\ContainerBuildStrategy.cs" />
+    <Compile Include="IDynamicServiceProvider.cs" />
     <Compile Include="StructureMap\StructureMapDependencyResolver.cs" />
     <Compile Include="TypeNotRegisteredException.cs" />
   </ItemGroup>
@@ -204,6 +209,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
