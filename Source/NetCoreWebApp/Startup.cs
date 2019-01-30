@@ -22,7 +22,7 @@ namespace Avtec.NetCoreWebApp
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public IServiceProvider ConfigureServices(IServiceCollection services)
+        public void ConfigureServices(IServiceCollection services)
         {
             services.Configure<CookiePolicyOptions>(options =>
             {
@@ -31,8 +31,12 @@ namespace Avtec.NetCoreWebApp
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            var container = ConfigureContainer(services);
-            return container;
+            //var container = ConfigureContainer(services);
+            //return container;
+            //Bootstrapper.Instance.Configure();
+            //var poo = Bootstrapper.Instance.DependencyResolver;
+            //var newt = new StructureMapServiceProvider();
+            //return new StructureMapServiceProvider(poo);
         }
 
         private IServiceProvider ConfigureContainer(IServiceCollection services)
@@ -40,8 +44,8 @@ namespace Avtec.NetCoreWebApp
             Bootstrapper.Instance.Configure();
             var poo = Bootstrapper.Instance.DependencyResolver;
 
-            
-            
+             //.ConfigureServices(services => services.AddAutofac())
+
             //var container = new Container();
             //container.Configure(config =>
             //{

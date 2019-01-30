@@ -37,7 +37,7 @@ namespace Avtec.DevMorningFix.Container
 
             DependencyResolver = currentResolver.Value;
         }
-
+        
         private static CompositionContainer GetContainer()
         {
             var location = Assembly.GetExecutingAssembly().Location;

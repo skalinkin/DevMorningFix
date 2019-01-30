@@ -1,4 +1,6 @@
-﻿namespace Avtec.DevMorningFix.Container.StructureMap
+﻿using StructureMap;
+
+namespace Avtec.DevMorningFix.Container.StructureMap
 {
     internal class ContainerBuildStrategy
     {
@@ -14,6 +16,7 @@
                     x.LookForRegistries();
                 })
             );
+            
             return container;
         }
     }
