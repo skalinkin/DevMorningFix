@@ -17,7 +17,6 @@ namespace Avtec.DevMorningFix.Container.Autofac
             {
                 Configure();
             }
-
             return _container.Resolve(serviceType);
         }
 
