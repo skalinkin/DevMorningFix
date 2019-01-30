@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Reflection;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
@@ -8,7 +7,6 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Avtec.DevMorningFix.Container.Autofac
 {
-
     internal class ContainerBuildStrategy
     {
         public IServiceCollection SvcCollection { get; set; }
