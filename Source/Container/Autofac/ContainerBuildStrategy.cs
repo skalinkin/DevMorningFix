@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Reflection;
 using Autofac;
@@ -16,26 +18,34 @@ namespace Avtec.DevMorningFix.Container.Autofac
             var builder = new ContainerBuilder();
 
             var allAssemblies = new List<Assembly>();
-            var path = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+            var paths = new Collection<string>();
 
-            foreach (var dll in Directory.GetFiles(path, "*.dll"))
+            paths.Add(AppDomain.CurrentDomain.BaseDirectory);
+            paths.Add(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "bin"));
+            foreach (var path in paths)
             {
-                allAssemblies.Add(Assembly.LoadFile(dll));
-            }
+                if (Directory.Exists(path))
+                {
+                    foreach (var dll in Directory.GetFiles(path, "*.dll"))
+                    {
+                        allAssemblies.Add(Assembly.LoadFile(dll));
+                    }
 
-            foreach (var exe in Directory.GetFiles(path, "*.exe"))
-            {
-                allAssemblies.Add(Assembly.LoadFile(exe));
-            }
+                    foreach (var exe in Directory.GetFiles(path, "*.exe"))
+                    {
+                        allAssemblies.Add(Assembly.LoadFile(exe));
+                    }
 
-            foreach (var assembly in allAssemblies)
-            {
-                builder.RegisterAssemblyTypes(assembly).AsImplementedInterfaces();
-            }
+                    foreach (var assembly in allAssemblies)
+                    {
+                        builder.RegisterAssemblyTypes(assembly).AsImplementedInterfaces();
+                    }
 
-            if (SvcCollection != null)
-            {
-                builder.Populate(SvcCollection);
+                    if (SvcCollection != null)
+                    {
+                        builder.Populate(SvcCollection);
+                    }
+                }
             }
 
             var container = builder.Build();

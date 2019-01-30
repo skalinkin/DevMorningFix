@@ -1,24 +1,24 @@
 [includedirs]
-C:/.conan/ibwfpv94/1/include
-C:/Users/syackey-qa/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/include
-C:/Users/syackey-qa/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/include
+C:/.conan/y20i63f7/1/include
+C:/Users/skalinkin/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/include
+C:/Users/skalinkin/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/include
 
 [libdirs]
-C:/.conan/ibwfpv94/1/lib
-C:/Users/syackey-qa/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/lib
-C:/Users/syackey-qa/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/lib
+C:/.conan/y20i63f7/1/lib
+C:/Users/skalinkin/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/lib
+C:/Users/skalinkin/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/lib
 
 [bindirs]
-C:/.conan/ibwfpv94/1/bin
-C:/Users/syackey-qa/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/bin
+C:/.conan/y20i63f7/1/bin
+C:/Users/skalinkin/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/bin
 
 [resdirs]
 
 
 [builddirs]
-C:/.conan/ibwfpv94/1/
-C:/Users/syackey-qa/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/
-C:/Users/syackey-qa/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/
+C:/.conan/y20i63f7/1/
+C:/Users/skalinkin/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/
+C:/Users/skalinkin/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/
 
 [libs]
 boost_wave
@@ -84,19 +84,19 @@ BOOST_ALL_NO_LIB
 
 
 [includedirs_boost]
-C:/.conan/ibwfpv94/1/include
+C:/.conan/y20i63f7/1/include
 
 [libdirs_boost]
-C:/.conan/ibwfpv94/1/lib
+C:/.conan/y20i63f7/1/lib
 
 [bindirs_boost]
-C:/.conan/ibwfpv94/1/bin
+C:/.conan/y20i63f7/1/bin
 
 [resdirs_boost]
 
 
 [builddirs_boost]
-C:/.conan/ibwfpv94/1/
+C:/.conan/y20i63f7/1/
 
 [libs_boost]
 boost_wave
@@ -159,23 +159,23 @@ BOOST_ALL_NO_LIB
 
 
 [rootpath_boost]
-C:/.conan/ibwfpv94/1
+C:/.conan/y20i63f7/1
 
 
 [includedirs_bzip2]
-C:/Users/syackey-qa/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/include
+C:/Users/skalinkin/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/include
 
 [libdirs_bzip2]
-C:/Users/syackey-qa/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/lib
+C:/Users/skalinkin/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/lib
 
 [bindirs_bzip2]
-C:/Users/syackey-qa/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/bin
+C:/Users/skalinkin/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/bin
 
 [resdirs_bzip2]
 
 
 [builddirs_bzip2]
-C:/Users/syackey-qa/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/
+C:/Users/skalinkin/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/
 
 [libs_bzip2]
 bz2
@@ -199,14 +199,14 @@ bz2
 
 
 [rootpath_bzip2]
-C:/Users/syackey-qa/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7
+C:/Users/skalinkin/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7
 
 
 [includedirs_zlib]
-C:/Users/syackey-qa/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/include
+C:/Users/skalinkin/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/include
 
 [libdirs_zlib]
-C:/Users/syackey-qa/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/lib
+C:/Users/skalinkin/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/lib
 
 [bindirs_zlib]
 
@@ -215,7 +215,7 @@ C:/Users/syackey-qa/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d2
 
 
 [builddirs_zlib]
-C:/Users/syackey-qa/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/
+C:/Users/skalinkin/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/
 
 [libs_zlib]
 zlib
@@ -239,13 +239,13 @@ zlib
 
 
 [rootpath_zlib]
-C:/Users/syackey-qa/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7
+C:/Users/skalinkin/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7
 
 
 [USER_boost]
 [USER_bzip2]
 [USER_zlib]
 [ENV_boost]
-BOOST_ROOT=C:\.conan\ibwfpv94\1
+BOOST_ROOT=C:\.conan\y20i63f7\1
 [ENV_bzip2]
 [ENV_zlib]

@@ -37,7 +37,7 @@ namespace Avtec.NetCoreWebApp
 
         private IServiceProvider ConfigureContainer(IServiceCollection services)
         {
-            Bootstrapper.Instance.Configure(services);
+            Bootstrapper.Instance.Configure();
             return Bootstrapper.Instance.DependencyResolver;
         }
 
