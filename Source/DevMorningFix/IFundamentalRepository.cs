@@ -2,7 +2,7 @@
 
 namespace Avtec.DevMorningFix
 {
-    internal interface IFundamentalRepository
+    public interface IFundamentalRepository
     {
         IEnumerable<DevFixFundamental> GetAllFundamentals();
     }

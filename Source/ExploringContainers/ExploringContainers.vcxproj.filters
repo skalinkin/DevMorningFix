@@ -1,10 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
     <Filter Include="Presentation Layer">
       <UniqueIdentifier>{2903ccc3-ba1c-47ab-a335-57229297bd4d}</UniqueIdentifier>
     </Filter>
@@ -34,8 +30,20 @@
     <Filter Include="AppConfig">
       <UniqueIdentifier>{cf38848e-e7fc-48ba-bcd2-76db6448bd49}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Containers\Fruit">
-      <UniqueIdentifier>{4b07669a-687c-452b-a39b-5e867e374674}</UniqueIdentifier>
+    <Filter Include="ContainerFlavors">
+      <UniqueIdentifier>{6842c5e7-21e9-4025-a9b8-20720bca24ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ContainerFlavors\BoostDI">
+      <UniqueIdentifier>{829c8dd9-707c-44c7-8c80-eaf11ddc5762}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ContainerFlavors\BoostDI\include">
+      <UniqueIdentifier>{53cab54d-1b16-47cc-a2df-63ca3553c93b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ContainerFlavors\BoostDI\include\boost">
+      <UniqueIdentifier>{628ba17a-cb5a-4d95-aece-5bf8e65182d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ContainerFlavors\Hypodermic">
+      <UniqueIdentifier>{c4205cf6-5215-44d4-8a0a-2866c1785a93}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -72,8 +80,545 @@
     <ClInclude Include="DependencyResolverFactory.h">
       <Filter>Containers\Factory</Filter>
     </ClInclude>
-    <ClInclude Include="FruitAdapter.h">
-      <Filter>Containers\Fruit</Filter>
+    <ClInclude Include="ContainerFlavors\BoostDI\include\boost\di.hpp">
+      <Filter>ContainerFlavors\BoostDI\include\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\ActivatedRegistrationInfo.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\ActivationException.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\ActivationHandler.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\ActivationHandlers.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\ActivationRegistry.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\ActivationResult.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\AnyArgument.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\ArgumentPack.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\ArgumentResolver.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\As.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\AsSelf.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\AutowireableConstructor.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\AutowireableConstructorRegistrationDescriptor.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\Behavior.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\CircularDependencyException.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\ComponentContext.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\Config.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\ConsoleLoggerSink.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\ConstructorDescriptor.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\ConstructorTypologyDeducer.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\Container.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\ContainerBuilder.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\ContainerInstanceRegistration.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\ContainerInstanceRegistrationActivator.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\DependencyActivationException.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\DependencyFactories.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\DependencyFactory.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\DependencyFactoryTag.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\ExceptionBase.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\FactoryWrapper.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\Hypodermic.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\ILoggerSink.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\InstanceAlreadyActivatingException.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\InstanceFactory.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\InstanceLifetime.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\InstanceRegistrationTags.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\IntegerSequence.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\IRegistration.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\IRegistrationActivator.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\IRegistrationDescriptor.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\IRegistrationRegistry.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\IRegistrationScope.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\IResolutionContainer.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\IResolutionContext.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\IRuntimeRegistrationBuilder.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\IsComplete.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\IsSupportedArgument.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\ITypeAlias.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\Log.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\Logger.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\LogLevel.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\MetaContains.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\MetaForEach.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\MetaIdentity.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\MetaInsert.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\MetaMap.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\MetaPair.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\Named.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\NamedTypeAlias.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\NestedRegistrationScope.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\NoopLoggerSink.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\OnActivated.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\PersistentInstanceRegistration.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\PointerAlignment.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\Pragmas.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\ProvidedDependencyTag.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\ProvidedInstanceDependencyTag.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\ProvidedInstanceFactoryRegistrationDescriptor.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\ProvidedInstanceRegistration.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\ProvidedInstanceRegistrationActivator.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\ProvidedInstanceRegistrationDescriptor.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\Registration.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\RegistrationActivator.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\RegistrationBuilder.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\RegistrationContext.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\RegistrationDescriptorBase.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\RegistrationDescriptorBuilder.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\RegistrationDescriptorInfo.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\RegistrationDescriptorInfoToString.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\RegistrationException.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\RegistrationScope.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\ResolutionContainer.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\ResolutionContext.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\ResolutionException.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\ResolutionInfo.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\RuntimeRegistrationBuilder.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\SingleInstance.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\TypeAlias.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\TypeAliases.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\TypeAliasKey.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\TypeInfo.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\UseIfNone.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Hypodermic\With.h">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\component_storage\binding_deps.defn.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\component_storage\binding_deps.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\component_storage\component_storage.defn.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\component_storage\component_storage.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\component_storage\component_storage_entry.defn.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\component_storage\component_storage_entry.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\component_storage\partial_component_storage.defn.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\component_storage\partial_component_storage.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\data_structures\arena_allocator.defn.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\data_structures\arena_allocator.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\data_structures\fixed_size_allocator.defn.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\data_structures\fixed_size_allocator.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\data_structures\fixed_size_vector.defn.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\data_structures\fixed_size_vector.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\data_structures\fixed_size_vector.templates.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\data_structures\memory_pool.defn.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\data_structures\memory_pool.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\data_structures\packed_pointer_and_bool.defn.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\data_structures\packed_pointer_and_bool.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\data_structures\semistatic_graph.defn.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\data_structures\semistatic_graph.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\data_structures\semistatic_graph.templates.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\data_structures\semistatic_map.defn.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\data_structures\semistatic_map.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\data_structures\semistatic_map.templates.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\injector\injector_accessor_for_tests.defn.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\injector\injector_accessor_for_tests.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\injector\injector_storage.defn.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\injector\injector_storage.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\meta\algos.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\meta\basics.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\meta\component.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\meta\errors.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\meta\eval.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\meta\fold.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\meta\graph.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\meta\immutable_map.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\meta\immutable_set.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\meta\list.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\meta\logical_operations.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\meta\map.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\meta\metaprogramming.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\meta\numeric_operations.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\meta\pair.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\meta\proof_tree_comparison.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\meta\proof_trees.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\meta\set.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\meta\signatures.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\meta\triplet.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\meta\vector.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\meta\wrappers.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\normalized_component_storage\binding_normalization.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\normalized_component_storage\binding_normalization.templates.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\normalized_component_storage\normalized_bindings.defn.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\normalized_component_storage\normalized_bindings.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\normalized_component_storage\normalized_component_storage.defn.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\normalized_component_storage\normalized_component_storage.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\normalized_component_storage\normalized_component_storage_holder.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\util\call_with_tuple.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\util\demangle_type_name.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\util\hash_codes.defn.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\util\hash_codes.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\util\hash_helpers.defn.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\util\hash_helpers.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\util\lambda_invoker.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\util\type_info.defn.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\util\type_info.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\bindings.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\component.defn.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\component_functors.defn.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\fruit_assert.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\fruit_internal_forward_decls.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\fruit-config.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\fruit-config-base.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\injection_debug_errors.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\injection_errors.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\injector.defn.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\normalized_component.defn.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\impl\provider.defn.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\component.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\fruit.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\fruit_forward_decls.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\injector.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\macro.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\normalized_component.h">
+      <Filter>Presentation Layer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerFlavors\Fruit\include\fruit\provider.h">
+      <Filter>Presentation Layer\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -101,13 +646,29 @@
     <ClCompile Include="DependencyResolverFactory.cpp">
       <Filter>Containers\Factory</Filter>
     </ClCompile>
-    <ClCompile Include="FruitAdapter.cpp">
-      <Filter>Containers\Fruit</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Xml Include="props.xml">
       <Filter>AppConfig</Filter>
     </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ContainerFlavors\Hypodermic\CMakeLists.txt">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ContainerFlavors\Hypodermic\Hypodermic.vcxproj">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </None>
+    <None Include="ContainerFlavors\Hypodermic\Hypodermic.vcxproj.filters">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </None>
+    <None Include="ContainerFlavors\Hypodermic\Hypodermic.vcxproj.user">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </None>
+    <None Include="ContainerFlavors\Hypodermic\libhypodermic.pc.in">
+      <Filter>ContainerFlavors\Hypodermic</Filter>
+    </None>
   </ItemGroup>
 </Project>

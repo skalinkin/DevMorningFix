@@ -18,10 +18,12 @@ namespace Avtec.DevMorningFix.Container
 
         public static Bootstrapper Instance { get; } = new Bootstrapper();
 
-        public IDependencyResolver DependencyResolver { get; set; }
+        public IServiceProvider DependencyResolver { get; set; }
 
-        [ImportMany(typeof(IDependencyResolver))]
-        public IEnumerable<Lazy<IDependencyResolver, Dictionary<string, object>>> DependencyResolvers { get; set; }
+        public Action<IServiceProvider> AfterContainerReady = ((sp) => {});
+
+        [ImportMany(typeof(IServiceProvider))]
+        public IEnumerable<Lazy<IServiceProvider, Dictionary<string, object>>> DependencyResolvers { get; set; }
 
         public void Configure()
         {
@@ -35,6 +37,7 @@ namespace Avtec.DevMorningFix.Container
                 .Where(i => i.Metadata.ContainsKey("Name"))
                 .Single(i => i.Metadata["Name"].ToString() == currentContainer);
 
+            AfterContainerReady(DependencyResolver);
             DependencyResolver = currentResolver.Value;
         }
 

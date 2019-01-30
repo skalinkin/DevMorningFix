@@ -1,36 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
+using Avtec.DevMorningFix;
+using Avtec.DevMorningFix.FormatOutput;
 
-namespace Avtec.DevMorningFix.FormatOutput
+namespace WebApplication
 {
-    internal class ConsoleOutput : IOutput
+    internal class WebOutput 
     {
         private readonly IFundamentalFormat _format;
         private readonly IFundamentalModel _model;
 
-        public ConsoleOutput(IFundamentalFormat format, IFundamentalModel model)
+        public WebOutput(IFundamentalFormat format, IFundamentalModel model)
         {
             _format = format;
             _model = model;
         }
 
-        public virtual void OutputFormatted(IDevFixFundamental f)
+        public string OutputFormatted(IDevFixFundamental f)
         {
             var format = _format.GetFormat();
             var data = _model.GetData(f);
             var finalString = string.Format(format, data);
-            Console.WriteLine(finalString);
+            return finalString;
         }
 
-        public void OutputData(IEnumerable<IDevFixFundamental> fundamentals)
+        public string OutputData(IEnumerable<IDevFixFundamental> fundamentals)
         {
             var format = _format.GetFormat();
+            var finalString = String.Empty;
             foreach (var fundamental in fundamentals)
             {
                 var data = _model.GetData(fundamental);
-                var finalString = string.Format(format, data);
-                Console.WriteLine(finalString);
+                finalString = string.Format(format, data);
+                
             }
+            return finalString;
         }
     }
 }

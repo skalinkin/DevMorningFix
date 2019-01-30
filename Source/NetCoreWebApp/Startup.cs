@@ -1,4 +1,5 @@
 ﻿using System;
+using Avtec.DevMorningFix.Container;
 using Avtec.NetCoreWebApp.DI;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -36,13 +37,19 @@ namespace Avtec.NetCoreWebApp
 
         private IServiceProvider ConfigureContainer(IServiceCollection services)
         {
-            var container = new Container();
-            container.Configure(config =>
+            Bootstrapper.Instance.Configure();
+            Bootstrapper.Instance.AfterContainerReady = sp =>
             {
-                config.IncludeRegistry<FunRegistry>();
-                config.Populate(services);
-            });
-            return container.GetInstance<IServiceProvider>();
+                var container = (Container) sp;
+                container.Configure(config =>
+                {
+                    config.IncludeRegistry<FunRegistry>();
+                    config.Populate(services);
+                });
+            };
+            
+            var poo = Bootstrapper.Instance.DependencyResolver;
+            return poo;
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore;
+﻿using Avtec.NetCoreWebApp.DI;
+using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.DependencyInjection;
+using StructureMap;
 
 namespace Avtec.NetCoreWebApp
 {
