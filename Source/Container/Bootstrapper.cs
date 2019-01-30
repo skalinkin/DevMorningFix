@@ -55,10 +55,14 @@ namespace Avtec.DevMorningFix.Container
         private static CompositionContainer GetContainer()
         {
             var location = Assembly.GetExecutingAssembly().Location;
+            var locationASP = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "bin");
             var path = Path.GetDirectoryName(location);
+            var pathASP = locationASP;
             Debug.Assert(path != null, nameof(path) + " != null");
             var directoryCatalog = new DirectoryCatalog(path, "*.dll");
+            var directoryCatalogASP = new DirectoryCatalog(pathASP, "*.dll");
             var catalog = new AggregateCatalog(directoryCatalog);
+            catalog = new AggregateCatalog(directoryCatalog, directoryCatalogASP);
             var container = new CompositionContainer(catalog);
             return container;
         }
