@@ -5,60 +5,23 @@ using StructureMap;
 
 namespace Avtec.DevMorningFix.Container.StructureMap
 {
-
-    class StructureMapThingy
+    [Export(typeof(IDynamicServiceProvider))]
+    [ExportMetadata("Name", "StructureMap")]
+    public class StructureMapBuilder : IDynamicServiceProvider
     {
-        private global::StructureMap.IContainer _container;
+        public IServiceProvider OurServiceProvider => GetServiceProvider();
+        public IServiceCollection ServicesCollection { get; set; }
 
-        public StructureMapThingy()
+        public IServiceProvider GetServiceProvider()
         {
-        }
-
-        [Export(typeof(IServiceProvider))]
-        [ExportMetadata("Name", "StructureMap")]
-        public IServiceProvider poo()
-        {
-            return new StructureMapServiceProvider(_container);
-        }
-
-        private void Configure()
-        {
-            var strategy = new ContainerBuildStrategy();
-            _container = strategy.CreateContainer();
-        }
-
-
-        class StructureMapDependencyResolver : IServiceProvider
-        {
-            private bool _configured;
-            private global::StructureMap.IContainer _container;
-
-            public object GetService(Type serviceType)
+            var strategy = new ContainerBuildStrategy
             {
-                if (!_configured)
-                {
-                    Configure();
-                }
+                SvcCollection = ServicesCollection
+            };
 
-                object poo = _container.GetInstance(serviceType);
-                return _container.GetInstance(serviceType);
-            }
+            var container = strategy.CreateContainer();
 
-
-
-
-            private void Configure()
-            {
-                //IServiceCollection services
-                _configured = true;
-                var strategy = new ContainerBuildStrategy();
-
-                global::StructureMap.IContainer container = strategy.CreateContainer();
-                var poo = new StructureMapServiceProvider(container);
-
-                //_container.Populate(services);
-                _container = container;
-            }
+            return new StructureMapServiceProvider(container);
         }
     }
 }

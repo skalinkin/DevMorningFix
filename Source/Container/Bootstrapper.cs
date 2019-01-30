@@ -7,6 +7,8 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using Avtec.DevMorningFix.Container.StructureMap;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Avtec.DevMorningFix.Container
 {
@@ -19,28 +21,37 @@ namespace Avtec.DevMorningFix.Container
         public static Bootstrapper Instance { get; } = new Bootstrapper();
 
         public IServiceProvider DependencyResolver { get; set; }
-
-        public Action<IServiceProvider> AfterContainerReady = ((sp) => {});
-
-        [ImportMany(typeof(IServiceProvider))]
-        public IEnumerable<Lazy<IServiceProvider, Dictionary<string, object>>> DependencyResolvers { get; set; }
+        
+        [ImportMany(typeof(IDynamicServiceProvider))]
+        public IEnumerable<Lazy<IDynamicServiceProvider, Dictionary<string, object>>> DependencyResolvers { get; set; }
 
         public void Configure()
         {
             var container = GetContainer();
-
             container.ComposeParts(Instance);
 
-            var currentContainer = ConfigurationManager.AppSettings["Container"];
+            var svcProvider = ResolveClassFromCompositionContainer();
+            DependencyResolver = svcProvider.OurServiceProvider;
 
-            var currentResolver = DependencyResolvers
-                .Where(i => i.Metadata.ContainsKey("Name"))
-                .Single(i => i.Metadata["Name"].ToString() == currentContainer);
-
-            AfterContainerReady(DependencyResolver);
-            DependencyResolver = currentResolver.Value;
         }
-        
+
+        public void Configure(IServiceCollection servicesCollection)
+        {
+            var container = GetContainer();
+            container.ComposeParts(Instance);
+
+            var svcProvider = ResolveClassFromCompositionContainer();
+            svcProvider.ServicesCollection = servicesCollection;
+
+            DependencyResolver = svcProvider.OurServiceProvider;
+        }
+
+        private static void ComposeContainer()
+        {
+            var container = GetContainer();
+            container.ComposeParts(Instance);
+        }
+
         private static CompositionContainer GetContainer()
         {
             var location = Assembly.GetExecutingAssembly().Location;
@@ -50,6 +61,17 @@ namespace Avtec.DevMorningFix.Container
             var catalog = new AggregateCatalog(directoryCatalog);
             var container = new CompositionContainer(catalog);
             return container;
+        }
+
+        private IDynamicServiceProvider ResolveClassFromCompositionContainer()
+        {
+            var currentContainer = ConfigurationManager.AppSettings["Container"];
+
+            Lazy<IDynamicServiceProvider, Dictionary<string, object>> currentResolver = DependencyResolvers
+                .Where(i => i.Metadata.ContainsKey("Name"))
+                .Single(i => i.Metadata["Name"].ToString() == currentContainer);
+
+            return currentResolver.Value;
         }
     }
 }

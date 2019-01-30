@@ -197,6 +197,7 @@
     <Compile Include="RegisteredObject.cs" />
     <Compile Include="SimpleIocContainer.cs" />
     <Compile Include="StructureMap\ContainerBuildStrategy.cs" />
+    <Compile Include="IDynamicServiceProvider.cs" />
     <Compile Include="StructureMap\StructureMapDependencyResolver.cs" />
     <Compile Include="TypeNotRegisteredException.cs" />
   </ItemGroup>
