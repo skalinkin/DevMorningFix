@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Avtec.DevMorningFix.WebApp {
+namespace WebApplication {
     
     
     public partial class _Default {
