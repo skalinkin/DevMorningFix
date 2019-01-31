@@ -4,7 +4,7 @@ using Avtec.DevMorningFix.XmlStoreModule.DataManager;
 
 namespace Avtec.DevMorningFix.XmlStoreModule
 {
-    internal class FundamentalRepository : IFundamentalRepository
+    public class FundamentalRepository : IFundamentalRepository
     {
         private readonly IDataManager _manager;
 

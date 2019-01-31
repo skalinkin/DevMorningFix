@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
 using System.Configuration;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 
@@ -13,6 +14,7 @@ namespace Avtec.DevMorningFix.Container
     {
         private Bootstrapper()
         {
+            Debug.Print("Creating instance of Bootstrapper.");
         }
 
         public static Bootstrapper Instance { get; } = new Bootstrapper();
@@ -24,15 +26,20 @@ namespace Avtec.DevMorningFix.Container
 
         public void Configure()
         {
+            Debug.Print("Configuring Bootstrapper.");
             var compositionContainer = GetContainer();
             compositionContainer.ComposeParts(Instance);
-
-            DependencyResolver = ResolveClassFromCompositionContainer();
+            DependencyResolver = SelectCurrentContainer();
         }
 
         private static CompositionContainer GetContainer()
         {
             var paths = GetPaths();
+
+            foreach (var path in paths)
+            {
+                Debug.Print($"Path to scan for IServiceProvider {path}");
+            }
 
             var catalog = new AggregateCatalog();
             foreach (var path in paths)
@@ -40,6 +47,7 @@ namespace Avtec.DevMorningFix.Container
                 if(Directory.Exists(path))
                 {
                     var part = new DirectoryCatalog(path, "*.dll");
+                    Debug.Print($"Adding directory catalog for path {path}");
                     catalog.Catalogs.Add(part);
                 }
             }
@@ -48,18 +56,23 @@ namespace Avtec.DevMorningFix.Container
             return container;
         }
 
-        private static IEnumerable<string> GetPaths()
+        private static string [] GetPaths()
         {
             var paths = new Collection<string>();
 
             paths.Add(AppDomain.CurrentDomain.BaseDirectory);
             paths.Add(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "bin"));
-            return paths;
+            return paths.ToArray();
         }
 
-        private IServiceProvider ResolveClassFromCompositionContainer()
+        private IServiceProvider SelectCurrentContainer()
         {
             var currentContainer = ConfigurationManager.AppSettings["Container"];
+
+            if (string.IsNullOrEmpty(currentContainer))
+            {
+                return DependencyResolvers.First().Value;
+            }
 
             var currentResolver = DependencyResolvers
                 .Where(i => i.Metadata.ContainsKey("Name"))

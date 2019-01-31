@@ -2,10 +2,10 @@
 using System.Web;
 using System.Web.Optimization;
 using System.Web.Routing;
-using Avtec.DevMorningFix;
 using Avtec.DevMorningFix.Container;
+using WebApplication;
 
-namespace WebApplication
+namespace Avtec.DevMorningFix.WebApplication
 {
     public class Global : HttpApplication
     {
@@ -18,6 +18,8 @@ namespace WebApplication
             var resolver = Bootstrapper.Instance.DependencyResolver;
             var start = resolver.GetService<IStartup>();
             start.Start();
+
+            HttpRuntime.WebObjectActivator = resolver;
         }
     }
 }
