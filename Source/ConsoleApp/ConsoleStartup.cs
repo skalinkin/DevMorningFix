@@ -8,7 +8,7 @@ namespace Avtec.DevMorningFix.ConsoleApp
         private readonly IOutput _output;
         private readonly IShowFundamentals _showFundamentalsBusinessCase;
 
-        public ConsoleStartup(IShowFundamentals showFundamentalsBusinessCase,IOutput output)
+        public ConsoleStartup(IShowFundamentals showFundamentalsBusinessCase, IOutput output)
         {
             _output = output;
             _showFundamentalsBusinessCase = showFundamentalsBusinessCase;

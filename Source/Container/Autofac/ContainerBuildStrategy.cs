@@ -45,15 +45,14 @@ namespace Avtec.DevMorningFix.Container.Autofac
 
                     if (SvcCollection != null)
                     {
-                       builder.Populate(SvcCollection);
+                        builder.Populate(SvcCollection);
                     }
-
                 }
             }
 
             var container = builder.Build();
 
-                Debug.Print($"{container.ComponentRegistry.Registrations}");
+            Debug.Print($"{container.ComponentRegistry.Registrations}");
 
             return container;
         }

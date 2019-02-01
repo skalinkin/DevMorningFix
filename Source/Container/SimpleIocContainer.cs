@@ -25,6 +25,7 @@ namespace Avtec.DevMorningFix.Container
         {
             registeredObjects.Add(new RegisteredObject(resolve, concrete, LifeCycle.Singleton));
         }
+
         public void Register(Type resolve, Type concrete, LifeCycle lifeCycle)
         {
             registeredObjects.Add(new RegisteredObject(resolve, concrete, lifeCycle));

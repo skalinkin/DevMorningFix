@@ -7,6 +7,7 @@ namespace Avtec.DevMorningFix
     {
         [Obsolete("Use OutputData instead.", false)]
         void OutputFormatted(IDevFixFundamental f);
+
         void OutputData(IEnumerable<IDevFixFundamental> fundamentals);
     }
 }

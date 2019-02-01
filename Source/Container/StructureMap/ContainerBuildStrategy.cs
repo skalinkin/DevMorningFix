@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using StructureMap;
 
 namespace Avtec.DevMorningFix.Container.StructureMap
@@ -14,14 +11,14 @@ namespace Avtec.DevMorningFix.Container.StructureMap
         {
             var container = new global::StructureMap.Container(
                 _ => _.Scan
-                    (
-                        x =>
-                            {
-                                x.TheCallingAssembly();
-                                x.AssembliesFromApplicationBaseDirectory();
-                                x.WithDefaultConventions();
-                            })
-                    );
+                (
+                    x =>
+                    {
+                        x.TheCallingAssembly();
+                        x.AssembliesFromApplicationBaseDirectory();
+                        x.WithDefaultConventions();
+                    })
+            );
 
             if (SvcCollection != null)
             {

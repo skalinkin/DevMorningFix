@@ -19,18 +19,8 @@ namespace Avtec.DevMorningFix.FundamentalsUnitTest
             subject.SetOutput(null);
 
             // Act
-            var exceptionThrown = false;
-            try
-            {
-                subject.Execute();
-            }
-            catch (InvalidOperationException ex)
-            {
-                exceptionThrown = true;
-            }
-
             // Assess
-            Assert.IsTrue(exceptionThrown);
+            Assert.Throws<InvalidOperationException>(subject.Execute);
         }
 
         [Test]

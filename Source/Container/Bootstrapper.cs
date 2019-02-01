@@ -44,7 +44,7 @@ namespace Avtec.DevMorningFix.Container
             var catalog = new AggregateCatalog();
             foreach (var path in paths)
             {
-                if(Directory.Exists(path))
+                if (Directory.Exists(path))
                 {
                     var part = new DirectoryCatalog(path, "*.dll");
                     Debug.Print($"Adding directory catalog for path {path}");
@@ -56,7 +56,7 @@ namespace Avtec.DevMorningFix.Container
             return container;
         }
 
-        private static string [] GetPaths()
+        private static string[] GetPaths()
         {
             var paths = new Collection<string>();
 
