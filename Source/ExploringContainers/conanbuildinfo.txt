@@ -1,24 +1,26 @@
 [includedirs]
-C:/.conan/y20i63f7/1/include
-C:/Users/skalinkin/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/include
-C:/Users/skalinkin/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/include
+C:/Users/nmauro-qa/.conan/data/Hypodermic/1.0.0/Hypodermic/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/include
+C:/.conan/lvvcyd_2/1/include
+C:/Users/nmauro-qa/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/include
+C:/Users/nmauro-qa/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/include
 
 [libdirs]
-C:/.conan/y20i63f7/1/lib
-C:/Users/skalinkin/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/lib
-C:/Users/skalinkin/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/lib
+C:/.conan/lvvcyd_2/1/lib
+C:/Users/nmauro-qa/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/lib
+C:/Users/nmauro-qa/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/lib
 
 [bindirs]
-C:/.conan/y20i63f7/1/bin
-C:/Users/skalinkin/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/bin
+C:/.conan/lvvcyd_2/1/bin
+C:/Users/nmauro-qa/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/bin
 
 [resdirs]
 
 
 [builddirs]
-C:/.conan/y20i63f7/1/
-C:/Users/skalinkin/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/
-C:/Users/skalinkin/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/
+C:/Users/nmauro-qa/.conan/data/Hypodermic/1.0.0/Hypodermic/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/
+C:/.conan/lvvcyd_2/1/
+C:/Users/nmauro-qa/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/
+C:/Users/nmauro-qa/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/
 
 [libs]
 boost_wave
@@ -83,20 +85,60 @@ BOOST_ALL_NO_LIB
 
 
 
+[includedirs_Hypodermic]
+C:/Users/nmauro-qa/.conan/data/Hypodermic/1.0.0/Hypodermic/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/include
+
+[libdirs_Hypodermic]
+
+
+[bindirs_Hypodermic]
+
+
+[resdirs_Hypodermic]
+
+
+[builddirs_Hypodermic]
+C:/Users/nmauro-qa/.conan/data/Hypodermic/1.0.0/Hypodermic/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/
+
+[libs_Hypodermic]
+
+
+[defines_Hypodermic]
+
+
+[cppflags_Hypodermic]
+
+
+[cflags_Hypodermic]
+
+
+[sharedlinkflags_Hypodermic]
+
+
+[exelinkflags_Hypodermic]
+
+
+[sysroot_Hypodermic]
+
+
+[rootpath_Hypodermic]
+C:/Users/nmauro-qa/.conan/data/Hypodermic/1.0.0/Hypodermic/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7
+
+
 [includedirs_boost]
-C:/.conan/y20i63f7/1/include
+C:/.conan/lvvcyd_2/1/include
 
 [libdirs_boost]
-C:/.conan/y20i63f7/1/lib
+C:/.conan/lvvcyd_2/1/lib
 
 [bindirs_boost]
-C:/.conan/y20i63f7/1/bin
+C:/.conan/lvvcyd_2/1/bin
 
 [resdirs_boost]
 
 
 [builddirs_boost]
-C:/.conan/y20i63f7/1/
+C:/.conan/lvvcyd_2/1/
 
 [libs_boost]
 boost_wave
@@ -159,23 +201,23 @@ BOOST_ALL_NO_LIB
 
 
 [rootpath_boost]
-C:/.conan/y20i63f7/1
+C:/.conan/lvvcyd_2/1
 
 
 [includedirs_bzip2]
-C:/Users/skalinkin/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/include
+C:/Users/nmauro-qa/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/include
 
 [libdirs_bzip2]
-C:/Users/skalinkin/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/lib
+C:/Users/nmauro-qa/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/lib
 
 [bindirs_bzip2]
-C:/Users/skalinkin/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/bin
+C:/Users/nmauro-qa/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/bin
 
 [resdirs_bzip2]
 
 
 [builddirs_bzip2]
-C:/Users/skalinkin/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/
+C:/Users/nmauro-qa/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/
 
 [libs_bzip2]
 bz2
@@ -199,14 +241,14 @@ bz2
 
 
 [rootpath_bzip2]
-C:/Users/skalinkin/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7
+C:/Users/nmauro-qa/.conan/data/bzip2/1.0.6/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7
 
 
 [includedirs_zlib]
-C:/Users/skalinkin/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/include
+C:/Users/nmauro-qa/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/include
 
 [libdirs_zlib]
-C:/Users/skalinkin/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/lib
+C:/Users/nmauro-qa/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/lib
 
 [bindirs_zlib]
 
@@ -215,7 +257,7 @@ C:/Users/skalinkin/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d27
 
 
 [builddirs_zlib]
-C:/Users/skalinkin/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/
+C:/Users/nmauro-qa/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7/
 
 [libs_zlib]
 zlib
@@ -239,13 +281,15 @@ zlib
 
 
 [rootpath_zlib]
-C:/Users/skalinkin/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7
+C:/Users/nmauro-qa/.conan/data/zlib/1.2.11/conan/stable/package/6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7
 
 
+[USER_Hypodermic]
 [USER_boost]
 [USER_bzip2]
 [USER_zlib]
+[ENV_Hypodermic]
 [ENV_boost]
-BOOST_ROOT=C:\.conan\y20i63f7\1
+BOOST_ROOT=C:\.conan\lvvcyd_2\1
 [ENV_bzip2]
 [ENV_zlib]

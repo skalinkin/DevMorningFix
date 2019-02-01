@@ -1,6 +1,6 @@
 #pragma once
 #include "IDependencyResolver.h"
-#include <ContainerBuilder.h>
+#include <Hypodermic/ContainerBuilder.h>
 
 class HypodermicAdapter:public IDependencyResolver
 {

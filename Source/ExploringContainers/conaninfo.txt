@@ -7,6 +7,7 @@
     os=Windows
 
 [requires]
+    Hypodermic/1.Y.Z
     boost/1.Y.Z
 
 [options]
@@ -23,11 +24,13 @@
     os_build=Windows
 
 [full_requires]
+    Hypodermic/1.0.0@Hypodermic/stable:6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7
     boost/1.69.0@conan/stable:29929b1deba07f613f7ddc25c0baf4d5a409487d
     bzip2/1.0.6@conan/stable:6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7
     zlib/1.2.11@conan/stable:6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7
 
 [full_options]
+    Hypodermic:shared=False
     boost:header_only=False
     boost:magic_autolink=False
     boost:python_executable=None

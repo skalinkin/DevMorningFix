@@ -59,22 +59,18 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="conanbuildinfo_multi.props" />
     <Import Project="conanbuildinfo_release_x64_v141.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="conanbuildinfo_multi.props" />
     <Import Project="conanbuildinfo_release_x64_v141.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="conanbuildinfo_multi.props" />
     <Import Project="conanbuildinfo_release_x64_v141.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="conanbuildinfo_multi.props" />
     <Import Project="conanbuildinfo_release_x64_v141.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
@@ -100,7 +96,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ProjectDir)ContainerFlavors\BoostDI\include;$(ProjectDir)ContainerFlavors\Fruit\include;$(ProjectDir)ContainerFlavors;$(ProjectDir)ContainerFlavors\Hypodermic;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)ContainerFlavors\BoostDI\include;$(ProjectDir)ContainerFlavors;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -144,7 +140,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ProjectDir)ContainerFlavors\BoostDI\include;$(ProjectDir)ContainerFlavors;$(ProjectDir)ContainerFlavors\Hypodermic;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)ContainerFlavors\BoostDI\include;$(ProjectDir)ContainerFlavors;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -275,99 +271,6 @@
     <ClInclude Include="ContainerFlavors\Fruit\include\fruit\macro.h" />
     <ClInclude Include="ContainerFlavors\Fruit\include\fruit\normalized_component.h" />
     <ClInclude Include="ContainerFlavors\Fruit\include\fruit\provider.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\ActivatedRegistrationInfo.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\ActivationException.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\ActivationHandler.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\ActivationHandlers.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\ActivationRegistry.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\ActivationResult.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\AnyArgument.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\ArgumentPack.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\ArgumentResolver.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\As.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\AsSelf.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\AutowireableConstructor.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\AutowireableConstructorRegistrationDescriptor.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\Behavior.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\CircularDependencyException.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\ComponentContext.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\Config.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\ConsoleLoggerSink.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\ConstructorDescriptor.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\ConstructorTypologyDeducer.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\Container.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\ContainerBuilder.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\ContainerInstanceRegistration.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\ContainerInstanceRegistrationActivator.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\DependencyActivationException.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\DependencyFactories.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\DependencyFactory.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\DependencyFactoryTag.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\ExceptionBase.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\FactoryWrapper.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\Hypodermic.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\ILoggerSink.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\InstanceAlreadyActivatingException.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\InstanceFactory.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\InstanceLifetime.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\InstanceRegistrationTags.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\IntegerSequence.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\IRegistration.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\IRegistrationActivator.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\IRegistrationDescriptor.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\IRegistrationRegistry.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\IRegistrationScope.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\IResolutionContainer.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\IResolutionContext.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\IRuntimeRegistrationBuilder.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\IsComplete.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\IsSupportedArgument.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\ITypeAlias.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\Log.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\Logger.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\LogLevel.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\MetaContains.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\MetaForEach.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\MetaIdentity.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\MetaInsert.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\MetaMap.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\MetaPair.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\Named.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\NamedTypeAlias.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\NestedRegistrationScope.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\NoopLoggerSink.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\OnActivated.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\PersistentInstanceRegistration.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\PointerAlignment.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\Pragmas.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\ProvidedDependencyTag.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\ProvidedInstanceDependencyTag.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\ProvidedInstanceFactoryRegistrationDescriptor.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\ProvidedInstanceRegistration.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\ProvidedInstanceRegistrationActivator.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\ProvidedInstanceRegistrationDescriptor.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\Registration.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\RegistrationActivator.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\RegistrationBuilder.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\RegistrationContext.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\RegistrationDescriptorBase.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\RegistrationDescriptorBuilder.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\RegistrationDescriptorInfo.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\RegistrationDescriptorInfoToString.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\RegistrationException.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\RegistrationScope.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\ResolutionContainer.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\ResolutionContext.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\ResolutionException.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\ResolutionInfo.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\RuntimeRegistrationBuilder.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\SingleInstance.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\TypeAlias.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\TypeAliases.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\TypeAliasKey.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\TypeInfo.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\UseIfNone.h" />
-    <ClInclude Include="ContainerFlavors\Hypodermic\With.h" />
     <ClInclude Include="DefaultOutputProvider.h" />
     <ClInclude Include="DependencyResolverFactory.h" />
     <ClInclude Include="DevMorningFix.h" />
@@ -403,13 +306,6 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="conanfile.txt" />
-    <Text Include="ContainerFlavors\Hypodermic\CMakeLists.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ContainerFlavors\Hypodermic\Hypodermic.vcxproj" />
-    <None Include="ContainerFlavors\Hypodermic\Hypodermic.vcxproj.filters" />
-    <None Include="ContainerFlavors\Hypodermic\Hypodermic.vcxproj.user" />
-    <None Include="ContainerFlavors\Hypodermic\libhypodermic.pc.in" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
