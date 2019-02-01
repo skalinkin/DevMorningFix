@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="WebApplication.Global" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="Avtec.DevMorningFix.WebApplication.Global" Language="C#" %>

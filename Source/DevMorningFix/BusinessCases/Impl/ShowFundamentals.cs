@@ -2,7 +2,7 @@
 
 namespace Avtec.DevMorningFix.BusinessCases.Impl
 {
-    internal class ShowFundamentals : IShowFundamentals
+    public class ShowFundamentals : IShowFundamentals
     {
         private readonly IFundamentalRepository _repository;
         private IOutput _output;

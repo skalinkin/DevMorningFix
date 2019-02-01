@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 using Autofac;
@@ -38,17 +39,21 @@ namespace Avtec.DevMorningFix.Container.Autofac
 
                     foreach (var assembly in allAssemblies)
                     {
-                        builder.RegisterAssemblyTypes(assembly).AsImplementedInterfaces();
+                        Debug.Print($"Registering assembly {assembly}");
+                        builder.RegisterAssemblyTypes(assembly).AsImplementedInterfaces().InstancePerDependency();
                     }
 
                     if (SvcCollection != null)
                     {
-                        builder.Populate(SvcCollection);
+                       builder.Populate(SvcCollection);
                     }
+
                 }
             }
 
             var container = builder.Build();
+
+                Debug.Print($"{container.ComponentRegistry.Registrations}");
 
             return container;
         }
