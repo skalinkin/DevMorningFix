@@ -340,3 +340,4 @@ ASALocalRun/
 # Conan
 conanbuildinfo*
 graph_info.json
+conaninfo.txt
