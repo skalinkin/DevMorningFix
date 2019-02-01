@@ -104,7 +104,8 @@
       <AdditionalLibraryDirectories>$(BOOST_LIB_48PLUS);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PreBuildEvent>
-      <Command>conan install .</Command>
+      <Command>
+      </Command>
       <Message>
       </Message>
     </PreBuildEvent>
@@ -151,7 +152,8 @@
       <AdditionalLibraryDirectories>$(BOOST_LIB_48PLUS);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PreBuildEvent>
-      <Command>conan install .</Command>
+      <Command>
+      </Command>
     </PreBuildEvent>
     <PreBuildEvent>
       <Message>
