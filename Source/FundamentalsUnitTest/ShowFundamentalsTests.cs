@@ -43,5 +43,23 @@ namespace Avtec.DevMorningFix.FundamentalsUnitTest
             // Assess
             Assert.IsNotNull(output.Fundamentals);
         }
+
+        [Test]
+        public void ResultNotNull2()
+        {
+            // Arrange
+            var repository = Substitute.For<IFundamentalRepository>();
+            var output = Substitute.For<IOutput>();
+            var list = new List<DevFixFundamental>();
+            repository.GetAllFundamentals().Returns(list);
+            var subject = new ShowFundamentals(repository);
+
+            // Act
+            subject.SetOutput(output);
+            subject.Execute();
+
+            // Assess
+            output.ReceivedWithAnyArgs().OutputData(list);
+        }
     }
 }
