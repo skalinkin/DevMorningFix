@@ -337,3 +337,6 @@ ASALocalRun/
 # Local History for Visual Studio
 .localhistory/
 
+# Conan
+conanbuildinfo*
+graph_info.json

@@ -1,1 +1,1 @@
-conan install .\Source\ExploringContainers
+conan install -if .\Source\ExploringContainers .\Source\ExploringContainers
