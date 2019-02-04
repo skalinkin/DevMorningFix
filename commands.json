@@ -1,0 +1,11 @@
+{
+  "commands": {
+    "collect": {
+      "fileName": "cmd.exe",
+      "workingDirectory": ".",
+      "arguments": "/c collect.bat"
+    }
+  },
+  "-vs-binding": {
+    "ProjectOpened": [ "collect" ] }
+}
